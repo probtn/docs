@@ -1,0 +1,323 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Управление кнопкой посредстовм postMessage сообщений из iframe &mdash; Документация Profit Button 1.4.1335_31102015_dev</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Документация Profit Button 1.4.1335_31102015_dev" href="index.html"/>
+        <link rel="next" title="Передача сообщений об этапах анимации" href="postMessage_button_animation.html"/>
+        <link rel="prev" title="Описание вариантов таргетинга в админке" href="admin_targetings.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Profit Button
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.1335_31102015_dev
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Содержание</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="description.html">Интеграция</a></li>
+<li class="toctree-l1"><a class="reference internal" href="description.html#id2">Общее описание кнопки</a></li>
+<li class="toctree-l1"><a class="reference internal" href="description.html#probtn">Объединенный probtn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="createbutton.html">Создание кампании и креатива</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Примеры режимов работы кнопки</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hierarchy.html">Иерархия сущностей admin.probtn.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adriver.html">Интеграция с AdRiver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adfox.html">Интеграция с AdFox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dfp.html">Интеграция с DFP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hpmd.html">HPMD баннер</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webparams.html">Описание параметров кнопки</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webparams.html#id19">Неиспользуемые параметры</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webparams.html#id21">Параметры по умолчания для кнопки</a></li>
+<li class="toctree-l1"><a class="reference internal" href="offline.html">Оффлайн режим</a></li>
+<li class="toctree-l1"><a class="reference internal" href="probtn_events.html">Получение событий кнопки на странице</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admin_targetings.html">Описание вариантов таргетинга в админке</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Управление кнопкой посредстовм postMessage сообщений из iframe</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Формат объекта в сообщении</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Варианты сообщений</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#probtn-start-content-showed-timer">probtn_start_content_showed_timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#probtn-stop-content-showed-timer">probtn_stop_content_showed_timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#probtn-close">probtn_close</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#probtn-hide">probtn_hide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#probtn-hide-content">probtn_hide_content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#button-image-iframe-disable-overlay">button_image_iframe_disable_overlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#button-image-iframe-done">button_image_iframe_done</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#probtn-restore-button-size">probtn_restore_button_size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#button-image-iframe-size">button_image_iframe_size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#probtn-change-content-url">probtn_change_content_url</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#probtn-performed-action">probtn_performed_action</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#probtn-message-to-creative">probtn_message_to_creative</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#probtn-creative-loaded-message">probtn_creative_loaded_message</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#probtn-opened-and-showed">probtn_opened_and_showed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">Пример отправки сообщения</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="postMessage_button_animation.html">Передача сообщений об этапах анимации</a></li>
+<li class="toctree-l1"><a class="reference internal" href="button_additional_animations_param.html">Дополнительные параметры анимации кнопки</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports_description.html">Отчеты admin.probtn.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="passback.html">Использование passback кода</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hints_and_tricks.html">Неочевидные моменты, подсказки и иные дополнительные данные</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Profit Button</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Управление кнопкой посредстовм postMessage сообщений из iframe</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/postMessage_button_control.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="postmessage-iframe">
+<span id="postmessage-button-control"></span><h1>Управление кнопкой посредстовм postMessage сообщений из iframe<a class="headerlink" href="#postmessage-iframe" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Возможность управления кнопкой из iframe (к примеру из показываемой страницы в модальном окне или креатива, показываемого в iframe) бывает необходима, в случае если на какие-либо действия внутри iframe нужно соответствующее действие кнопки (к примеру закрытие модального окна, закрытие кнопки и т.д.).</p>
+<p>Ниже описан формат передаваемого объекта и список доступных команд.</p>
+<div class="section" id="id1">
+<h2>Формат объекта в сообщении<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Пример:
+<code class="docutils literal"><span class="pre">{command:</span> <span class="pre">&quot;command_value&quot;,</span> <span class="pre">size:</span> <span class="pre">{width:</span> <span class="pre">100,</span> <span class="pre">height:</span> <span class="pre">100},</span> <span class="pre">value:</span> <span class="pre">&quot;buy&quot;</span> <span class="pre">}</span></code></p>
+<p>Вместо <code class="docutils literal"><span class="pre">command_value</span></code> указываем одну из доступных команд ниже. <code class="docutils literal"><span class="pre">Size</span></code> используем только для <code class="docutils literal"><span class="pre">button_image_iframe_size</span></code>, где указываем размеры области.</p>
+</div>
+<div class="section" id="id2">
+<h2>Варианты сообщений<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="probtn-start-content-showed-timer">
+<h3>probtn_start_content_showed_timer<a class="headerlink" href="#probtn-start-content-showed-timer" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Передача сообщения для запуска таймера времени просмотра контента пользователем.</p>
+</div>
+<div class="section" id="probtn-stop-content-showed-timer">
+<h3>probtn_stop_content_showed_timer<a class="headerlink" href="#probtn-stop-content-showed-timer" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Передача сообщения об остановке таймера времени просмотра контента пользователем и произведении отправки статистики в admin.probtn.com</p>
+</div>
+<div class="section" id="probtn-close">
+<h3>probtn_close<a class="headerlink" href="#probtn-close" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Закрытие кнопки (включая модальное окно, области закрытияЮ активные зоны и т.д.) и отправка статистики о ее закрытии</p>
+</div>
+<div class="section" id="probtn-hide">
+<h3>probtn_hide<a class="headerlink" href="#probtn-hide" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Скрытие кнопки (скрывается только кнопка)</p>
+</div>
+<div class="section" id="probtn-hide-content">
+<h3>probtn_hide_content<a class="headerlink" href="#probtn-hide-content" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Скрыть модальное окно</p>
+</div>
+<div class="section" id="button-image-iframe-disable-overlay">
+<h3>button_image_iframe_disable_overlay<a class="headerlink" href="#button-image-iframe-disable-overlay" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Скрыть overlay поверх iframe креатива для того чтобы дать пользователю возможность взаимодействовать со страницей внутри кнопки.</p>
+</div>
+<div class="section" id="button-image-iframe-done">
+<h3>button_image_iframe_done<a class="headerlink" href="#button-image-iframe-done" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Показатьвернуть iframe креатив</p>
+</div>
+<div class="section" id="probtn-restore-button-size">
+<h3>probtn_restore_button_size<a class="headerlink" href="#probtn-restore-button-size" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Восстановить изначальные размеры кнопки</p>
+</div>
+<div class="section" id="button-image-iframe-size">
+<h3>button_image_iframe_size<a class="headerlink" href="#button-image-iframe-size" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Установить размеры overlay над iframe креатива кнопки. В сообщении также передается новый размер overlay.</p>
+</div>
+<div class="section" id="probtn-change-content-url">
+<h3>probtn_change_content_url<a class="headerlink" href="#probtn-change-content-url" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Заменяет ContentURL кнопки на указанный в <code class="docutils literal"><span class="pre">value</span></code></p>
+</div>
+<div class="section" id="probtn-performed-action">
+<h3>probtn_performed_action<a class="headerlink" href="#probtn-performed-action" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Отправка сообщения о действии внутри iframe.
+В поле <code class="docutils literal"><span class="pre">value</span></code> возможно указать тип действия. Если не указать, то по умолчанию будет использоваться вариант <code class="docutils literal"><span class="pre">buy</span></code></p>
+<p>Пример:</p>
+<p><code class="docutils literal"><span class="pre">window.top.postMessage({</span> <span class="pre">command:</span> <span class="pre">'probtn_performed_action'</span> <span class="pre">},</span> <span class="pre">'*');</span></code></p>
+<p><code class="docutils literal"><span class="pre">window.top.postMessage({</span> <span class="pre">command:</span> <span class="pre">'probtn_performed_action',</span> <span class="pre">value:</span> <span class="pre">'booked'</span> <span class="pre">},</span> <span class="pre">'*');</span></code></p>
+</div>
+<div class="section" id="probtn-message-to-creative">
+<h3>probtn_message_to_creative<a class="headerlink" href="#probtn-message-to-creative" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Передача сообщения в креатив (к примеру отправка сообщения из модального окна в кнопку).
+В сообщении поле <code class="docutils literal"><span class="pre">object</span></code> передается как сообщение уже непосредственно в <code class="docutils literal"><span class="pre">iframe</span></code> креатив.</p>
+</div>
+<div class="section" id="probtn-creative-loaded-message">
+<h3>probtn_creative_loaded_message<a class="headerlink" href="#probtn-creative-loaded-message" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Сообщение от креатива кнопке о том, что креатив упешно загрузился и инициализировался. После чего кнопка будет показана на странице.
+Требует включенного параметра <code class="docutils literal"><span class="pre">waitIframeLoadedMsg</span></code></p>
+</div>
+<div class="section" id="probtn-opened-and-showed">
+<h3>probtn_opened_and_showed<a class="headerlink" href="#probtn-opened-and-showed" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Сообщение для произведения отправки сообщения об открытии ссылки - <code class="docutils literal"><span class="pre">ContentShowed</span></code></p>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>Пример отправки сообщения<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">window.top.postMessage({</span> <span class="pre">command:</span> <span class="pre">&quot;probtn_close&quot;</span> <span class="pre">},</span> <span class="pre">'*');</span></code></p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="postMessage_button_animation.html" class="btn btn-neutral float-right" title="Передача сообщений об этапах анимации" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="admin_targetings.html" class="btn btn-neutral" title="Описание вариантов таргетинга в админке" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Profit Button LLC.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.4.1335_31102015_dev',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

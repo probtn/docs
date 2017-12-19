@@ -1,0 +1,360 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Additional animation button params &mdash; Profit Button en 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Profit Button en 1 documentation" href="index.html"/>
+        <link rel="next" title="Reports at admin.probtn.com" href="reports_description.html"/>
+        <link rel="prev" title="Button events" href="probtn_events.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Profit Button en
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of content</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="description.html">General description of the button</a></li>
+<li class="toctree-l1"><a class="reference internal" href="createbutton.html">Campaign and creative creating</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Button modes examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hierarchy.html">The hierarchy of entities of admin.probtn.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adriver.html">Integrtion with AdRiver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adfox.html">AdFox integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dfp.html">Probtn - working with DFP Google ads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webparams.html">Params description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webparams.html#not-used-params">Not used params</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webparams.html#button-default-params">Button default params</a></li>
+<li class="toctree-l1"><a class="reference internal" href="offline.html">Offline mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="probtn_events.html">Button events</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Additional animation button params</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#animations-list">Animations list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#opacity">opacity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rollout">rollout</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#start-position">&lt;start_position&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#percent-of-button-rollout">&lt;percent_of_button_rollout&gt;</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#lookout">lookout</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">&lt;start_position&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#percent-of-button-lookout">&lt;percent_of_button_lookout&gt;</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#cornertocorner">cornerToCorner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#forwardstopandaway">forwardStopAndAway</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">&lt;start_position&gt;</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#forwardandstop">forwardAndStop</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">&lt;start_position&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#first-step-duration">&lt;first_step_duration&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#additional-mode">&lt;additional_mode&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">&lt;start_position&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pauseduration">&lt;pauseDuration&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stopduration">&lt;stopDuration&gt;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reports_description.html">Reports at admin.probtn.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="passback.html">Using passback code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hints_and_tricks.html">Unobvious moments, tips and other additional data</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Profit Button en</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Additional animation button params</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/button_additional_animations_param.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="additional-animation-button-params">
+<span id="hpmd"></span><h1>Additional animation button params<a class="headerlink" href="#additional-animation-button-params" title="Permalink to this headline">¶</a></h1>
+<p>Using additional animation params, set in animation name using <code class="docutils literal"><span class="pre">_</span></code> separators give possibility to set animation directions, duration of separate animation steps and so on.</p>
+<div class="section" id="animations-list">
+<h2>Animations list<a class="headerlink" href="#animations-list" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">opacity</span></code></li>
+<li><code class="docutils literal"><span class="pre">rollout</span></code></li>
+<li><code class="docutils literal"><span class="pre">lookout</span></code></li>
+<li><code class="docutils literal"><span class="pre">forwardAndBack</span></code></li>
+<li><code class="docutils literal"><span class="pre">forwardStopAndAway</span></code></li>
+<li><code class="docutils literal"><span class="pre">cornerToCorner</span></code></li>
+<li><code class="docutils literal"><span class="pre">forwardAndStop</span></code></li>
+</ul>
+</div>
+<div class="section" id="opacity">
+<h2>opacity<a class="headerlink" href="#opacity" title="Permalink to this headline">¶</a></h2>
+<p>Format: <code class="docutils literal"><span class="pre">opacity_&lt;end_opacity_value&gt;</span></code></p>
+<p>Example: <code class="docutils literal"><span class="pre">opacity_0.3</span></code></p>
+</div>
+<div class="section" id="rollout">
+<h2>rollout<a class="headerlink" href="#rollout" title="Permalink to this headline">¶</a></h2>
+<p>Format: <code class="docutils literal"><span class="pre">rollout_&lt;start_position&gt;_&lt;percent_of_button_rollout&gt;</span></code></p>
+<p>Example: <code class="docutils literal"><span class="pre">rollout_left_70</span></code></p>
+<div class="section" id="start-position">
+<h3>&lt;start_position&gt;<a class="headerlink" href="#start-position" title="Permalink to this headline">¶</a></h3>
+<p>Variants:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">left</span></code></li>
+<li><code class="docutils literal"><span class="pre">right</span></code></li>
+</ul>
+</div>
+<div class="section" id="percent-of-button-rollout">
+<h3>&lt;percent_of_button_rollout&gt;<a class="headerlink" href="#percent-of-button-rollout" title="Permalink to this headline">¶</a></h3>
+<p>Percent from page width on which button would max move out.</p>
+</div>
+</div>
+<div class="section" id="lookout">
+<h2>lookout<a class="headerlink" href="#lookout" title="Permalink to this headline">¶</a></h2>
+<p>Format: <code class="docutils literal"><span class="pre">lookout_&lt;start_position&gt;_&lt;percent_of_button_lookout&gt;</span></code></p>
+<p>Example: <code class="docutils literal"><span class="pre">lookout_left_70</span></code></p>
+<div class="section" id="id1">
+<h3>&lt;start_position&gt;<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Variants:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">left</span></code></li>
+<li><code class="docutils literal"><span class="pre">right</span></code></li>
+</ul>
+</div>
+<div class="section" id="percent-of-button-lookout">
+<h3>&lt;percent_of_button_lookout&gt;<a class="headerlink" href="#percent-of-button-lookout" title="Permalink to this headline">¶</a></h3>
+<p>Percent from button width at which button would look out.</p>
+</div>
+</div>
+<div class="section" id="cornertocorner">
+<h2>cornerToCorner<a class="headerlink" href="#cornertocorner" title="Permalink to this headline">¶</a></h2>
+<p>No additional params.</p>
+</div>
+<div class="section" id="forwardstopandaway">
+<h2>forwardStopAndAway<a class="headerlink" href="#forwardstopandaway" title="Permalink to this headline">¶</a></h2>
+<p>Format: <code class="docutils literal"><span class="pre">forwardStopAndAway_&lt;start_position&gt;</span></code></p>
+<p>Example: <code class="docutils literal"><span class="pre">forwardStopAndAway_right</span></code></p>
+<div class="section" id="id2">
+<h3>&lt;start_position&gt;<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Variants:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">left</span></code></li>
+<li><code class="docutils literal"><span class="pre">right</span></code></li>
+</ul>
+</div>
+</div>
+<div class="section" id="forwardandstop">
+<h2>forwardAndStop<a class="headerlink" href="#forwardandstop" title="Permalink to this headline">¶</a></h2>
+<p>Format: <code class="docutils literal"><span class="pre">forwardAndStop_&lt;start_position&gt;_&lt;first_step_duration&gt;_&lt;additional_mode&gt;</span></code></p>
+<p>Exmaple: <code class="docutils literal"><span class="pre">forwardAndStop_right_2000</span></code></p>
+<div class="section" id="id3">
+<h3>&lt;start_position&gt;<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Variants:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">left</span></code></li>
+<li><code class="docutils literal"><span class="pre">right</span></code></li>
+</ul>
+</div>
+<div class="section" id="first-step-duration">
+<h3>&lt;first_step_duration&gt;<a class="headerlink" href="#first-step-duration" title="Permalink to this headline">¶</a></h3>
+<p>Duration of button moving from one side of the screen to other side, in ms</p>
+</div>
+<div class="section" id="additional-mode">
+<h3>&lt;additional_mode&gt;<a class="headerlink" href="#additional-mode" title="Permalink to this headline">¶</a></h3>
+<p>Variants:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">maximizeButton</span></code> - setting button size to the screen size when button move would be finished</li>
+</ul>
+<blockquote>
+<div>forwardAndBack</div></blockquote>
+<hr class="docutils" />
+<p>Format: `` forwardAndBack_&lt;start_position&gt;_&lt;pauseDuration&gt;_&lt;stopDuration&gt;``</p>
+<p>Example: `` forwardAndBack_right_2000``</p>
+</div>
+<div class="section" id="id4">
+<h3>&lt;start_position&gt;<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Variants:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">left</span></code></li>
+<li><code class="docutils literal"><span class="pre">right</span></code></li>
+</ul>
+</div>
+<div class="section" id="pauseduration">
+<h3>&lt;pauseDuration&gt;<a class="headerlink" href="#pauseduration" title="Permalink to this headline">¶</a></h3>
+<p>Duration of the pause (in ms) after first button move to other side of the screen</p>
+</div>
+<div class="section" id="stopduration">
+<h3>&lt;stopDuration&gt;<a class="headerlink" href="#stopduration" title="Permalink to this headline">¶</a></h3>
+<p>Duration of the pause before minimizing <code class="docutils literal"><span class="pre">#probtn_wrapper</span></code></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="reports_description.html" class="btn btn-neutral float-right" title="Reports at admin.probtn.com" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="probtn_events.html" class="btn btn-neutral" title="Button events" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Profit Button LLC.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

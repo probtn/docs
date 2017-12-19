@@ -1,0 +1,427 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Дополнительные параметры анимации кнопки &mdash; Документация Profit Button 1.4.1335_31102015_dev</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Документация Profit Button 1.4.1335_31102015_dev" href="index.html"/>
+        <link rel="next" title="Отчеты admin.probtn.com" href="reports_description.html"/>
+        <link rel="prev" title="Передача сообщений об этапах анимации" href="postMessage_button_animation.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Profit Button
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.4.1335_31102015_dev
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Содержание</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="description.html">Интеграция</a></li>
+<li class="toctree-l1"><a class="reference internal" href="description.html#id2">Общее описание кнопки</a></li>
+<li class="toctree-l1"><a class="reference internal" href="description.html#probtn">Объединенный probtn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="createbutton.html">Создание кампании и креатива</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Примеры режимов работы кнопки</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hierarchy.html">Иерархия сущностей admin.probtn.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adriver.html">Интеграция с AdRiver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adfox.html">Интеграция с AdFox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dfp.html">Интеграция с DFP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hpmd.html">HPMD баннер</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsp.html">Интеграция с DSP (на примере getintent)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webparams.html">Описание параметров кнопки</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webparams.html#id19">Неиспользуемые параметры</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webparams.html#id21">Параметры по умолчания для кнопки</a></li>
+<li class="toctree-l1"><a class="reference internal" href="offline.html">Оффлайн режим</a></li>
+<li class="toctree-l1"><a class="reference internal" href="probtn_events.html">Получение событий кнопки на странице</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admin_targetings.html">Описание вариантов таргетинга в админке</a></li>
+<li class="toctree-l1"><a class="reference internal" href="postMessage_button_control.html">Управление кнопкой посредстовм postMessage сообщений из iframe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="postMessage_button_animation.html">Передача сообщений об этапах анимации</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Дополнительные параметры анимации кнопки</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Список анимаций</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#opacity">opacity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rollout">rollout</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">&lt;начальное_положение&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">&lt;процент_выдвижения_кнопки&gt;</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#lookout">lookout</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">&lt;начальное_положение&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">&lt;процент_выдвижения_кнопки&gt;</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#cornertocorner">cornerToCorner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#forwardstopandaway">forwardStopAndAway</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id7">&lt;начальное_положение&gt;</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#forwardandstop">forwardAndStop</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id8">&lt;начальное_положение&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">&lt;длительность_первого_этапа&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">&lt;дополнительный_режим&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">&lt;ширина_выезда&gt;</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#uptodown">upToDown</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#up-down">&lt;сторона_up_или_down&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">&lt;длительность_ожидания_перед_запуском_анимации_в_мс&gt;</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#forwardandback">forwardAndBack</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id13">&lt;начальное_положение&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pauseduration">&lt;pauseDuration&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stopduration">&lt;stopDuration&gt;</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#lookoutandout">lookOutAndOut</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id14">&lt;начальное_положение&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">&lt;ширина_выглядывания&gt;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reports_description.html">Отчеты admin.probtn.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="passback.html">Использование passback кода</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hints_and_tricks.html">Неочевидные моменты, подсказки и иные дополнительные данные</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Profit Button</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Дополнительные параметры анимации кнопки</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/button_additional_animations_param.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="hpmd">
+<span id="id1"></span><h1>Дополнительные параметры анимации кнопки<a class="headerlink" href="#hpmd" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Посредством дополнительных параметров анимации, указываемых в самом имени анимации посредством <code class="docutils literal"><span class="pre">_</span></code> разделителей возможно указать время отдельных этапов анимаций, ее направления и т.д.</p>
+<div class="section" id="id2">
+<h2>Список анимаций<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">opacity</span></code></li>
+<li><code class="docutils literal"><span class="pre">rollout</span></code></li>
+<li><code class="docutils literal"><span class="pre">lookout</span></code></li>
+<li><code class="docutils literal"><span class="pre">forwardAndBack</span></code></li>
+<li><code class="docutils literal"><span class="pre">forwardStopAndAway</span></code></li>
+<li><code class="docutils literal"><span class="pre">cornerToCorner</span></code></li>
+<li><code class="docutils literal"><span class="pre">forwardAndStop</span></code></li>
+<li><code class="docutils literal"><span class="pre">lootOutAndOut</span></code></li>
+<li><code class="docutils literal"><span class="pre">topToBottomAndStop</span></code></li>
+<li><code class="docutils literal"><span class="pre">upToDown</span></code></li>
+</ul>
+</div>
+<div class="section" id="opacity">
+<h2>opacity<a class="headerlink" href="#opacity" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Формат: <code class="docutils literal"><span class="pre">opacity_&lt;конечное_значение_прозрачности_кнопки&gt;</span></code></p>
+<p>Пример: <code class="docutils literal"><span class="pre">opacity_0.3</span></code></p>
+</div>
+<div class="section" id="rollout">
+<h2>rollout<a class="headerlink" href="#rollout" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Формат: <code class="docutils literal"><span class="pre">rollout_&lt;начальное_положение&gt;_&lt;процент_выдвижения_кнопки&gt;</span></code></p>
+<p>Пример: <code class="docutils literal"><span class="pre">rollout_left_70</span></code></p>
+<div class="section" id="id3">
+<h3>&lt;начальное_положение&gt;<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Варианты:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">left</span></code></li>
+<li><code class="docutils literal"><span class="pre">right</span></code></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>&lt;процент_выдвижения_кнопки&gt;<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Процент от ширины страницы на которую максимально будет выдвинута кнопка</p>
+</div>
+</div>
+<div class="section" id="lookout">
+<h2>lookout<a class="headerlink" href="#lookout" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Формат: <code class="docutils literal"><span class="pre">lookout_&lt;начальное_положение&gt;_&lt;процент_выдвижения_кнопки&gt;</span></code></p>
+<p>Пример: <code class="docutils literal"><span class="pre">lookout_left_70</span></code></p>
+<div class="section" id="id5">
+<h3>&lt;начальное_положение&gt;<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Варианты:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">left</span></code></li>
+<li><code class="docutils literal"><span class="pre">right</span></code></li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h3>&lt;процент_выдвижения_кнопки&gt;<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Процент от ширины кнопки на которую максимально будет &#8220;выглядывать&#8221; кнопка</p>
+</div>
+</div>
+<div class="section" id="cornertocorner">
+<h2>cornerToCorner<a class="headerlink" href="#cornertocorner" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Дополнительные параметры отсутствуют.</p>
+</div>
+<div class="section" id="forwardstopandaway">
+<h2>forwardStopAndAway<a class="headerlink" href="#forwardstopandaway" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Формат: <code class="docutils literal"><span class="pre">forwardStopAndAway_&lt;начальное_положение&gt;</span></code></p>
+<p>Пример: <code class="docutils literal"><span class="pre">forwardStopAndAway_right</span></code></p>
+<div class="section" id="id7">
+<h3>&lt;начальное_положение&gt;<a class="headerlink" href="#id7" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Варианты:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">left</span></code></li>
+<li><code class="docutils literal"><span class="pre">right</span></code></li>
+</ul>
+</div>
+</div>
+<div class="section" id="forwardandstop">
+<h2>forwardAndStop<a class="headerlink" href="#forwardandstop" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Формат: <code class="docutils literal"><span class="pre">forwardAndStop_&lt;начальное_положение&gt;_&lt;длительность_первого_этапа&gt;_&lt;дополнительный_режим&gt;_&lt;ширина_выезда&gt;</span></code></p>
+<p>Пример: <code class="docutils literal"><span class="pre">forwardAndStop_right_2000_0.9</span></code></p>
+<div class="section" id="id8">
+<h3>&lt;начальное_положение&gt;<a class="headerlink" href="#id8" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Варианты:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">left</span></code></li>
+<li><code class="docutils literal"><span class="pre">right</span></code></li>
+</ul>
+</div>
+<div class="section" id="id9">
+<h3>&lt;длительность_первого_этапа&gt;<a class="headerlink" href="#id9" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Длительность проезда кнопки от одного края до другого в мс</p>
+</div>
+<div class="section" id="id10">
+<h3>&lt;дополнительный_режим&gt;<a class="headerlink" href="#id10" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Варианты:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">maximizeButton</span></code> - увеличение размеров кнопки до размеров экрана по завершению перемещения</li>
+<li><code class="docutils literal"><span class="pre">openModal</span></code> - открытие модального окна по завершению анимации кнопки</li>
+</ul>
+</div>
+<div class="section" id="id11">
+<h3>&lt;ширина_выезда&gt;<a class="headerlink" href="#id11" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Задается как число от 0 до 1 - соответсвует пропорциональной ширине (от ширины страницы) для точки завершения выезда кнопки.</p>
+<p>К примеру при 1 кнопка проедет всю щирину экрана, при 0.5 - только половину, после чего остановится.</p>
+</div>
+</div>
+<div class="section" id="uptodown">
+<h2>upToDown<a class="headerlink" href="#uptodown" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Формат: <code class="docutils literal"><span class="pre">upToDown_&lt;сторона_up_или_down&gt;_&lt;длительность_ожидания_перед_запуском_анимации_в_мс&gt;</span></code></p>
+<p>Пример: `` upToDown_up_2000``</p>
+<div class="section" id="up-down">
+<h3>&lt;сторона_up_или_down&gt;<a class="headerlink" href="#up-down" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Варианты:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">up</span></code></li>
+<li><code class="docutils literal"><span class="pre">down</span></code></li>
+</ul>
+</div>
+<div class="section" id="id12">
+<h3>&lt;длительность_ожидания_перед_запуском_анимации_в_мс&gt;<a class="headerlink" href="#id12" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Длительность паузы (в мс) после первого проезда кнопки в противоположной части экрана</p>
+</div>
+</div>
+<div class="section" id="forwardandback">
+<h2>forwardAndBack<a class="headerlink" href="#forwardandback" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Формат: `` forwardAndBack_&lt;начальное_положение&gt;_&lt;pauseDuration&gt;_&lt;stopDuration&gt;``</p>
+<p>Пример: `` forwardAndBack_right_2000``</p>
+<div class="section" id="id13">
+<h3>&lt;начальное_положение&gt;<a class="headerlink" href="#id13" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Варианты:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">left</span></code></li>
+<li><code class="docutils literal"><span class="pre">right</span></code></li>
+</ul>
+</div>
+<div class="section" id="pauseduration">
+<h3>&lt;pauseDuration&gt;<a class="headerlink" href="#pauseduration" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Длительность паузы (в мс) после первого проезда кнопки в противоположной части экрана</p>
+</div>
+<div class="section" id="stopduration">
+<h3>&lt;stopDuration&gt;<a class="headerlink" href="#stopduration" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Длительность задержки до уменьшения probtn_wrapper</p>
+</div>
+</div>
+<div class="section" id="lookoutandout">
+<h2>lookOutAndOut<a class="headerlink" href="#lookoutandout" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Анимация с выглядыванием кнопки (два раза), затем показом модального окна и выездом кнопки к боку модального окна.</p>
+<p>Формат: `` lookOutAndOut_&lt;начальное_положение&gt;_&lt;ширина_выглядывания&gt;``</p>
+<p>Пример формата: `` lookOutAndOut_right_50``</p>
+<p>Пример: <a class="reference external" href="http://demo.probtn.com/button_example4/fruto/desktop/">http://demo.probtn.com/button_example4/fruto/desktop/</a></p>
+<div class="section" id="id14">
+<h3>&lt;начальное_положение&gt;<a class="headerlink" href="#id14" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Варианты:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">left</span></code></li>
+<li><code class="docutils literal"><span class="pre">right</span></code></li>
+</ul>
+</div>
+<div class="section" id="id15">
+<h3>&lt;ширина_выглядывания&gt;<a class="headerlink" href="#id15" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Процент выглядывания кнопки</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="reports_description.html" class="btn btn-neutral float-right" title="Отчеты admin.probtn.com" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="postMessage_button_animation.html" class="btn btn-neutral" title="Передача сообщений об этапах анимации" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Profit Button LLC.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.4.1335_31102015_dev',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
