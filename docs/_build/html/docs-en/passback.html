@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -30,6 +32,9 @@
   
 
   
+        <link rel="index" title="Алфавитный указатель"
+              href="../genindex.html"/>
+        <link rel="search" title="Поиск" href="../search.html"/>
     <link rel="top" title="Документация Profit Button 1.4.1335_31102015_dev" href="../index.html"/> 
 
   
@@ -39,6 +44,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -79,7 +85,10 @@
           
             
             
-                <p class="caption"><span class="caption-text">Содержание</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Содержание</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../description.html">Интеграция</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../description.html#id2">Общее описание кнопки</a></li>
@@ -91,6 +100,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../adfox.html">Интеграция с AdFox</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dfp.html">Интеграция с DFP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hpmd.html">HPMD баннер</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dsp.html">Интеграция с DSP (на примере getintent)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../webparams.html">Описание параметров кнопки</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../webparams.html#id19">Неиспользуемые параметры</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../webparams.html#id21">Параметры по умолчания для кнопки</a></li>
@@ -115,8 +125,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">Profit Button</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Profit Button</a>
+        
       </nav>
 
 
@@ -129,19 +141,36 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
-    <li>Using passback code</li>
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Using passback code</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/docs-en/passback.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/docs-en/passback.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -152,18 +181,18 @@
 <p>There is opportunity in button to use passback code, which would be added at page in case button disabled (when  admin.probtn.com settings request return then button state is off).</p>
 <p>In particular at editing app we can add at field <code class="docutils literal"><span class="pre">Passback</span> <span class="pre">Code</span></code> HTML code, which would be added at page (if passback code is pure JS code, when e need to put it inside <code class="docutils literal"><span class="pre">&lt;script&gt;&lt;/script&gt;</span></code>).</p>
 <p>In field <code class="docutils literal"><span class="pre">Passback</span> <span class="pre">Code</span> <span class="pre">Selector</span></code> possible to set DOM path, where passback code would be added. By default used <code class="docutils literal"><span class="pre">#probtn_passback</span></code></p>
-<img alt="../_images/17.png" src="../_images/17.png" />
+<img alt="../_images/14.png" src="../_images/14.png" />
 <div class="section" id="exmaple-of-using-dfp-passback-code">
 <h2>Exmaple of using DFP passback code<a class="headerlink" href="#exmaple-of-using-dfp-passback-code" title="Ссылка на этот заголовок">¶</a></h2>
 <p>You can find description of how to get passback code by this link - <a class="reference external" href="https://support.google.com/dfp_sb/answer/2811375?hl=ru">https://support.google.com/dfp_sb/answer/2811375?hl=ru</a></p>
 <p>In particular, in the inventory in create tags section, we choose to create a passback tag</p>
-<img alt="../_images/24.png" src="../_images/24.png" />
+<img alt="../_images/22.png" src="../_images/22.png" />
 <p>and after it we get nessesary passback code</p>
-<img alt="../_images/34.png" src="../_images/34.png" />
+<img alt="../_images/32.png" src="../_images/32.png" />
 <div class="section" id="example-of-passback-code">
 <h3>Example of passback code:<a class="headerlink" href="#example-of-passback-code" title="Ссылка на этот заголовок">¶</a></h3>
-<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">data-glade</span> <span class="na">data-ad-unit-path=</span><span class="s">&quot;/55807997/probtn1&quot;</span> <span class="na">height=</span><span class="s">&quot;600&quot;</span> <span class="na">width=</span><span class="s">&quot;120&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;script </span><span class="na">async=</span><span class="s">&#39;async&#39;</span> <span class="na">src=</span><span class="s">&#39;https://securepubads.g.doubleclick.net/static/glade.js&#39;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<div class="highlight-html"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-glade</span> <span class="na">data-ad-unit-path</span><span class="o">=</span><span class="s">&quot;/55807997/probtn1&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;600&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;120&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">async</span><span class="o">=</span><span class="s">&#39;async&#39;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://securepubads.g.doubleclick.net/static/glade.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -171,6 +200,9 @@
 </div>
 
 
+           </div>
+           <div class="articleComments">
+            
            </div>
           </div>
           <footer>
@@ -205,7 +237,8 @@
             VERSION:'1.4.1335_31102015_dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

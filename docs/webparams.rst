@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 .. _webparams:
-  
+
 Описание параметров кнопки
 ==================================
 
@@ -18,32 +18,38 @@
 
 Badge
 ----------------------------------
-Объект описывающий поведение бейджа probtnad и его параметры
+Badge представляет собой объект, который включает в себя графический элемент (логотип, эмблема, и т.д.)
+Пример Badge в виде логотипа "probtnad" можно видеть на картинке:
+
+.. image:: images/webparams/btn_badge.png
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 BadgeImage - ссылка на картинку бейджа-плашки
 
 BadgePosition
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Позиция бейджа, может быть одним из следующих вариантов:
+Устанавливает положение Badge на креативе. В зависимости от значений, Badge может располагаться:
 
-- top_left
-- top_right
-- top_center
-= bottom_left
-- bottom_right
-- bottom_center
+- ``top_left`` - в верхней левой части
+- ``top_right`` - в верхней правой части
+- ``top_center`` - в верхней части посередине
+- ``bottom_left``- в нижней части слева
+- ``bottom_right``- в нижней части справа
+- ``bottom_center``- в нижней части посередине
 
 
 BadgeSize
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-размеры плашки (объект аналогичный ButtonSize)
+Устанавливает размер объекта Badge (Аналогичен параметру ButtonSize).
 
 BadgeActive
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Включена плашка или нет
+В зависимости от значения данного параметра Badge может быть включен или выключен.
 
-По умолчанию: ``true`` (включена)
+- ``true`` - включен
+- ``false`` - выключен
+
+По умолчанию установлен в ``true``.
 
 VideoItemHeaderImage
 ----------------------------------
@@ -134,8 +140,8 @@ RoundButton
 
 - ``none`` - ничего не делать, по умолчанию
 - ``auto`` - автоматическое приведение формата кнопки до круга или элипса. Также возможно указать заливку свободного места, к примеру ``auto_fill_#121212``
-- ``manual`` - ручное указание "закругления" (указывается как второй параметр, к примеру ``manual_30``)                 
-					
+- ``manual`` - ручное указание "закругления" (указывается как второй параметр, к примеру ``manual_30``)
+
 LockBody
 ----------------------------------
 Если включено, то мы применяем css стили для body для установки ширины и высоты равной 100%, а также скрытие полос прокрутки.
@@ -288,7 +294,7 @@ isAnimation
 
 Анимация forwardStopAndAway
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Кнопка перемещается из-за левого края до середины, останавливается и затем перемещается за правый край. 
+Кнопка перемещается из-за левого края до середины, останавливается и затем перемещается за правый край.
 Длительность каждого этапа задается параметром ``animationDuration``
 
 Анимация upToDown
@@ -361,7 +367,7 @@ DisableButtonMove
 ----------------------------------
 Отключить ли возможность перемещения кнопки
 
-По умолчанию: 
+По умолчанию:
 
 * false
 
@@ -369,7 +375,7 @@ waitForIframeButtonLoaded
 ----------------------------------
 Ждать ли пока загрузится контент iframe кнопки
 
-По умолчанию: 
+По умолчанию:
 
 * true
 
@@ -441,7 +447,7 @@ UtmSource
 IframeScale
 ----------------------------------
 Параметр для применения к iframe для transform: scale(value)
-По умолчанию 1. 
+По умолчанию 1.
 В случае если указан iframeScaleMinWidth !=0 рассчитывается исходя из данного параметра.
 
 ButtonInitDelay
@@ -452,16 +458,16 @@ VideoClickURL
 ----------------------------------
 Ссылка, по которой переходит пользователь по нажатию на видео. (В случае если VideoClickURL =='' , то для этого подставляется строка из VideoPoster. Когда параметр пуст, ссылку на видео не добавляем)
 
-ButtonOnClick 
+ButtonOnClick
 ----------------------------------
 событие по нажатию на кнопку (добавляется в onclick, необходимо для запуска видео под мобильными браузерами)
 По умолчанию:
 function start1() { var video = $("#video").get(0); video.play(); }; start1(); setTimeout(start1 , 1500);
 
-ButtonType 
+ButtonType
 ----------------------------------
 тип кнопки
-По умолчанию button - поведение кнопки по умолчанию. 
+По умолчанию button - поведение кнопки по умолчанию.
 
 Текущие варианты ButtonType:
 
@@ -578,7 +584,7 @@ ButtonEnabled
 ButtonVisible
 ----------------------------------
 Видна / не видна
- 
+
 ButtonPosition
 ----------------------------------
 Позиция кнопки. Задается как объект ``{X:0.5, Y:.5}``
@@ -627,7 +633,7 @@ ClosePosition
 Задается как объект ``{X:0.5, Y:.5}``
 Где X и Y указывается от 0 до 1 (от 0 до 1, где 1 - ширина или высота window соответственно)
 Применимо при ``ButtonType = button``
- 
+
 CloseSize
 ----------------------------------
 Размер области закрытия. Задается как объект ``{ W: 64.0, H: 64.0 }``
@@ -718,7 +724,7 @@ iframeScaleMinWidth
 
 iframeScale
 ----------------------------------
-По умолчанию 1. Параметр scale для transform iframe'а. 
+По умолчанию 1. Параметр scale для transform iframe'а.
 Вычисляется автоматически на основе iframeScaleMinWidth и ширины fancybox
 
 HintOpacity
@@ -753,7 +759,7 @@ ContentInsets
 Представляет собой объект ``{ T: -2.0, B: -2.0, L: -2.0, R: -2.0 }``
 с соответственно отступами для top, bottom, left и right.
 
-Если ContentInsets меньше 0, то отступы рассчитываются автоматически на основе размеров кнопки. 
+Если ContentInsets меньше 0, то отступы рассчитываются автоматически на основе размеров кнопки.
 
 HideInFrame
 ----------------------------------
@@ -779,7 +785,7 @@ isHPMD
 ----------------------------------
 По умолчанию ``false``.
 
-В случае, если установлено в true, то будут вызываться события HPMD 
+В случае, если установлено в true, то будут вызываться события HPMD
 
 dfp
 ----------------------------------
@@ -809,7 +815,7 @@ useLocalFileSettings
 localSettingsPath
 ----------------------------------
 Url (абсолютный или относительный) до json файла.
- 
+
 По умолчанию ``"settings.json"``
 
 isSmartBanner
@@ -835,14 +841,14 @@ smartbanner
 
 Настройки по умолчанию
 
-:: 
+::
 	{
 	  iosAppId: null,
 	  androidAppId: null,
 	  isFixed: false, //if true, smartbanner will have position: fixed style
 	  isFixedMode: 'default', //default - position fixed over content
 	  // extrusion - banner is fixed, but content moved down (banner height) - so banner don't close any content at page
-	  
+
 	  title: null, // What the title of the app should be in the banner (defaults to <title>)
 	  author: null, // What the author of the app should be in the banner (defaults to <meta name="author"> or hostname)
 	  price: 'FREE', // Price of the app
@@ -864,7 +870,7 @@ smartbanner
 	  force: null, // Choose 'ios', 'android' or 'windows'. Don't do a browser check, just always show this banner
 	  hideOnInstall: true, // Hide the banner after "VIEW" is clicked.
 	  layer: false, // Display as overlay layer or slide down the page
-	  iOSUniversalApp: true // If the iOS App is a universal app for both iPad and iPhone, display Smart Banner to iPad users, too.      
+	  iOSUniversalApp: true // If the iOS App is a universal app for both iPad and iPhone, display Smart Banner to iPad users, too.
 	  appendToSelector: 'body' //Append the banner to a specific selector
 	}
 
@@ -1063,7 +1069,7 @@ ButtonIframeInitialSize
                         }
                     ]
 
-					
+
 ActiveZones параметры
 ----------------------------------
 Использование активных зон возможно в случае если ButtonType=="button_and_active_zones"
@@ -1103,7 +1109,7 @@ Position
 
 ``Position: { X: 0.1, Y: 0.1 }``
 
-Позиция указывается как число от 0 до 1 
+Позиция указывается как число от 0 до 1
 
 ActiveImage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1132,14 +1138,14 @@ ClickCounterLink
 ActiveSize
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Размер зоны в активном состоянии
-Представляет собой 
+Представляет собой
 ActiveSize: { W: 64, H: 64 }
 Где W - ширина, H - высота
 
 InactiveSize
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Размер зоны в активном состоянии.
-Представляет собой 
+Представляет собой
 ``InactiveSize: { W: 64, H: 64 }``
 
 Где W - ширина, H - высота
@@ -1161,18 +1167,18 @@ ActiveOpacity
                         {
                             Name: "Area1",
                             Position: {
-                                X: 0.1, 
+                                X: 0.1,
                                 Y: 0.1
                             },
                             ActiveImage: "//probtnexample1.azurewebsites.net/img/logo.png",
                             InactiveImage: "//admin.probtn.com/eqwid_btn_nonpress.png",
                             ActiveSize: {
-                                W: 64, 
+                                W: 64,
                                 H: 64
                             },
-                            InactiveSize: { 
-                                W: 64, 
-                                H: 64 
+                            InactiveSize: {
+                                W: 64,
+                                H: 64
                             },
                             ActionURL: "http://m0rg0t.ru",
                             ClickCounterLink: "",
@@ -1204,7 +1210,7 @@ ActiveOpacity
 
 Неиспользуемые параметры
 ==============================
- 
+
 ContentWebViewInsets
 -----------------------------
 Не используется
@@ -1335,8 +1341,6 @@ HintArrowImageR
 DefaultDuration, DefaultDelay, OpenDuration, OpenDelay, CloseDuration, CloseDelay, ButtonShowDuration, ButtonShowDelay, ButtonHideDuration, ButtonHideDelay, ButtonDragDuration, ButtonDragDelay, ButtonUndragDuration: 0.2, ButtonUndragDelay, ButtonInactiveDuration, ButtonInactiveDelay, ButtonInertiaSpeed, ButtonInertiaSpeedMin, ButtonInertiaSpeedMax, ButtonInertiaFactor, CloseShowDuration, CloseShowDelay, CloseHideDuration, CloseHideDelay, CloseActiveDuration, CloseActiveDelay, CloseUnactiveDuration, CloseUnactiveDelay, HintLaunchDuration, HintLaunchDelay, HintShowDuration, HintShowDelay, HintHideDuration, HintHideDelay, ContentShowDuration, ContentShowDelay, ContentHideDuration, ContentHideDelay
 
 Не используется
- 
+
 Параметры по умолчания для кнопки
 =================================
-
-

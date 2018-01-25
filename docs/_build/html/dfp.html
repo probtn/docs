@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -30,6 +32,9 @@
   
 
   
+        <link rel="index" title="Алфавитный указатель"
+              href="genindex.html"/>
+        <link rel="search" title="Поиск" href="search.html"/>
     <link rel="top" title="Документация Profit Button 1.4.1335_31102015_dev" href="index.html"/>
         <link rel="next" title="HPMD баннер" href="hpmd.html"/>
         <link rel="prev" title="Интеграция с AdFox" href="adfox.html"/> 
@@ -41,6 +46,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -81,7 +87,10 @@
           
             
             
-                <p class="caption"><span class="caption-text">Содержание</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Содержание</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="description.html">Интеграция</a></li>
 <li class="toctree-l1"><a class="reference internal" href="description.html#id2">Общее описание кнопки</a></li>
@@ -91,7 +100,7 @@
 <li class="toctree-l1"><a class="reference internal" href="hierarchy.html">Иерархия сущностей admin.probtn.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adriver.html">Интеграция с AdRiver</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adfox.html">Интеграция с AdFox</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Интеграция с DFP</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Интеграция с DFP</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#dfp-safeframe">Интеграция с DFP - без safeframe</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#step-0">Step 0</a></li>
 </ul>
@@ -105,6 +114,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="hpmd.html">HPMD баннер</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsp.html">Интеграция с DSP (на примере getintent)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webparams.html">Описание параметров кнопки</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webparams.html#id19">Неиспользуемые параметры</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webparams.html#id21">Параметры по умолчания для кнопки</a></li>
@@ -129,8 +139,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">Profit Button</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Profit Button</a>
+        
       </nav>
 
 
@@ -143,19 +155,36 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>Интеграция с DFP</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Интеграция с DFP</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/dfp.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/dfp.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -171,15 +200,15 @@
 <h3>Step 0<a class="headerlink" href="#step-0" title="Ссылка на этот заголовок">¶</a></h3>
 <p>Добавьте следующий код в ваше DFP объявление</p>
 <p><code class="docutils literal"><span class="pre">&lt;script</span> <span class="pre">src=&quot;//cdn.probtn.com/showinparent_concat.js&quot;&gt;&lt;/script&gt;</span></code></p>
-<p>и не указывайте пункт &#8220;Показывать в SafeFrame&#8221;</p>
+<p>и не указывайте пункт «Показывать в SafeFrame»</p>
 <img alt="_images/safeframe1.png" src="_images/safeframe1.png" />
 <p>Для указания дополнительных параметров к коду объявления можно добавить блок c настройками кнопки (домен и кампания указаны для примера):</p>
-<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;probtn_additional_params&quot;</span> <span class="na">style=</span><span class="s">&quot;display: none;&quot;</span><span class="nt">&gt;</span>{ &quot;domain&quot;: &quot;example.com&quot;, &quot;SelectAdSet&quot;: &quot;campaign_id&quot;}<span class="nt">&lt;/div&gt;</span>
+<div class="highlight-html"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;probtn_additional_params&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;display: none;&quot;</span><span class="p">&gt;</span>{ &quot;domain&quot;: &quot;example.com&quot;, &quot;SelectAdSet&quot;: &quot;campaign_id&quot;}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 <p>Такой код бдет выглядеть так:</p>
-<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;probtn_additional_params&quot;</span> <span class="na">style=</span><span class="s">&quot;display: none;&quot;</span><span class="nt">&gt;</span>{ &quot;domain&quot;: &quot;example.com&quot;, &quot;SelectAdSet&quot;: &quot;campaign_id&quot;}<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;//cdn.probtn.com/showinparent_concat.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<div class="highlight-html"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;probtn_additional_params&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;display: none;&quot;</span><span class="p">&gt;</span>{ &quot;domain&quot;: &quot;example.com&quot;, &quot;SelectAdSet&quot;: &quot;campaign_id&quot;}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;//cdn.probtn.com/showinparent_concat.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -192,17 +221,17 @@
 Добавьте на страницу showinparent_concat.js ( Общее описание работы кнопки )</p>
 <p><code class="docutils literal"><span class="pre">&lt;script</span> <span class="pre">src=&quot;//cdn.probtn.com/showinparent_concat.js&quot;&gt;&lt;/script&gt;</span></code></p>
 <p>Например:</p>
-<div class="highlight-html"><div class="highlight"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-<span class="nt">&lt;head</span> <span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width, initial-scale=1&quot;</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;title&gt;</span>probtn (hackpad)<span class="nt">&lt;/title&gt;</span>
-<span class="nt">&lt;/head&gt;</span>
-<span class="nt">&lt;body&gt;</span>
-                <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;//cdn.probtn.com/showinparent_concat.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
+<div class="highlight-html"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>probtn (hackpad)<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;//cdn.probtn.com/showinparent_concat.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -222,7 +251,7 @@
 <p>Также возможно указать идентификатор кампании, по которому кнопка будет показывать креативы только указанной кампании для аппа.
 Для этого необходимо</p>
 <p>Создать объявление с кодом
-<code class="docutils literal"><span class="pre">&lt;iframe</span>&nbsp; <span class="pre">style=&quot;border:</span> <span class="pre">0px;</span> <span class="pre">width:</span> <span class="pre">0px;</span> <span class="pre">height:</span> <span class="pre">0px;</span> <span class="pre">display:</span> <span class="pre">none;&quot;</span> <span class="pre">src=&quot;//example.com/example_iframe_page.html?domain=nessasary_example_app_domain.test&amp;SelectAdSet=565e021f99c27511100000d0&quot;&gt;&lt;/iframe&gt;</span></code></p>
+<code class="docutils literal"><span class="pre">&lt;iframe</span>&#160; <span class="pre">style=&quot;border:</span> <span class="pre">0px;</span> <span class="pre">width:</span> <span class="pre">0px;</span> <span class="pre">height:</span> <span class="pre">0px;</span> <span class="pre">display:</span> <span class="pre">none;&quot;</span> <span class="pre">src=&quot;//example.com/example_iframe_page.html?domain=nessasary_example_app_domain.test&amp;SelectAdSet=565e021f99c27511100000d0&quot;&gt;&lt;/iframe&gt;</span></code></p>
 <p>Url //example.com/example_iframe_page.html добавлен для примера, необходимо использовать свой путь (до страницы созданной на шаге 1)
 Значение GET параметра domain (для примера указано) nessasary_example_app_domain.test нужно заменить на необходимый домен (идентификатор), используемый в нужном аппе в admin.probtn.com</p>
 <p>Значение GET параметра SelectAdSet (для примера указано) <code class="docutils literal"><span class="pre">565e021f99c27511100000d0</span></code> нужно заменить на идентификатор кампании (не нужно указывать идентификатор placement или creative)
@@ -234,15 +263,18 @@
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="hpmd.html" class="btn btn-neutral float-right" title="HPMD баннер" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="hpmd.html" class="btn btn-neutral float-right" title="HPMD баннер" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="adfox.html" class="btn btn-neutral" title="Интеграция с AdFox" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="adfox.html" class="btn btn-neutral" title="Интеграция с AdFox" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -276,7 +308,8 @@
             VERSION:'1.4.1335_31102015_dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>

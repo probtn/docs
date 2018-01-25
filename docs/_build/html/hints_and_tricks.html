@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -30,6 +32,9 @@
   
 
   
+        <link rel="index" title="Алфавитный указатель"
+              href="genindex.html"/>
+        <link rel="search" title="Поиск" href="search.html"/>
     <link rel="top" title="Документация Profit Button 1.4.1335_31102015_dev" href="index.html"/>
         <link rel="prev" title="Использование passback кода" href="passback.html"/> 
 
@@ -40,6 +45,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -80,7 +86,10 @@
           
             
             
-                <p class="caption"><span class="caption-text">Содержание</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Содержание</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="description.html">Интеграция</a></li>
 <li class="toctree-l1"><a class="reference internal" href="description.html#id2">Общее описание кнопки</a></li>
@@ -92,6 +101,7 @@
 <li class="toctree-l1"><a class="reference internal" href="adfox.html">Интеграция с AdFox</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dfp.html">Интеграция с DFP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hpmd.html">HPMD баннер</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsp.html">Интеграция с DSP (на примере getintent)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webparams.html">Описание параметров кнопки</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webparams.html#id19">Неиспользуемые параметры</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webparams.html#id21">Параметры по умолчания для кнопки</a></li>
@@ -103,7 +113,7 @@
 <li class="toctree-l1"><a class="reference internal" href="button_additional_animations_param.html">Дополнительные параметры анимации кнопки</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reports_description.html">Отчеты admin.probtn.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="passback.html">Использование passback кода</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Неочевидные моменты, подсказки и иные дополнительные данные</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Неочевидные моменты, подсказки и иные дополнительные данные</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#dom">Описание DOM модели кнопки</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#probtn-wrapper">#probtn_wrapper</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#iframe-probtn-guidiframe">iframe#probtn_guidIframe</a></li>
@@ -131,8 +141,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">Profit Button</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Profit Button</a>
+        
       </nav>
 
 
@@ -145,19 +157,36 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>Неочевидные моменты, подсказки и иные дополнительные данные</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Неочевидные моменты, подсказки и иные дополнительные данные</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/hints_and_tricks.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/hints_and_tricks.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -168,10 +197,10 @@
 <div class="section" id="dom">
 <h2>Описание DOM модели кнопки<a class="headerlink" href="#dom" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Базовая схема элементов кнопки</p>
-<img alt="_images/probtn_DOM_model.png" src="_images/probtn_DOM_model.png" />
+<img alt="_images/probtn_DOM_model1.png" src="_images/probtn_DOM_model1.png" />
 <div class="section" id="probtn-wrapper">
 <h3>#probtn_wrapper<a class="headerlink" href="#probtn-wrapper" title="Ссылка на этот заголовок">¶</a></h3>
-<p>Базовый элемент, внутри которого &#8220;содержится&#8221; кнопка, активные зоны и блок с дополнительными элементами (предзагруженными картинками, трекинговыми ссылками, изображением зоны закрытия и т.д.)</p>
+<p>Базовый элемент, внутри которого «содержится» кнопка, активные зоны и блок с дополнительными элементами (предзагруженными картинками, трекинговыми ссылками, изображением зоны закрытия и т.д.)</p>
 </div>
 <div class="section" id="iframe-probtn-guidiframe">
 <h3>iframe#probtn_guidIframe<a class="headerlink" href="#iframe-probtn-guidiframe" title="Ссылка на этот заголовок">¶</a></h3>
@@ -199,10 +228,10 @@
 <div class="section" id="id2">
 <h3>Скрытие кнопки закрытия модального окна<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h3>
 <p>Для скрытия кнопки закрытия модального окна (к примеру в случае, если страница внутри iframe сама реализует закрытие модального окнакнопки используя механизм postMessage) можно добавить в параметр <code class="docutils literal"><span class="pre">Z</span> <span class="pre">Custom</span> <span class="pre">CSS</span></code> (или непосредственно на сайт) следующие CSS стили:</p>
-<div class="highlight-css"><div class="highlight"><pre><span class="nc">.fancybox-close</span> <span class="p">{</span>
-        <span class="k">display</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
-        <span class="k">top</span><span class="o">:</span> <span class="m">0px</span> <span class="cp">!important</span><span class="p">;</span>
-        <span class="k">right</span><span class="o">:</span> <span class="m">0px</span> <span class="cp">!important</span><span class="p">;</span>
+<div class="highlight-css"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">fancybox-close</span> <span class="p">{</span>
+        <span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+        <span class="k">top</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
+        <span class="k">right</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -212,13 +241,16 @@
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="passback.html" class="btn btn-neutral" title="Использование passback кода" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="passback.html" class="btn btn-neutral" title="Использование passback кода" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -252,7 +284,8 @@
             VERSION:'1.4.1335_31102015_dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>

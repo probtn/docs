@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -30,6 +32,9 @@
   
 
   
+        <link rel="index" title="Алфавитный указатель"
+              href="genindex.html"/>
+        <link rel="search" title="Поиск" href="search.html"/>
     <link rel="top" title="Документация Profit Button 1.4.1335_31102015_dev" href="index.html"/>
         <link rel="next" title="Описание параметров кнопки" href="webparams.html"/>
         <link rel="prev" title="HPMD баннер" href="hpmd.html"/> 
@@ -41,6 +46,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -81,7 +87,10 @@
           
             
             
-                <p class="caption"><span class="caption-text">Содержание</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Содержание</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="description.html">Интеграция</a></li>
 <li class="toctree-l1"><a class="reference internal" href="description.html#id2">Общее описание кнопки</a></li>
@@ -93,7 +102,7 @@
 <li class="toctree-l1"><a class="reference internal" href="adfox.html">Интеграция с AdFox</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dfp.html">Интеграция с DFP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hpmd.html">HPMD баннер</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Интеграция с DSP (на примере getintent)</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Интеграция с DSP (на примере getintent)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id1">Общее описание</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id2">Пример кода для объявления в DSP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id3">Описание терминов</a><ul>
@@ -128,8 +137,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">Profit Button</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Profit Button</a>
+        
       </nav>
 
 
@@ -142,19 +153,36 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>Интеграция с DSP (на примере getintent)</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Интеграция с DSP (на примере getintent)</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/dsp.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/dsp.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -173,11 +201,11 @@
 <p>Для реального запуска необходимо заменить в блоке <code class="docutils literal"><span class="pre">#probtn_additional_params</span></code> параметр <code class="docutils literal"><span class="pre">domain</span></code> с <code class="docutils literal"><span class="pre">getintent_dsp</span></code> на реальный идентификатор аппа из admin.probtn.com</p>
 <p>Также заменить в <code class="docutils literal"><span class="pre">addLink(&quot;https://pixel.probtn.com/1/from-ref?pbdebug=getintent&amp;DeviceUID=&amp;localDomain=&quot;+document.domain.replace(&quot;www.&quot;,</span> <span class="pre">&quot;&quot;)+&quot;&amp;daction=&quot;</span> <span class="pre">+</span> <span class="pre">param</span> <span class="pre">+</span> <span class="pre">suf);</span></code> <code class="docutils literal"><span class="pre">pbdebug</span></code> параметр с <code class="docutils literal"><span class="pre">getintent</span></code> на реальный идентификатор аппа из admin.probtn.com</p>
 <p>Или возможно воспользоваться сервисом для генерации кодов интеграции для автоматического создания кода с заданными параметрами (ссылка будет добавлена позднее после релиза сервиса).</p>
-<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;probtn_content1&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;probtn_additional_params&quot;</span> <span class="na">style=</span><span class="s">&quot;display: none;&quot;</span><span class="nt">&gt;</span>{ &quot;domain&quot;: &quot;getintent_dsp&quot;, &quot;HideInFrame&quot;: false, &quot;useGuidIframe&quot;: false}<span class="nt">&lt;/div&gt;</span>
+<div class="highlight-html"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;probtn_content1&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;probtn_additional_params&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;display: none;&quot;</span><span class="p">&gt;</span>{ &quot;domain&quot;: &quot;getintent_dsp&quot;, &quot;HideInFrame&quot;: false, &quot;useGuidIframe&quot;: false}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;script&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="kd">var</span> <span class="nx">addLink</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">link</span><span class="p">)</span> <span class="p">{</span>
             <span class="kd">var</span> <span class="nx">trackingImage</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">self</span><span class="p">.</span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;img&quot;</span><span class="p">);</span>
             <span class="nx">trackingImage</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="s2">&quot;probtn_getintent_includepb_tracking_image&quot;</span><span class="p">;</span>
@@ -250,7 +278,7 @@
                 <span class="nx">addSuperPixelLink</span><span class="p">(</span><span class="s2">&quot;probtn_concat_loaded_to_self&quot;</span><span class="p">);</span>
         <span class="p">});</span>
 <span class="p">}</span>
-<span class="nt">&lt;/script&gt;</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -275,15 +303,18 @@
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="webparams.html" class="btn btn-neutral float-right" title="Описание параметров кнопки" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="webparams.html" class="btn btn-neutral float-right" title="Описание параметров кнопки" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="hpmd.html" class="btn btn-neutral" title="HPMD баннер" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="hpmd.html" class="btn btn-neutral" title="HPMD баннер" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -317,7 +348,8 @@
             VERSION:'1.4.1335_31102015_dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>

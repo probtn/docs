@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -30,6 +32,9 @@
   
 
   
+        <link rel="index" title="Алфавитный указатель"
+              href="genindex.html"/>
+        <link rel="search" title="Поиск" href="search.html"/>
     <link rel="top" title="Документация Profit Button 1.4.1335_31102015_dev" href="index.html"/>
         <link rel="next" title="Неочевидные моменты, подсказки и иные дополнительные данные" href="hints_and_tricks.html"/>
         <link rel="prev" title="Отчеты admin.probtn.com" href="reports_description.html"/> 
@@ -41,6 +46,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -81,7 +87,10 @@
           
             
             
-                <p class="caption"><span class="caption-text">Содержание</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Содержание</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="description.html">Интеграция</a></li>
 <li class="toctree-l1"><a class="reference internal" href="description.html#id2">Общее описание кнопки</a></li>
@@ -93,6 +102,7 @@
 <li class="toctree-l1"><a class="reference internal" href="adfox.html">Интеграция с AdFox</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dfp.html">Интеграция с DFP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hpmd.html">HPMD баннер</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsp.html">Интеграция с DSP (на примере getintent)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webparams.html">Описание параметров кнопки</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webparams.html#id19">Неиспользуемые параметры</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webparams.html#id21">Параметры по умолчания для кнопки</a></li>
@@ -103,7 +113,7 @@
 <li class="toctree-l1"><a class="reference internal" href="postMessage_button_animation.html">Передача сообщений об этапах анимации</a></li>
 <li class="toctree-l1"><a class="reference internal" href="button_additional_animations_param.html">Дополнительные параметры анимации кнопки</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reports_description.html">Отчеты admin.probtn.com</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Использование passback кода</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Использование passback кода</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#dfp-passback">Пример использования DFP passback кода</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id2">Пример полученного кода:</a></li>
 </ul>
@@ -123,8 +133,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">Profit Button</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Profit Button</a>
+        
       </nav>
 
 
@@ -137,19 +149,36 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>Использование passback кода</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Использование passback кода</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/passback.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/passback.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -160,20 +189,20 @@
 <p>В кнопке есть возможность использовать passback код, который будет добавлен на страницу в случае, если кнопка выключена (от admin.probtn.com пришли данные о том что она выключена).</p>
 <p>В частности в редактировании аппа мы можем добавить в поля <code class="docutils literal"><span class="pre">Passback</span> <span class="pre">Code</span></code> HTML код, который будет добавлен на страницу (если passback код был получен в виде JS кода, то нужно обрамить его в <code class="docutils literal"><span class="pre">&lt;script&gt;&lt;/script&gt;</span></code>).</p>
 <p>Также для случая, если такой функционал нужен только для того, чтобы подсчитывать количество показов можно воспользоваться двумя полями <code class="docutils literal"><span class="pre">OnShowPixel</span></code> и <code class="docutils literal"><span class="pre">OnNoShowPixel</span></code> в которых можно указать пиксели на посчет показов и не показов соответственно.</p>
-<p><a class="reference internal" href="webparams.html#webparams"><span>Описание параметров кнопки</span></a></p>
+<p><a class="reference internal" href="webparams.html#webparams"><span class="std std-ref">Описание параметров кнопки</span></a></p>
 <p>В поле <code class="docutils literal"><span class="pre">Passback</span> <span class="pre">Code</span> <span class="pre">Selector</span></code> можно указать путь, куда будет добавлен passback код. По умолчанию используется <code class="docutils literal"><span class="pre">#probtn_passback</span></code></p>
-<img alt="_images/16.png" src="_images/16.png" />
+<img alt="_images/17.png" src="_images/17.png" />
 <div class="section" id="dfp-passback">
 <h2>Пример использования DFP passback кода<a class="headerlink" href="#dfp-passback" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Описание получения passback кода доступно по следующей ссылке - <a class="reference external" href="https://support.google.com/dfp_sb/answer/2811375?hl=ru">https://support.google.com/dfp_sb/answer/2811375?hl=ru</a></p>
 <p>В часности в инвентаре в создании тегов мы выбираем создание тега возврата</p>
-<img alt="_images/23.png" src="_images/23.png" />
+<img alt="_images/24.png" src="_images/24.png" />
 <p>и после чего мы получим необходимый нам passback код</p>
-<img alt="_images/33.png" src="_images/33.png" />
+<img alt="_images/34.png" src="_images/34.png" />
 <div class="section" id="id2">
 <h3>Пример полученного кода:<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h3>
-<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">data-glade</span> <span class="na">data-ad-unit-path=</span><span class="s">&quot;/55807997/probtn1&quot;</span> <span class="na">height=</span><span class="s">&quot;600&quot;</span> <span class="na">width=</span><span class="s">&quot;120&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;script </span><span class="na">async=</span><span class="s">&#39;async&#39;</span> <span class="na">src=</span><span class="s">&#39;https://securepubads.g.doubleclick.net/static/glade.js&#39;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<div class="highlight-html"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-glade</span> <span class="na">data-ad-unit-path</span><span class="o">=</span><span class="s">&quot;/55807997/probtn1&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;600&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;120&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">async</span><span class="o">=</span><span class="s">&#39;async&#39;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://securepubads.g.doubleclick.net/static/glade.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -182,15 +211,18 @@
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="hints_and_tricks.html" class="btn btn-neutral float-right" title="Неочевидные моменты, подсказки и иные дополнительные данные" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="hints_and_tricks.html" class="btn btn-neutral float-right" title="Неочевидные моменты, подсказки и иные дополнительные данные" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="reports_description.html" class="btn btn-neutral" title="Отчеты admin.probtn.com" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="reports_description.html" class="btn btn-neutral" title="Отчеты admin.probtn.com" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -224,7 +256,8 @@
             VERSION:'1.4.1335_31102015_dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>
