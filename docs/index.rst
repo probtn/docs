@@ -2,7 +2,7 @@
    sphinx-quickstart on Mon Nov  2 12:32:08 2015.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
- 
+
 .. _index:
 
 Profit Button
@@ -12,7 +12,7 @@ Profit Button
    :maxdepth: 2
    :caption: Содержание
    :name: mastertoc
-   
+
    description
    createbutton
    examples
@@ -20,8 +20,8 @@ Profit Button
    adriver
    adfox
    dfp
-   hpmd 
-   dsp  
+   hpmd
+   dsp
    webparams
    offline
    probtn_events
@@ -29,7 +29,7 @@ Profit Button
    postMessage_button_control
    postMessage_button_animation
    button_additional_animations_param
+   get_parameters
    reports_description
    passback
    hints_and_tricks
-
