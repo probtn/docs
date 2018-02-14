@@ -13,8 +13,6 @@
 
   
   
-  
-  
 
   
 
@@ -32,9 +30,6 @@
   
 
   
-        <link rel="index" title="Алфавитный указатель"
-              href="genindex.html"/>
-        <link rel="search" title="Поиск" href="search.html"/>
     <link rel="top" title="Документация Profit Button 1.4.1335_31102015_dev" href="index.html"/>
         <link rel="next" title="Иерархия сущностей admin.probtn.com" href="hierarchy.html"/>
         <link rel="prev" title="Создание кампании и креатива" href="createbutton.html"/> 
@@ -46,7 +41,6 @@
 
 <body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
 
     
@@ -87,16 +81,13 @@
           
             
             
-              
-            
-            
-              <p class="caption"><span class="caption-text">Содержание</span></p>
+                <p class="caption"><span class="caption-text">Содержание</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="description.html">Интеграция</a></li>
 <li class="toctree-l1"><a class="reference internal" href="description.html#id2">Общее описание кнопки</a></li>
 <li class="toctree-l1"><a class="reference internal" href="description.html#probtn">Объединенный probtn</a></li>
 <li class="toctree-l1"><a class="reference internal" href="createbutton.html">Создание кампании и креатива</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Примеры режимов работы кнопки</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Примеры режимов работы кнопки</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">Плавающая кнопка по умолчанию</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id3">Кнопка с видео</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id4">Кнопка со скролл-зонами</a></li>
@@ -129,6 +120,7 @@
 <li class="toctree-l1"><a class="reference internal" href="postMessage_button_control.html">Управление кнопкой посредстовм postMessage сообщений из iframe</a></li>
 <li class="toctree-l1"><a class="reference internal" href="postMessage_button_animation.html">Передача сообщений об этапах анимации</a></li>
 <li class="toctree-l1"><a class="reference internal" href="button_additional_animations_param.html">Дополнительные параметры анимации кнопки</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_parameters.html">Описание параметров запроса к admin.probtn.com от скрипта кнопки</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reports_description.html">Отчеты admin.probtn.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="passback.html">Использование passback кода</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hints_and_tricks.html">Неочевидные моменты, подсказки и иные дополнительные данные</a></li>
@@ -144,10 +136,8 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Profit Button</a>
-        
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Profit Button</a>
       </nav>
 
 
@@ -160,36 +150,19 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>Примеры режимов работы кнопки</li>
-    
-    
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Примеры режимов работы кнопки</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="_sources/examples.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/examples.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -241,7 +214,7 @@ function playVideo(thisItem) {
 <script src="//cdn.probtn.com/probtn_concat.js"></script></div>
 <div class="section" id="id3">
 <h2>Кнопка с видео<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Поведение кнопки аналогично кнопке по умолчанию, но при нажатии на кнопку происходит воспроизведение видео (с «автозапуском», в том числе и на мобильных браузерах).</p>
+<p>Поведение кнопки аналогично кнопке по умолчанию, но при нажатии на кнопку происходит воспроизведение видео (с &#8220;автозапуском&#8221;, в том числе и на мобильных браузерах).</p>
 <p>Данный режим задается при указании параметра
 <code class="docutils literal"><span class="pre">&quot;ButtonContentType&quot;:&quot;video&quot;</span></code></p>
 <div class="videoExample">
@@ -264,7 +237,7 @@ function playVideo(thisItem) {
 </div></div>
 <div class="section" id="c">
 <h2>Кнопка c активными зонами<a class="headerlink" href="#c" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Поведение кнопки аналогично кнопке по умолчанию, но кроме кнопки на экране присутствует несколько активных зон, при «сбросе» кнопки на которую будет произведено то или иное действие (в зависимости от настроек активной зоны).</p>
+<p>Поведение кнопки аналогично кнопке по умолчанию, но кроме кнопки на экране присутствует несколько активных зон, при &#8220;сбросе&#8221; кнопки на которую будет произведено то или иное действие (в зависимости от настроек активной зоны).</p>
 <p>Данный режим задается при указании параметра
 <code class="docutils literal"><span class="pre">&quot;ButtonType&quot;:&quot;button_and_active_zones&quot;</span></code>
 и указания настроек активных зон (объект <code class="docutils literal"><span class="pre">ActiveZones</span></code> настроек)</p>
@@ -344,14 +317,14 @@ function playVideo(thisItem) {
 </div></div>
 <div class="section" id="rollout">
 <h3>rollout<a class="headerlink" href="#rollout" title="Ссылка на этот заголовок">¶</a></h3>
-<p>Анимация, при которой кнопка «выдвигается» по мере скролла страницы</p>
+<p>Анимация, при которой кнопка &#8220;выдвигается&#8221; по мере скролла страницы</p>
 <p>Используемые параметры:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">isAnimation</span></code></li>
 <li><code class="docutils literal"><span class="pre">animationDuration</span></code></li>
 </ul>
 <p>В частности задается как <code class="docutils literal"><span class="pre">isAnimation</span> <span class="pre">=</span> <span class="pre">rollout_left</span></code> в формате <code class="docutils literal"><span class="pre">rollout_&lt;сторона&gt;</span></code>, где сторона - опциональна и может принимать значения <code class="docutils literal"><span class="pre">left</span></code> или <code class="docutils literal"><span class="pre">right</span></code></p>
-<p>И возможно указать сторону из которой будет «выдвигаться» кнопка и максимальную ширину «выдвижения» (в процентах), в частности
+<p>И возможно указать сторону из которой будет &#8220;выдвигаться&#8221; кнопка и максимальную ширину &#8220;выдвижения&#8221; (в процентах), в частности
 <code class="docutils literal"><span class="pre">rollout_&lt;сторона&gt;_&lt;ширина&gt;</span></code> к примеру <code class="docutils literal"><span class="pre">rollout</span></code>, <code class="docutils literal"><span class="pre">rollout_left</span></code>, <code class="docutils literal"><span class="pre">rollout_left_60</span></code></p>
 <p>Демо страницы:</p>
 <ul class="simple">
@@ -426,18 +399,15 @@ function playVideo(thisItem) {
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="hierarchy.html" class="btn btn-neutral float-right" title="Иерархия сущностей admin.probtn.com" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="hierarchy.html" class="btn btn-neutral float-right" title="Иерархия сущностей admin.probtn.com" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="createbutton.html" class="btn btn-neutral" title="Создание кампании и креатива" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="createbutton.html" class="btn btn-neutral" title="Создание кампании и креатива" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -471,8 +441,7 @@ function playVideo(thisItem) {
             VERSION:'1.4.1335_31102015_dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
+            HAS_SOURCE:  true
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>
