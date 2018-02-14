@@ -13,8 +13,6 @@
 
   
   
-  
-  
 
   
 
@@ -32,9 +30,6 @@
   
 
   
-        <link rel="index" title="Алфавитный указатель"
-              href="../genindex.html"/>
-        <link rel="search" title="Поиск" href="../search.html"/>
     <link rel="top" title="Документация Profit Button 1.4.1335_31102015_dev" href="../index.html"/> 
 
   
@@ -44,7 +39,6 @@
 
 <body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
 
     
@@ -85,10 +79,7 @@
           
             
             
-              
-            
-            
-              <p class="caption"><span class="caption-text">Содержание</span></p>
+                <p class="caption"><span class="caption-text">Содержание</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../description.html">Интеграция</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../description.html#id2">Общее описание кнопки</a></li>
@@ -110,6 +101,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../postMessage_button_control.html">Управление кнопкой посредстовм postMessage сообщений из iframe</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../postMessage_button_animation.html">Передача сообщений об этапах анимации</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../button_additional_animations_param.html">Дополнительные параметры анимации кнопки</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_parameters.html">Описание параметров запроса к admin.probtn.com от скрипта кнопки</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reports_description.html">Отчеты admin.probtn.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../passback.html">Использование passback кода</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hints_and_tricks.html">Неочевидные моменты, подсказки и иные дополнительные данные</a></li>
@@ -125,10 +117,8 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Profit Button</a>
-        
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Profit Button</a>
       </nav>
 
 
@@ -141,36 +131,19 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-      <li>Profit Button</li>
-    
-    
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Profit Button</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/docs-en/index.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/docs-en/index.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -179,7 +152,7 @@
   <div class="section" id="profit-button">
 <span id="index"></span><h1>Profit Button<a class="headerlink" href="#profit-button" title="Ссылка на этот заголовок">¶</a></h1>
 <div class="toctree-wrapper compound" id="mastertoc">
-<p class="caption"><span class="caption-text">Table of content</span><a class="headerlink" href="#mastertoc" title="Постоянная ссылка на оглавление">¶</a></p>
+<p class="caption"><span class="caption-text">Table of content</span><a class="headerlink" href="#mastertoc" title="Permalink to this toctree">¶</a></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="description.html">General description of the button</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="description.html#recieving-button-settings">Recieving button settings</a></li>
@@ -389,7 +362,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="postMessage_button_animation.html">Send message about animation steps</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="postMessage_button_animation.html#object-s-format">Object’s format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="postMessage_button_animation.html#object-s-format">Object&#8217;s format</a></li>
 <li class="toctree-l2"><a class="reference internal" href="postMessage_button_animation.html#rolloutanimation">rolloutAnimation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="postMessage_button_animation.html#forwardandstopanimation">forwardAndStopAnimation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="postMessage_button_animation.html#forwardandbackanimation">forwardAndBackAnimation</a></li>
@@ -419,7 +392,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="hints_and_tricks.html">Unobvious moments, tips and other additional data</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="hints_and_tricks.html#description-of-the-button-s-dom-model">Description of the button’s DOM model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hints_and_tricks.html#description-of-the-button-s-dom-model">Description of the button&#8217;s DOM model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hints_and_tricks.html#tips-tricks">Tips&amp;tricks</a></li>
 </ul>
 </li>
@@ -428,9 +401,6 @@
 </div>
 
 
-           </div>
-           <div class="articleComments">
-            
            </div>
           </div>
           <footer>
@@ -465,8 +435,7 @@
             VERSION:'1.4.1335_31102015_dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
+            HAS_SOURCE:  true
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
