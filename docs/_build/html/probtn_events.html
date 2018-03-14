@@ -121,11 +121,14 @@
 <li class="toctree-l3"><a class="reference internal" href="#hidded">Hidded</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#scrollzoneshowed">ScrollZoneShowed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#videoclicked">VideoClicked</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#performedaction">performedAction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">ContentShowedDuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#videofullduration">VideoFullDuration</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">Примеры</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id6">Примеры</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#listener">Пример добавления listener для события</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id6">Пример объекта</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Пример объекта</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#demo">demo-страницы</a></li>
 </ul>
 </li>
@@ -265,9 +268,21 @@
 <p>Значение по умолчанию - 1.</p>
 <p>Вызывается при клике на видео (если для видео указана ссылка для перехода по нажатию на видео).</p>
 </div>
+<div class="section" id="performedaction">
+<h3>performedAction<a class="headerlink" href="#performedaction" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Данное событие используется, когда требуется передать какие-либо пользовательские данные в админку (например, о том, что обнаружен adBlock).</p>
 </div>
 <div class="section" id="id5">
-<h2>Примеры<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h2>
+<h3>ContentShowedDuration<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Параметр содержит длительность показа кнопки (передается вместе с VideoFullDuration).</p>
+</div>
+<div class="section" id="videofullduration">
+<h3>VideoFullDuration<a class="headerlink" href="#videofullduration" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Параметр содержит полную длительность видео в секундах (передается вместе с ContentShowedDuration).</p>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>Примеры<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="section" id="listener">
 <h3>Пример добавления listener для события<a class="headerlink" href="#listener" title="Ссылка на этот заголовок">¶</a></h3>
 <dl class="docutils">
@@ -281,8 +296,8 @@ $(«#eventsOutput»).append(«&lt;p&gt;»+JSON.stringify(e.data)+»&lt;/p&gt;»)
 </dd>
 </dl>
 </div>
-<div class="section" id="id6">
-<h3>Пример объекта<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h3>
+<div class="section" id="id7">
+<h3>Пример объекта<a class="headerlink" href="#id7" title="Ссылка на этот заголовок">¶</a></h3>
 <p><code class="docutils literal"><span class="pre">{&quot;AZName&quot;:&quot;&quot;,&quot;Statistic&quot;:[{&quot;name&quot;:&quot;Moved&quot;,&quot;value&quot;:1}]}</span></code></p>
 </div>
 <div class="section" id="demo">
