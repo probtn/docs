@@ -62,6 +62,7 @@ JsImpressionCode
 
 Содержит пользовательский js-скрипт, который будет исполнен после запуска кнопки.
 Пример использования:
+
 ``'JsImpressionCode': '<script>alert("Hello World!");</script' + '>'``.
 
 VideoItemHeaderImage

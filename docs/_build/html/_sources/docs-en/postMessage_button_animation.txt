@@ -2,9 +2,9 @@
    sphinx-quickstart on Mon Nov  2 12:32:08 2015.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
- 
+
 .. _hpmd:
- 
+
 Send message about animation steps
 ==================================
 
@@ -23,6 +23,17 @@ rolloutAnimation
 probtn_page_scroll
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Message about page was scrolled.
+
+probtn_move
+----------------------------------
+
+probtn_start_move
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Message about button was started move.
+
+probtn_end_move
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Message about button was finished move.
 
 forwardAndStopAnimation
 ----------------------------------
@@ -69,5 +80,3 @@ lookoutAnimation
 
 cornerToCornerAnimation
 ----------------------------------
-
-

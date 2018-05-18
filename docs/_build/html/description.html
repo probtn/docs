@@ -13,8 +13,6 @@
 
   
   
-  
-  
 
   
 
@@ -32,9 +30,6 @@
   
 
   
-        <link rel="index" title="Алфавитный указатель"
-              href="genindex.html"/>
-        <link rel="search" title="Поиск" href="search.html"/>
     <link rel="top" title="Документация Profit Button 1.4.1335_31102015_dev" href="index.html"/>
         <link rel="next" title="Создание кампании и креатива" href="createbutton.html"/>
         <link rel="prev" title="Profit Button" href="index.html"/> 
@@ -46,7 +41,6 @@
 
 <body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
 
     
@@ -87,12 +81,9 @@
           
             
             
-              
-            
-            
-              <p class="caption"><span class="caption-text">Содержание</span></p>
+                <p class="caption"><span class="caption-text">Содержание</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Интеграция</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Интеграция</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#showinparent-concat-js-probtn-concat-js">showinparent_concat.js и probtn_concat.js</a></li>
 </ul>
 </li>
@@ -135,6 +126,7 @@
 <li class="toctree-l1"><a class="reference internal" href="reports_description.html">Отчеты admin.probtn.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="passback.html">Использование passback кода</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hints_and_tricks.html">Неочевидные моменты, подсказки и иные дополнительные данные</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistics_api.html">Использование API для получения статистики</a></li>
 </ul>
 
             
@@ -147,10 +139,8 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Profit Button</a>
-        
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Profit Button</a>
       </nav>
 
 
@@ -163,36 +153,19 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>Интеграция</li>
-    
-    
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Интеграция</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="_sources/description.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/description.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -224,9 +197,9 @@
 <h2>Краткое описание взаимодействия с сервером настроек (<code class="docutils literal"><span class="pre">admin.probtn.com</span></code>)<a class="headerlink" href="#admin-probtn-com" title="Ссылка на этот заголовок">¶</a></h2>
 <p>При запуске скрипта кнопки, происходит следующее:</p>
 <p>Производится начальная инициализация, во время которой кнопка делает запрос настроек к admin.probtn.com. Настройки идентифицируются исходя из домена сайта (в частности при запросе в числе прочих передается параметр BundleID с доменом сайта, который автоматически берется из document.domain)</p>
-<p>В случае, если указаны настройки способами 1 и 2, и одним из параметров указан параметр domain c идентификатором»доменом», соответствующим одному из «аппов» в <code class="docutils literal"><span class="pre">admin.probtn.com</span></code>, то скрипт кнопки при обращении к серверу в <code class="docutils literal"><span class="pre">BundleID</span></code> передаст указанный параметр и получит для него настройки. Это бывает полезно в различных случаях, к примеру когда кнопка с искомыми настройками должна показываться на нескольких сайтах, или же наоборот, когда на одном сайте нужно показать различные рекламные кампании (данный вариант возможен и с использованием campaign в «аппе», но не всегда подходит).</p>
+<p>В случае, если указаны настройки способами 1 и 2, и одним из параметров указан параметр domain c идентификатором&#8221;доменом&#8221;, соответствующим одному из &#8220;аппов&#8221; в <code class="docutils literal"><span class="pre">admin.probtn.com</span></code>, то скрипт кнопки при обращении к серверу в <code class="docutils literal"><span class="pre">BundleID</span></code> передаст указанный параметр и получит для него настройки. Это бывает полезно в различных случаях, к примеру когда кнопка с искомыми настройками должна показываться на нескольких сайтах, или же наоборот, когда на одном сайте нужно показать различные рекламные кампании (данный вариант возможен и с использованием campaign в &#8220;аппе&#8221;, но не всегда подходит).</p>
 <p>В случае, если апп (и его кампании) выключены, от сервера придет ответ о том, что кнопка выключена, и соответственно кнопка показана не будет, и не будет производить дальнейшую инициализацию.</p>
-<p>В случае, если аппа с указанным bundleId»доменом» не существует, будет возвращена ошибка, и кнопка опять таки не будет производить дальнейшую инициализацию.</p>
+<p>В случае, если аппа с указанным bundleId&#8221;доменом&#8221; не существует, будет возвращена ошибка, и кнопка опять таки не будет производить дальнейшую инициализацию.</p>
 </div>
 <div class="section" id="id4">
 <h2>Интеграция со сторонними сервисами<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h2>
@@ -285,25 +258,22 @@
 <h2>Описание сборки<a class="headerlink" href="#id7" title="Ссылка на этот заголовок">¶</a></h2>
 <p>В репозитории <code class="docutils literal"><span class="pre">probtn/cdn</span></code> при <code class="docutils literal"><span class="pre">precommit</span></code> происходит следующее:
 На основе <code class="docutils literal"><span class="pre">src/probtn_concat_template.js</span></code> шаблона происходит сборка в файл <code class="docutils literal"><span class="pre">probtn_concat_full.js</span></code>
-(замена в файле строк include «path_to_file») посредством</p>
+(замена в файле строк include &#8220;path_to_file&#8221;) посредством</p>
 <p>Далее probtn_concat_full.js минифицируется посредством <code class="docutils literal"><span class="pre">grunt-contrib-uglify</span></code> в <code class="docutils literal"><span class="pre">probtn_concat.js</span></code></p>
 </div>
 </div>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="createbutton.html" class="btn btn-neutral float-right" title="Создание кампании и креатива" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="createbutton.html" class="btn btn-neutral float-right" title="Создание кампании и креатива" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Profit Button" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="Profit Button" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -337,8 +307,7 @@
             VERSION:'1.4.1335_31102015_dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
+            HAS_SOURCE:  true
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>

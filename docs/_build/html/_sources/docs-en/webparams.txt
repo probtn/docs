@@ -4,13 +4,131 @@
    contain the root `toctree` directive.
 
 .. _webparams:
-  
-Params description 
+
+Params description
 ==================================
 
-Description of the parameters used by the button (by application)
- 
+Description of the parameters used by the button (by application).
 If a parameter is used differently in different modes, it is specifically marked (including, the required modes)
+
+Related Pages:
+
+* :ref:`index`
+* :ref:`description`
+
+Badge
+----------------------------------
+Badge is an object, includes different graphic elements such as logo, emblem, etc.
+Badge example:
+
+.. image:: images/webparams/btn_badge.png
+
+BadgeImage
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+it includes link on graphical element Badge.
+
+BadgePosition
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Setup Badge position on creative. In dependence on the possible values, Badge could be:
+
+- ``top_left`` - on top left of creative
+- ``top_right`` - on top right of creative
+- ``top_center`` - on top center of creative
+- ``bottom_left``- on bottom left of creative
+- ``bottom_right``- on bottom right of creative
+- ``bottom_center``- on bottom center of creative.
+
+BadgeSize
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Setup size Badge's object.
+Parameters setup as object ``{ W: 64.0, H: 64.0 }`` , where keys:
+- ``W`` - width
+- ``H`` - height,
+and float are their values in pixels.
+
+BadgeActive
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In dependence on the possible values, Badge could be on or off.
+- ``true`` - on
+- ``false`` - off
+By default is ``true``.
+
+JsImpressionCode
+----------------------------------
+
+Contain user's js-script, which will start after starting button.
+Example of using:
+``'JsImpressionCode': '<script>alert("Hello World!");</script' + '>'``.
+
+VideoItemHeaderImage
+----------------------------------
+Image URL, using for branding (logo in video) for video content (``ButtonContentType: video``).
+If empty, table line and image won't be created.
+By default: "".
+
+BrandingImage
+----------------------------------
+Image URL, using for page branding while button is moving.
+(Image using as background-image for ``#probtn_wrapper`` element).
+By default: "".
+
+CorrectPositionBeforeMove
+----------------------------------
+
+Parameter to determine whether to set the adjust button position before it was moved, or not.
+If true, then button position will be updated when browser window resise or device orientation change.
+By default "true".
+
+OnNoShowPixel
+----------------------------------
+
+Pixel, which called, if button is NOT showed (It can be set for app in admin panel).
+
+OnShowPixel
+----------------------------------
+
+Pixel, which called, if button is showed (It can be set for app in admin panel).
+
+LocationPoints
+----------------------------------
+
+Array of points, for which we check to whether user's geolocation in radius of action one of them.
+Format objects of array: ``{"rad": 500, "lat": 33.33, "lon": 55.55}``.
+Where:
+
+- ``rad`` - radius from point in meters
+- ``lat`` - latitude
+- ``lon`` - longitude.
+
+RequireLocation
+----------------------------------
+
+Whether need geolocation data for button work.
+By default: ``false``
+
+ButtonInjectPath
+----------------------------------
+
+Path, which contain ``#probtn_wrapper` button block and code of modal window.
+By default:
+``body``
+
+waitIframeLoadedMsg
+----------------------------------
+
+If true, creative send  message (``probtn_creative_loaded_message``) about finished loading and initialization.
+
+:ref:`postMessage_button_control`
+
+By default: ``false``
+
+waitContentLoadedMsg
+----------------------------------
+
+animationData
+----------------------------------
+Animation additional data, which is used for adding description path of button animation.
+It is created by redactor http://probtn-animation-service.azurewebsites.net/.
 
 RoundButton
 ----------------------------------
@@ -21,8 +139,8 @@ Variants:
 
 - ``none`` - do nothing, by default
 - ``auto`` - automatic set button (banner) format to round or ellipse. Also it's possible to set fill color for free space for example ``auto_fill_#121212``
-- ``manual`` - manual set of border radius (set as second param, for example ``manual_30``)                 
-					
+- ``manual`` - manual set of border radius (set as second param, for example ``manual_30``)
+
 LockBody
 ----------------------------------
 If this param is ON, then we apply css styles for ``body`` to set width and height equal to 100%, an also hide scrollbars.
@@ -165,7 +283,7 @@ Button moves from left side to right side of the page, and then moving back to t
 
 Animation forwardStopAndAway
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Button moves from left side to the center of the page, stops and after moves to the right side. 
+Button moves from left side to the center of the page, stops and after moves to the right side.
 Each animation step duration set by ``animationDuration`` param.
 
 animationDuration
@@ -245,7 +363,7 @@ waitForIframeButtonLoaded
 ----------------------------------
 Wait for the content of the button iframe to be uploaded.
 
-By default: 
+By default:
 
 * true
 
@@ -255,7 +373,7 @@ Button size. Set as an object ``{ W: 0, H: 0 }``
 here W and H stand for width and height in px respectively.
 
 If the values are set to 0, scaling for the button iframe is not needed.
- 
+
 If positive values are set, the iframe is adjusted to the size indicated in the ButtonSize parameter respectvely.
 
 ButtonImageType
@@ -309,7 +427,7 @@ By default: false
 UtmSourceUseOnlyDomain
 ----------------------------------
 By default false.
- 
+
 Use utm_source by default. If set to false, the full URL is used, if set to true, only the domain is used.
 
 UtmCampaign
@@ -325,7 +443,7 @@ By default ""
 IframeScale
 ----------------------------------
 parameter applied to the iframe for transform: scale(value)
- 
+
 By default: 1.
 
 If iframeScaleMinWidth !=0, calculations are made based on this parameter
@@ -339,21 +457,21 @@ VideoClickURL
 ----------------------------------
 Link that a user opens by a click on the video. (If VideoClickURL =='', a line from VideoPoster is pasted. If the parameter is left blank, no need to add a link to the video.
 
-ButtonOnClick 
+ButtonOnClick
 ----------------------------------
 Event called by a click on the button (added in an onclick, necessary to play a video in mobile browsers)
- 
+
 By default:
 
 ``function start1() { var video = $("#video").get(0); video.play(); }; start1(); setTimeout(start1 , 1500);``
 
-ButtonType 
+ButtonType
 ----------------------------------
 Button type
- 
-By default 
+
+By default
 button - button behaviour by default
- 
+
 Current options for ButtonType
 
 * button - button with an iframe in fancybox
@@ -368,10 +486,10 @@ Current options for ButtonType
 ButtonContentType
 ----------------------------------
 Type of the button content
- 
-By default: 
+
+By default:
 * iframe - page display in the iframe
- 
+
 Current options for ButtonContentType
 
 * iframe - page display in the iframe
@@ -381,7 +499,7 @@ Current options for ButtonContentType
 VideoSize
 ----------------------------------
 Video size (necessary to adjust the size of the video for mobile browsers that for some reason do not keep video porportions)
- 
+
 The parameter itself is an object that consists of X and Y attributes (width and height)
 
 Example (value by default):
@@ -417,18 +535,18 @@ Campaign identifier
 NeverClose
 ----------------------------------
 If set to true, removes the closing area for the button
- 
+
 Aplied when ``ButtonType = button``
 
 domain
 ----------------------------------
 Domain that requests button settings. If left blank, the domain is received automatically and corresponds to the domain where the button is activated.
- 
+
 If a certain domain is indicated, the actual domain is not used and the settings for the indicated domain are received.
 
 fancyboxJsPath
 ----------------------------------
-URL to the location of the fancybox library.  
+URL to the location of the fancybox library.
 
 fancyboxCssPath
 ----------------------------------
@@ -448,7 +566,7 @@ Show or not the button after its first display to a user.
 
 * true - button hides after the first display (until HideAfterFirstShow is set to true or the cookie expires)
 * false -  button is displayed every time (defined by server settings and server targeting)
- 
+
 Applied when ButtonType = button
 
 LoadFancyboxCSS
@@ -474,7 +592,7 @@ Enabled/disabled
 ButtonVisible
 ----------------------------------
 Visible/invisible
- 
+
 ButtonPosition
 ----------------------------------
 Button position. Set as an object ``{X:0.5, Y:.5}``
@@ -492,7 +610,7 @@ ButtonDragSize
 ----------------------------------
 Size of the button when dragged. Set as an object. ``{ W: 64.0, H: 64.0 }``
 where W and H stand for width and height in px respectively
- 
+
 Applied when ``ButtonType = button``
 
 ButtonOpacity
@@ -518,17 +636,17 @@ Applied when ``ButtonType = button``
 ClosePosition
 ----------------------------------
 Position of the button closing area
- 
+
 Set as an object ``{X:0.5, Y:0.5}``
 where X and Y vary between 0 and 1 (1 stands for window width or height respectively)
- 
+
 Applied when ``ButtonType = button``
- 
+
 CloseSize
 ----------------------------------
 Size of the closing area. Set as an object ``{ W: 64.0, H: 64.0 }``
 where W and H stand for width and height in px respectively
- 
+
 Applied when ``ButtonType = button``
 
 CloseActiveSize
@@ -547,21 +665,21 @@ Applied when ``ButtonType = button``
 CloseActiveOpacity
 ----------------------------------
 Opacity of the closing area in active mode (when the button is rolled over it).
- 
+
 Applied when ``ButtonType = button``
 
 CloseImage
 ----------------------------------
 Link to the image for the closing area.
- 
+
 Applied when ``ButtonType = button``
 
 HintLabelInsets
 ----------------------------------
 Text insets (below the button line)
- 
+
 Set in the following format ``{ T: 4.0, B: 4.0, L: 4.0, R: 4.0 }``
- 
+
 Applied when ``ButtonType = button``
 
 HintText
@@ -607,15 +725,15 @@ VendorText background color
 iframeScaleMinWidth
 ----------------------------------
 Minimal width for the site displayed inside the iframe. If the current fancybox width is smaller than the required iframeScaleMinWidth, the iframe is to be scaled using the tranform parameter to fit in the current width.
- 
+
 Suitable for the sites that do not adjust autmatically to the given width.
- 
+
 Be default 0, no need to scale.
 
 iframeScale
 ----------------------------------
 By default 1. Scaling attribute for the transform parameter of the iframe.
- 
+
 Calculated automatially based on iframeScaleMinWidth and fancybox width.
 
 HintOpacity
@@ -633,7 +751,7 @@ ContentSize
 Fancybox size
 
 Set as an object ``{ W: 100, H: 100, X: "90%", Y: "90%" }``
- 
+
 If IsManualSize = true, X and Y show up for the size in %.
 Otherwise, W and H are used (width and height respectively)
 
@@ -641,15 +759,15 @@ Otherwise, W and H are used (width and height respectively)
 IsManualSize
 ----------------------------------
 If IsManualSize = true, ContentSize shows X and Y for the size in %.
- 
+
 Otherwise, W and H are used (width and height in px respectively)
 
 ContentInsets
 ----------------------------------
 Insets for fancybox (and its substitutes)
- 
+
 Set as an object ``{ T: -2.0, B: -2.0, L: -2.0, R: -2.0 }``
- 
+
 With given top, bottom, left and right insets.
 If ContentInsets is below 0, insets are calculated automatically based on the button size.
 
@@ -671,7 +789,7 @@ The parameter helps to modify css of the page without interfering with the code
 showInParent
 ----------------------------------
 By default false
- 
+
 If the button is in the iframe and the parent window as well as the page in the iframe are located on the same domain, if set to true, the button adds to the parent the following code ``//cdn.probtn.com/includepb.min.js`` or ``//cdn.probtn.com/probtn_concat.js`` in order to play the button in the parent.
 
 isHPMD
@@ -688,7 +806,7 @@ isDFP - используется ли DFP
 clickUrlEsc - ссылка из макроса DFP для отслеживания кликов
 
 Object for settings in DFP Google
- 
+
 * dfp: ``{ isDFP: false,  clickUrlEsc: "", cacheBuster: ""}``
 * isDFP - use or not DFP
 * clickUrlEsc -  link from the DFP macro to track the clicks
@@ -701,25 +819,25 @@ Link called when the button is pressed. Helps to additionally collect statictics
 isServerCommunicationEnabled
 ----------------------------------
 By default: true
- 
+
 Parameter that defines communication with the server (including, getting settings and sending statistics)
 
 useLocalFileSettings
 ----------------------------------
 By default: false
- 
+
 Use or not the json file containing the button settings
 
 localSettingsPath
 ----------------------------------
 URL (absolute or relative) to the json file
- 
+
 By default ``"settings.json"``
 
 isSmartBanner
 ----------------------------------
 By default: false
- 
+
 If set to true, a smartbanner is displayed instead of the button (based on  https://github.com/jasny/jquery.smartbanner )
 
 smartbannerJsPath
@@ -736,14 +854,14 @@ smartbanner
 Object with settings for the smartbanner
 
 Settings by default
-:: 
+::
 	{
 	  iosAppId: null,
 	  androidAppId: null,
 	  isFixed: false, //if true, smartbanner will have position: fixed style
 	  isFixedMode: 'default', //default - position fixed over content
 	  // extrusion - banner is fixed, but content moved down (banner height) - so banner don't close any content at page
-	  
+
 	  title: null, // What the title of the app should be in the banner (defaults to <title>)
 	  author: null, // What the author of the app should be in the banner (defaults to <meta name="author"> or hostname)
 	  price: 'FREE', // Price of the app
@@ -765,7 +883,7 @@ Settings by default
 	  force: null, // Choose 'ios', 'android' or 'windows'. Don't do a browser check, just always show this banner
 	  hideOnInstall: true, // Hide the banner after "VIEW" is clicked.
 	  layer: false, // Display as overlay layer or slide down the page
-	  iOSUniversalApp: true // If the iOS App is a universal app for both iPad and iPhone, display Smart Banner to iPad users, too.      
+	  iOSUniversalApp: true // If the iOS App is a universal app for both iPad and iPhone, display Smart Banner to iPad users, too.
 	  appendToSelector: 'body' //Append the banner to a specific selector
 	}
 
@@ -877,19 +995,19 @@ URL for statistics (by a click on the button)
 CustomButtonParams
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Use additional parameters for the button (size, opacity, etc.)
- 
+
 By default: false
 
 ButtonSize
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Button size. Set as an object ``{ W: 64.0, H: 64.0 }``
- 
+
 where W and H stand for width ad height in px respectively
 
 ButtonDragSize
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Size of the button when dragged. Set as an object ``{ W: 64.0, H: 64.0 }``
- 
+
 where W and H stand for width ad height in px respectively
 
 ButtonOpacity
@@ -979,9 +1097,9 @@ Position
 Object that describes zone position
 
 Example:
- 
+
 * Position: ``{ X: 0.1, Y: 0.1 }``
- 
+
 Position value is set between 0 and 1
 
 ActiveImage
@@ -1013,21 +1131,21 @@ Link called when the button is dropped to the active zone. Helps to additionally
 ActiveSize
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Size of the zone in active mode
- 
+
 Looks like this
- 
+
 ActiveSize: ``{ W: 64, H: 64 }``
- 
+
 where W and H stand for width and height respectively
 
 InactiveSize
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Size of the zone in active mode
- 
+
 Looks like this
- 
+
 InactiveSize: ``{ W: 64, H: 64 }``
- 
+
 where W and H stand for width and height respectively
 
 InactiveOpacity
@@ -1046,18 +1164,18 @@ Example
                         {
                             Name: "Area1",
                             Position: {
-                                X: 0.1, 
+                                X: 0.1,
                                 Y: 0.1
                             },
                             ActiveImage: "//probtnexample1.azurewebsites.net/img/logo.png",
                             InactiveImage: "//admin.probtn.com/eqwid_btn_nonpress.png",
                             ActiveSize: {
-                                W: 64, 
+                                W: 64,
                                 H: 64
                             },
-                            InactiveSize: { 
-                                W: 64, 
-                                H: 64 
+                            InactiveSize: {
+                                W: 64,
+                                H: 64
                             },
                             ActionURL: "http://m0rg0t.ru",
                             ClickCounterLink: "",
@@ -1089,7 +1207,7 @@ Example
 
 Not used params
 ==============================
- 
+
 ContentWebViewInsets
 -----------------------------
 Not used
@@ -1116,7 +1234,7 @@ ButtonOpenSize
 Not used.
 
 Button size when fancybox is open. Set as an object ``{ W: 64.0, H: 64.0 }``
- 
+
 where W and H stand for width and height in px respectively
 
 
@@ -1125,7 +1243,7 @@ ButtonInactiveSize
 Not used.
 
 Button size in inactive mode. Set as an object ``{ W: 64.0, H: 64.0 }``
- 
+
 where W and H stand for width and height in px respectively
 
 HintInsets
@@ -1220,13 +1338,11 @@ HintArrowImageR
 -----------------------------
 Not used.
 
-Остальные параметры
+Other parameters:
 -----------------------------
 DefaultDuration, DefaultDelay, OpenDuration, OpenDelay, CloseDuration, CloseDelay, ButtonShowDuration, ButtonShowDelay, ButtonHideDuration, ButtonHideDelay, ButtonDragDuration, ButtonDragDelay, ButtonUndragDuration: 0.2, ButtonUndragDelay, ButtonInactiveDuration, ButtonInactiveDelay, ButtonInertiaSpeed, ButtonInertiaSpeedMin, ButtonInertiaSpeedMax, ButtonInertiaFactor, CloseShowDuration, CloseShowDelay, CloseHideDuration, CloseHideDelay, CloseActiveDuration, CloseActiveDelay, CloseUnactiveDuration, CloseUnactiveDelay, HintLaunchDuration, HintLaunchDelay, HintShowDuration, HintShowDelay, HintHideDuration, HintHideDelay, ContentShowDuration, ContentShowDelay, ContentHideDuration, ContentHideDelay
 
 Not used
- 
+
 Button default params
 =================================
-
-

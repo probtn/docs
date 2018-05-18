@@ -13,8 +13,6 @@
 
   
   
-  
-  
 
   
 
@@ -32,9 +30,6 @@
   
 
   
-        <link rel="index" title="Алфавитный указатель"
-              href="../genindex.html"/>
-        <link rel="search" title="Поиск" href="../search.html"/>
     <link rel="top" title="Документация Profit Button 1.4.1335_31102015_dev" href="../index.html"/> 
 
   
@@ -44,7 +39,6 @@
 
 <body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
 
     
@@ -85,10 +79,7 @@
           
             
             
-              
-            
-            
-              <p class="caption"><span class="caption-text">Содержание</span></p>
+                <p class="caption"><span class="caption-text">Содержание</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../description.html">Интеграция</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../description.html#id2">Общее описание кнопки</a></li>
@@ -114,6 +105,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../reports_description.html">Отчеты admin.probtn.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../passback.html">Использование passback кода</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hints_and_tricks.html">Неочевидные моменты, подсказки и иные дополнительные данные</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics_api.html">Использование API для получения статистики</a></li>
 </ul>
 
             
@@ -126,10 +118,8 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Profit Button</a>
-        
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Profit Button</a>
       </nav>
 
 
@@ -142,36 +132,19 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-      <li>Params description</li>
-    
-    
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Params description</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/docs-en/webparams.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/docs-en/webparams.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -179,15 +152,125 @@
             
   <div class="section" id="params-description">
 <span id="webparams"></span><h1>Params description<a class="headerlink" href="#params-description" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Description of the parameters used by the button (by application)</p>
-<p>If a parameter is used differently in different modes, it is specifically marked (including, the required modes)</p>
+<p>Description of the parameters used by the button (by application).
+If a parameter is used differently in different modes, it is specifically marked (including, the required modes)</p>
+<p>Related Pages:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../index.html#index"><span>Profit Button</span></a></li>
+<li><a class="reference internal" href="description.html#description"><span>General description of the button</span></a></li>
+</ul>
+<div class="section" id="badge">
+<h2>Badge<a class="headerlink" href="#badge" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Badge is an object, includes different graphic elements such as logo, emblem, etc.
+Badge example:</p>
+<img alt="docs-en\images/webparams/btn_badge.png" src="docs-en\images/webparams/btn_badge.png" />
+<div class="section" id="badgeimage">
+<h3>BadgeImage<a class="headerlink" href="#badgeimage" title="Ссылка на этот заголовок">¶</a></h3>
+<p>it includes link on graphical element Badge.</p>
+</div>
+<div class="section" id="badgeposition">
+<h3>BadgePosition<a class="headerlink" href="#badgeposition" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Setup Badge position on creative. In dependence on the possible values, Badge could be:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">top_left</span></code> - on top left of creative</li>
+<li><code class="docutils literal"><span class="pre">top_right</span></code> - on top right of creative</li>
+<li><code class="docutils literal"><span class="pre">top_center</span></code> - on top center of creative</li>
+<li><code class="docutils literal"><span class="pre">bottom_left</span></code>- on bottom left of creative</li>
+<li><code class="docutils literal"><span class="pre">bottom_right</span></code>- on bottom right of creative</li>
+<li><code class="docutils literal"><span class="pre">bottom_center</span></code>- on bottom center of creative.</li>
+</ul>
+</div>
+<div class="section" id="badgesize">
+<h3>BadgeSize<a class="headerlink" href="#badgesize" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Setup size Badge&#8217;s object.
+Parameters setup as object <code class="docutils literal"><span class="pre">{</span> <span class="pre">W:</span> <span class="pre">64.0,</span> <span class="pre">H:</span> <span class="pre">64.0</span> <span class="pre">}</span></code> , where keys:
+- <code class="docutils literal"><span class="pre">W</span></code> - width
+- <code class="docutils literal"><span class="pre">H</span></code> - height,
+and float are their values in pixels.</p>
+</div>
+<div class="section" id="badgeactive">
+<h3>BadgeActive<a class="headerlink" href="#badgeactive" title="Ссылка на этот заголовок">¶</a></h3>
+<p>In dependence on the possible values, Badge could be on or off.
+- <code class="docutils literal"><span class="pre">true</span></code> - on
+- <code class="docutils literal"><span class="pre">false</span></code> - off
+By default is <code class="docutils literal"><span class="pre">true</span></code>.</p>
+</div>
+</div>
+<div class="section" id="jsimpressioncode">
+<h2>JsImpressionCode<a class="headerlink" href="#jsimpressioncode" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Contain user&#8217;s js-script, which will start after starting button.
+Example of using:
+<code class="docutils literal"><span class="pre">'JsImpressionCode':</span> <span class="pre">'&lt;script&gt;alert(&quot;Hello</span> <span class="pre">World!&quot;);&lt;/script'</span> <span class="pre">+</span> <span class="pre">'&gt;'</span></code>.</p>
+</div>
+<div class="section" id="videoitemheaderimage">
+<h2>VideoItemHeaderImage<a class="headerlink" href="#videoitemheaderimage" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Image URL, using for branding (logo in video) for video content (<code class="docutils literal"><span class="pre">ButtonContentType:</span> <span class="pre">video</span></code>).
+If empty, table line and image won&#8217;t be created.
+By default: &#8220;&#8221;.</p>
+</div>
+<div class="section" id="brandingimage">
+<h2>BrandingImage<a class="headerlink" href="#brandingimage" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Image URL, using for page branding while button is moving.
+(Image using as background-image for <code class="docutils literal"><span class="pre">#probtn_wrapper</span></code> element).
+By default: &#8220;&#8221;.</p>
+</div>
+<div class="section" id="correctpositionbeforemove">
+<h2>CorrectPositionBeforeMove<a class="headerlink" href="#correctpositionbeforemove" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Parameter to determine whether to set the adjust button position before it was moved, or not.
+If true, then button position will be updated when browser window resise or device orientation change.
+By default &#8220;true&#8221;.</p>
+</div>
+<div class="section" id="onnoshowpixel">
+<h2>OnNoShowPixel<a class="headerlink" href="#onnoshowpixel" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Pixel, which called, if button is NOT showed (It can be set for app in admin panel).</p>
+</div>
+<div class="section" id="onshowpixel">
+<h2>OnShowPixel<a class="headerlink" href="#onshowpixel" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Pixel, which called, if button is showed (It can be set for app in admin panel).</p>
+</div>
+<div class="section" id="locationpoints">
+<h2>LocationPoints<a class="headerlink" href="#locationpoints" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Array of points, for which we check to whether user&#8217;s geolocation in radius of action one of them.
+Format objects of array: <code class="docutils literal"><span class="pre">{&quot;rad&quot;:</span> <span class="pre">500,</span> <span class="pre">&quot;lat&quot;:</span> <span class="pre">33.33,</span> <span class="pre">&quot;lon&quot;:</span> <span class="pre">55.55}</span></code>.
+Where:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">rad</span></code> - radius from point in meters</li>
+<li><code class="docutils literal"><span class="pre">lat</span></code> - latitude</li>
+<li><code class="docutils literal"><span class="pre">lon</span></code> - longitude.</li>
+</ul>
+</div>
+<div class="section" id="requirelocation">
+<h2>RequireLocation<a class="headerlink" href="#requirelocation" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Whether need geolocation data for button work.
+By default: <code class="docutils literal"><span class="pre">false</span></code></p>
+</div>
+<div class="section" id="buttoninjectpath">
+<h2>ButtonInjectPath<a class="headerlink" href="#buttoninjectpath" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Path, which contain <code class="docutils literal"><span class="pre">#probtn_wrapper`</span> <span class="pre">button</span> <span class="pre">block</span> <span class="pre">and</span> <span class="pre">code</span> <span class="pre">of</span> <span class="pre">modal</span> <span class="pre">window.</span>
+<span class="pre">By</span> <span class="pre">default:</span>
+<span class="pre">``body</span></code></p>
+</div>
+<div class="section" id="waitiframeloadedmsg">
+<h2>waitIframeLoadedMsg<a class="headerlink" href="#waitiframeloadedmsg" title="Ссылка на этот заголовок">¶</a></h2>
+<p>If true, creative send  message (<code class="docutils literal"><span class="pre">probtn_creative_loaded_message</span></code>) about finished loading and initialization.</p>
+<p><a class="reference internal" href="../postMessage_button_control.html#postmessage-button-control"><span>Управление кнопкой посредстовм postMessage сообщений из iframe</span></a></p>
+<p>By default: <code class="docutils literal"><span class="pre">false</span></code></p>
+</div>
+<div class="section" id="waitcontentloadedmsg">
+<h2>waitContentLoadedMsg<a class="headerlink" href="#waitcontentloadedmsg" title="Ссылка на этот заголовок">¶</a></h2>
+</div>
+<div class="section" id="animationdata">
+<h2>animationData<a class="headerlink" href="#animationdata" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Animation additional data, which is used for adding description path of button animation.
+It is created by redactor <a class="reference external" href="http://probtn-animation-service.azurewebsites.net/">http://probtn-animation-service.azurewebsites.net/</a>.</p>
+</div>
 <div class="section" id="roundbutton">
 <h2>RoundButton<a class="headerlink" href="#roundbutton" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Format: <code class="docutils literal"><span class="pre">&lt;mode&gt;_&lt;additional_param&gt;_&lt;fill_color&gt;</span></code></p>
 <p>Variants:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">none</span></code> - do nothing, by default</li>
-<li><code class="docutils literal"><span class="pre">auto</span></code> - automatic set button (banner) format to round or ellipse. Also it’s possible to set fill color for free space for example <code class="docutils literal"><span class="pre">auto_fill_#121212</span></code></li>
+<li><code class="docutils literal"><span class="pre">auto</span></code> - automatic set button (banner) format to round or ellipse. Also it&#8217;s possible to set fill color for free space for example <code class="docutils literal"><span class="pre">auto_fill_#121212</span></code></li>
 <li><code class="docutils literal"><span class="pre">manual</span></code> - manual set of border radius (set as second param, for example <code class="docutils literal"><span class="pre">manual_30</span></code>)</li>
 </ul>
 </div>
@@ -205,17 +288,17 @@ It needed in cases when we need to input something in modal window and ios move 
 <div class="section" id="soundurl">
 <h2>SoundURL<a class="headerlink" href="#soundurl" title="Ссылка на этот заголовок">¶</a></h2>
 <p>URL to the sound file which would be played at page.
-If field is empty, sound wouldn’t be played.</p>
-<p>By default: «»</p>
+If field is empty, sound wouldn&#8217;t be played.</p>
+<p>By default: &#8220;&#8221;</p>
 </div>
 <div class="section" id="soundmode">
 <h2>SoundMode<a class="headerlink" href="#soundmode" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Mode for audio play.</p>
-<p>By default: «»</p>
+<p>By default: &#8220;&#8221;</p>
 <p>Variants:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">autoStart</span></code> - automatic sound play at button start (except ios, where this mode works simmular to default mode)</li>
-<li>«» - start sound play when  user manipulate page at first time.</li>
+<li>&#8220;&#8221; - start sound play when  user manipulate page at first time.</li>
 </ul>
 </div>
 <div class="section" id="useexternaldataaboutuser">
@@ -226,7 +309,7 @@ If field is empty, sound wouldn’t be played.</p>
 <div class="section" id="fancyboxclosemethod">
 <h2>FancyboxcloseMethod<a class="headerlink" href="#fancyboxclosemethod" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Close animation of modal window (fancybox)</p>
-<p>By default: «zoomOut»</p>
+<p>By default: &#8220;zoomOut&#8221;</p>
 </div>
 <div class="section" id="fancyboxclosespeed">
 <h2>FancyboxCloseSpeed<a class="headerlink" href="#fancyboxclosespeed" title="Ссылка на этот заголовок">¶</a></h2>
@@ -236,13 +319,13 @@ If field is empty, sound wouldn’t be played.</p>
 <div class="section" id="creativeid">
 <h2>CreativeId<a class="headerlink" href="#creativeid" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Creative ID for force show</p>
-<p>By default: «»</p>
+<p>By default: &#8220;&#8221;</p>
 </div>
 <div class="section" id="passbackcustomcode">
 <h2>PassbackCustomCode<a class="headerlink" href="#passbackcustomcode" title="Ссылка на этот заголовок">¶</a></h2>
 <p>In this param possible to add code, which would be called in case, if button disabled (when settings request from admin.probtn.com return <code class="docutils literal"><span class="pre">{&quot;ButtonVisible&quot;:false,&quot;ButtonEnabled&quot;:false}</span></code>)</p>
 <p>ATTENTION - better to test your code before using in production.</p>
-<p>By default: «».</p>
+<p>By default: &#8220;&#8221;.</p>
 </div>
 <div class="section" id="modalwindowmode">
 <h2>ModalWindowMode<a class="headerlink" href="#modalwindowmode" title="Ссылка на этот заголовок">¶</a></h2>
@@ -255,7 +338,7 @@ If field is empty, sound wouldn’t be played.</p>
 <li>sidebarTop</li>
 <li>sidebarBottom</li>
 </ul>
-<p>By default «».</p>
+<p>By default &#8220;&#8221;.</p>
 </div>
 <div class="section" id="extrusionmode">
 <h2>ExtrusionMode<a class="headerlink" href="#extrusionmode" title="Ссылка на этот заголовок">¶</a></h2>
@@ -265,12 +348,12 @@ If field is empty, sound wouldn’t be played.</p>
 <li>(empty) - nothing happens</li>
 <li>topButton - body element would have margin-top equal to button height.</li>
 </ul>
-<p>By default «».</p>
+<p>By default &#8220;&#8221;.</p>
 </div>
 <div class="section" id="additionaltargetingparam">
 <h2>AdditionalTargetingParam<a class="headerlink" href="#additionaltargetingparam" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Additional custom parameter for targeting, which allows to make targeting at admin.probtn.com depending from custom tasks (for example targeting by different categories at site, etc).</p>
-<p>By default «».</p>
+<p>By default &#8220;&#8221;.</p>
 </div>
 <div class="section" id="isanimation">
 <h2>isAnimation<a class="headerlink" href="#isanimation" title="Ссылка на этот заголовок">¶</a></h2>
@@ -356,7 +439,7 @@ Each animation step duration set by <code class="docutils literal"><span class="
 </div>
 <div class="section" id="waitforgeolocation">
 <h2>WaitForGeoLocation<a class="headerlink" href="#waitforgeolocation" title="Ссылка на этот заголовок">¶</a></h2>
-<p>With geolocation on, wait for the positioning data to be received (and user’s permission in case of the first use) before the display of the button.</p>
+<p>With geolocation on, wait for the positioning data to be received (and user&#8217;s permission in case of the first use) before the display of the button.</p>
 <p>By default:</p>
 <ul class="simple">
 <li>false</li>
@@ -422,7 +505,7 @@ By default: false</p>
 </div>
 <div class="section" id="fullscreenclicklink">
 <h2>FullscreenClickLink<a class="headerlink" href="#fullscreenclicklink" title="Ссылка на этот заголовок">¶</a></h2>
-<p>(For the mode when ButtonType==“fullscreen“)
+<p>(For the mode when ButtonType==&#8217;fullscreen&#8217;)
 Click on fullscreen will open link.</p>
 </div>
 <div class="section" id="hidewithoutinteractiontime">
@@ -457,12 +540,12 @@ By default: false</p>
 <div class="section" id="utmcampaign">
 <h2>UtmCampaign<a class="headerlink" href="#utmcampaign" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Value of the  utm_campaign parameter. Not set if the field is left blank,
-By default «»</p>
+By default &#8220;&#8221;</p>
 </div>
 <div class="section" id="utmsource">
 <h2>UtmSource<a class="headerlink" href="#utmsource" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Value of the utm_source parameter,  if the field is left blank, the current page URL (or domain, defined by the UtmSourceUseOnlyDomain attribute) is used.
-By default «»</p>
+By default &#8220;&#8221;</p>
 </div>
 <div class="section" id="iframescale">
 <h2>IframeScale<a class="headerlink" href="#iframescale" title="Ссылка на этот заголовок">¶</a></h2>
@@ -477,7 +560,7 @@ By default: 0</p>
 </div>
 <div class="section" id="videoclickurl">
 <h2>VideoClickURL<a class="headerlink" href="#videoclickurl" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Link that a user opens by a click on the video. (If VideoClickURL ==“„, a line from VideoPoster is pasted. If the parameter is left blank, no need to add a link to the video.</p>
+<p>Link that a user opens by a click on the video. (If VideoClickURL ==&#8217;&#8216;, a line from VideoPoster is pasted. If the parameter is left blank, no need to add a link to the video.</p>
 </div>
 <div class="section" id="buttononclick">
 <h2>ButtonOnClick<a class="headerlink" href="#buttononclick" title="Ссылка на этот заголовок">¶</a></h2>
@@ -527,7 +610,7 @@ Value is URL (to the image).</p>
 </div>
 <div class="section" id="trackinglink">
 <h2>TrackingLink<a class="headerlink" href="#trackinglink" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Link to the image to be used as background for the button wrapper. Introduced in order to set one’s image (pixel) to collect statistical data about a user.</p>
+<p>Link to the image to be used as background for the button wrapper. Introduced in order to set one&#8217;s image (pixel) to collect statistical data about a user.</p>
 </div>
 <div class="section" id="minimizewrappertime">
 <h2>MinimizeWrapperTime<a class="headerlink" href="#minimizewrappertime" title="Ссылка на этот заголовок">¶</a></h2>
@@ -586,7 +669,7 @@ Parameter that defines how link would be opened (for <code class="docutils liter
 <p>Download or not css for fancybox by default.</p>
 <ul class="simple">
 <li>true - download</li>
-<li>false - don’t download (e.g., fancybox is already in use on the site)</li>
+<li>false - don&#8217;t download (e.g., fancybox is already in use on the site)</li>
 </ul>
 </div>
 <div class="section" id="contenturl">
@@ -712,7 +795,7 @@ Applied when <code class="docutils literal"><span class="pre">ButtonType</span> 
 </div>
 <div class="section" id="vendorsite">
 <h2>VendorSite<a class="headerlink" href="#vendorsite" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Link to the vendor’s site</p>
+<p>Link to the vendor&#8217;s site</p>
 </div>
 <div class="section" id="vendortextfont">
 <h2>VendorTextFont<a class="headerlink" href="#vendortextfont" title="Ссылка на этот заголовок">¶</a></h2>
@@ -776,7 +859,7 @@ If ContentInsets is below 0, insets are calculated automatically based on the bu
 </div>
 <div class="section" id="zcustomcss">
 <h2>ZCustomCss<a class="headerlink" href="#zcustomcss" title="Ссылка на этот заголовок">¶</a></h2>
-<p>By default «».</p>
+<p>By default &#8220;&#8221;.</p>
 <p>If this parameter includes a text, the latter is added to the page as css.</p>
 <p>The parameter helps to modify css of the page without interfering with the code</p>
 </div>
@@ -793,12 +876,12 @@ If ContentInsets is below 0, insets are calculated automatically based on the bu
 <div class="section" id="dfp">
 <h2>dfp<a class="headerlink" href="#dfp" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Объект для настроек при использовании DFP Google
-<code class="docutils literal"><span class="pre">dfp:</span> <span class="pre">{</span> <span class="pre">isDFP:</span> <span class="pre">false,</span>&#160; <span class="pre">clickUrlEsc:</span> <span class="pre">&quot;&quot;,</span> <span class="pre">cacheBuster:</span> <span class="pre">&quot;&quot;}</span></code>
+<code class="docutils literal"><span class="pre">dfp:</span> <span class="pre">{</span> <span class="pre">isDFP:</span> <span class="pre">false,</span>&nbsp; <span class="pre">clickUrlEsc:</span> <span class="pre">&quot;&quot;,</span> <span class="pre">cacheBuster:</span> <span class="pre">&quot;&quot;}</span></code>
 isDFP - используется ли DFP
 clickUrlEsc - ссылка из макроса DFP для отслеживания кликов</p>
 <p>Object for settings in DFP Google</p>
 <ul class="simple">
-<li>dfp: <code class="docutils literal"><span class="pre">{</span> <span class="pre">isDFP:</span> <span class="pre">false,</span>&#160; <span class="pre">clickUrlEsc:</span> <span class="pre">&quot;&quot;,</span> <span class="pre">cacheBuster:</span> <span class="pre">&quot;&quot;}</span></code></li>
+<li>dfp: <code class="docutils literal"><span class="pre">{</span> <span class="pre">isDFP:</span> <span class="pre">false,</span>&nbsp; <span class="pre">clickUrlEsc:</span> <span class="pre">&quot;&quot;,</span> <span class="pre">cacheBuster:</span> <span class="pre">&quot;&quot;}</span></code></li>
 <li>isDFP - use or not DFP</li>
 <li>clickUrlEsc -  link from the DFP macro to track the clicks</li>
 </ul>
@@ -840,37 +923,37 @@ clickUrlEsc - ссылка из макроса DFP для отслеживани
 <h2>smartbanner<a class="headerlink" href="#smartbanner" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Object with settings for the smartbanner</p>
 <p>Settings by default</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="n">iosAppId</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
-  <span class="n">androidAppId</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
-  <span class="n">isFixed</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span> <span class="o">//</span><span class="k">if</span> <span class="n">true</span><span class="p">,</span> <span class="n">smartbanner</span> <span class="n">will</span> <span class="n">have</span> <span class="n">position</span><span class="p">:</span> <span class="n">fixed</span> <span class="n">style</span>
-  <span class="n">isFixedMode</span><span class="p">:</span> <span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="o">//</span><span class="n">default</span> <span class="o">-</span> <span class="n">position</span> <span class="n">fixed</span> <span class="n">over</span> <span class="n">content</span>
-  <span class="o">//</span> <span class="n">extrusion</span> <span class="o">-</span> <span class="n">banner</span> <span class="ow">is</span> <span class="n">fixed</span><span class="p">,</span> <span class="n">but</span> <span class="n">content</span> <span class="n">moved</span> <span class="n">down</span> <span class="p">(</span><span class="n">banner</span> <span class="n">height</span><span class="p">)</span> <span class="o">-</span> <span class="n">so</span> <span class="n">banner</span> <span class="n">don</span><span class="s1">&#39;t close any content at page</span>
+<div class="highlight-python"><div class="highlight"><pre>{
+  iosAppId: null,
+  androidAppId: null,
+  isFixed: false, //if true, smartbanner will have position: fixed style
+  isFixedMode: &#39;default&#39;, //default - position fixed over content
+  // extrusion - banner is fixed, but content moved down (banner height) - so banner don&#39;t close any content at page
 
-  <span class="n">title</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span> <span class="o">//</span> <span class="n">What</span> <span class="n">the</span> <span class="n">title</span> <span class="n">of</span> <span class="n">the</span> <span class="n">app</span> <span class="n">should</span> <span class="n">be</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">banner</span> <span class="p">(</span><span class="n">defaults</span> <span class="n">to</span> <span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="p">)</span>
-  <span class="n">author</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span> <span class="o">//</span> <span class="n">What</span> <span class="n">the</span> <span class="n">author</span> <span class="n">of</span> <span class="n">the</span> <span class="n">app</span> <span class="n">should</span> <span class="n">be</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">banner</span> <span class="p">(</span><span class="n">defaults</span> <span class="n">to</span> <span class="o">&lt;</span><span class="n">meta</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;author&quot;</span><span class="o">&gt;</span> <span class="ow">or</span> <span class="n">hostname</span><span class="p">)</span>
-  <span class="n">price</span><span class="p">:</span> <span class="s1">&#39;FREE&#39;</span><span class="p">,</span> <span class="o">//</span> <span class="n">Price</span> <span class="n">of</span> <span class="n">the</span> <span class="n">app</span>
-  <span class="n">appStoreLanguage</span><span class="p">:</span> <span class="s1">&#39;us&#39;</span><span class="p">,</span> <span class="o">//</span> <span class="n">Language</span> <span class="n">code</span> <span class="k">for</span> <span class="n">App</span> <span class="n">Store</span>
-  <span class="n">inAppStore</span><span class="p">:</span> <span class="s1">&#39;On the App Store&#39;</span><span class="p">,</span> <span class="o">//</span> <span class="n">Text</span> <span class="n">of</span> <span class="n">price</span> <span class="k">for</span> <span class="n">iOS</span>
-  <span class="n">inGooglePlay</span><span class="p">:</span> <span class="s1">&#39;In Google Play&#39;</span><span class="p">,</span> <span class="o">//</span> <span class="n">Text</span> <span class="n">of</span> <span class="n">price</span> <span class="k">for</span> <span class="n">Android</span>
-  <span class="n">inAmazonAppStore</span><span class="p">:</span> <span class="s1">&#39;In the Amazon Appstore&#39;</span><span class="p">,</span>
-  <span class="n">inWindowsStore</span><span class="p">:</span> <span class="s1">&#39;In the Windows Store&#39;</span><span class="p">,</span> <span class="o">//</span> <span class="n">Text</span> <span class="n">of</span> <span class="n">price</span> <span class="k">for</span> <span class="n">Windows</span>
-  <span class="n">GooglePlayParams</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span> <span class="o">//</span> <span class="n">Aditional</span> <span class="n">parameters</span> <span class="k">for</span> <span class="n">the</span> <span class="n">market</span>
-  <span class="n">icon</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span> <span class="o">//</span> <span class="n">The</span> <span class="n">URL</span> <span class="n">of</span> <span class="n">the</span> <span class="n">icon</span> <span class="p">(</span><span class="n">defaults</span> <span class="n">to</span> <span class="o">&lt;</span><span class="n">meta</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;apple-touch-icon&quot;</span><span class="o">&gt;</span><span class="p">)</span>
-  <span class="n">iconGloss</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span> <span class="o">//</span> <span class="n">Force</span> <span class="n">gloss</span> <span class="n">effect</span> <span class="k">for</span> <span class="n">iOS</span> <span class="n">even</span> <span class="k">for</span> <span class="n">precomposed</span>
-  <span class="n">url</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span> <span class="o">//</span> <span class="n">The</span> <span class="n">URL</span> <span class="k">for</span> <span class="n">the</span> <span class="n">button</span><span class="o">.</span> <span class="n">Keep</span> <span class="n">null</span> <span class="k">if</span> <span class="n">you</span> <span class="n">want</span> <span class="n">the</span> <span class="n">button</span> <span class="n">to</span> <span class="n">link</span> <span class="n">to</span> <span class="n">the</span> <span class="n">app</span> <span class="n">store</span><span class="o">.</span>
-  <span class="n">button</span><span class="p">:</span> <span class="s1">&#39;VIEW&#39;</span><span class="p">,</span> <span class="o">//</span> <span class="n">Text</span> <span class="k">for</span> <span class="n">the</span> <span class="n">install</span> <span class="n">button</span>
-  <span class="n">scale</span><span class="p">:</span> <span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="o">//</span> <span class="n">Scale</span> <span class="n">based</span> <span class="n">on</span> <span class="n">viewport</span> <span class="n">size</span> <span class="p">(</span><span class="nb">set</span> <span class="n">to</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">disable</span><span class="p">)</span>
-  <span class="n">speedIn</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span> <span class="o">//</span> <span class="n">Show</span> <span class="n">animation</span> <span class="n">speed</span> <span class="n">of</span> <span class="n">the</span> <span class="n">banner</span>
-  <span class="n">speedOut</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span> <span class="o">//</span> <span class="n">Close</span> <span class="n">animation</span> <span class="n">speed</span> <span class="n">of</span> <span class="n">the</span> <span class="n">banner</span>
-  <span class="n">daysHidden</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="o">//</span> <span class="n">Duration</span> <span class="p">(</span><span class="ow">in</span> <span class="n">days</span><span class="p">)</span> <span class="n">to</span> <span class="n">hide</span> <span class="n">the</span> <span class="n">banner</span> <span class="n">after</span> <span class="n">being</span> <span class="n">closed</span> <span class="p">(</span><span class="mi">0</span> <span class="o">=</span> <span class="n">always</span> <span class="n">show</span> <span class="n">banner</span><span class="p">)</span>
-  <span class="n">daysReminder</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span> <span class="o">//</span> <span class="n">Duration</span> <span class="p">(</span><span class="ow">in</span> <span class="n">days</span><span class="p">)</span> <span class="n">to</span> <span class="n">hide</span> <span class="n">the</span> <span class="n">banner</span> <span class="n">after</span> <span class="s2">&quot;VIEW&quot;</span> <span class="ow">is</span> <span class="n">clicked</span> <span class="o">*</span><span class="n">separate</span> <span class="kn">from</span> <span class="nn">when</span> <span class="n">the</span> <span class="n">close</span> <span class="n">button</span> <span class="ow">is</span> <span class="n">clicked</span><span class="o">*</span> <span class="p">(</span><span class="mi">0</span> <span class="o">=</span> <span class="n">always</span> <span class="n">show</span> <span class="n">banner</span><span class="p">)</span>
-  <span class="n">force</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span> <span class="o">//</span> <span class="n">Choose</span> <span class="s1">&#39;ios&#39;</span><span class="p">,</span> <span class="s1">&#39;android&#39;</span> <span class="ow">or</span> <span class="s1">&#39;windows&#39;</span><span class="o">.</span> <span class="n">Don</span><span class="s1">&#39;t do a browser check, just always show this banner</span>
-  <span class="n">hideOnInstall</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span> <span class="o">//</span> <span class="n">Hide</span> <span class="n">the</span> <span class="n">banner</span> <span class="n">after</span> <span class="s2">&quot;VIEW&quot;</span> <span class="ow">is</span> <span class="n">clicked</span><span class="o">.</span>
-  <span class="n">layer</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span> <span class="o">//</span> <span class="n">Display</span> <span class="k">as</span> <span class="n">overlay</span> <span class="n">layer</span> <span class="ow">or</span> <span class="n">slide</span> <span class="n">down</span> <span class="n">the</span> <span class="n">page</span>
-  <span class="n">iOSUniversalApp</span><span class="p">:</span> <span class="n">true</span> <span class="o">//</span> <span class="n">If</span> <span class="n">the</span> <span class="n">iOS</span> <span class="n">App</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">universal</span> <span class="n">app</span> <span class="k">for</span> <span class="n">both</span> <span class="n">iPad</span> <span class="ow">and</span> <span class="n">iPhone</span><span class="p">,</span> <span class="n">display</span> <span class="n">Smart</span> <span class="n">Banner</span> <span class="n">to</span> <span class="n">iPad</span> <span class="n">users</span><span class="p">,</span> <span class="n">too</span><span class="o">.</span>
-  <span class="n">appendToSelector</span><span class="p">:</span> <span class="s1">&#39;body&#39;</span> <span class="o">//</span><span class="n">Append</span> <span class="n">the</span> <span class="n">banner</span> <span class="n">to</span> <span class="n">a</span> <span class="n">specific</span> <span class="n">selector</span>
-<span class="p">}</span>
+  title: null, // What the title of the app should be in the banner (defaults to &lt;title&gt;)
+  author: null, // What the author of the app should be in the banner (defaults to &lt;meta name=&quot;author&quot;&gt; or hostname)
+  price: &#39;FREE&#39;, // Price of the app
+  appStoreLanguage: &#39;us&#39;, // Language code for App Store
+  inAppStore: &#39;On the App Store&#39;, // Text of price for iOS
+  inGooglePlay: &#39;In Google Play&#39;, // Text of price for Android
+  inAmazonAppStore: &#39;In the Amazon Appstore&#39;,
+  inWindowsStore: &#39;In the Windows Store&#39;, // Text of price for Windows
+  GooglePlayParams: null, // Aditional parameters for the market
+  icon: null, // The URL of the icon (defaults to &lt;meta name=&quot;apple-touch-icon&quot;&gt;)
+  iconGloss: null, // Force gloss effect for iOS even for precomposed
+  url: null, // The URL for the button. Keep null if you want the button to link to the app store.
+  button: &#39;VIEW&#39;, // Text for the install button
+  scale: &#39;auto&#39;, // Scale based on viewport size (set to 1 to disable)
+  speedIn: 300, // Show animation speed of the banner
+  speedOut: 400, // Close animation speed of the banner
+  daysHidden: 15, // Duration (in days) to hide the banner after being closed (0 = always show banner)
+  daysReminder: 90, // Duration (in days) to hide the banner after &quot;VIEW&quot; is clicked *separate from when the close button is clicked* (0 = always show banner)
+  force: null, // Choose &#39;ios&#39;, &#39;android&#39; or &#39;windows&#39;. Don&#39;t do a browser check, just always show this banner
+  hideOnInstall: true, // Hide the banner after &quot;VIEW&quot; is clicked.
+  layer: false, // Display as overlay layer or slide down the page
+  iOSUniversalApp: true // If the iOS App is a universal app for both iPad and iPhone, display Smart Banner to iPad users, too.
+  appendToSelector: &#39;body&#39; //Append the banner to a specific selector
+}
 </pre></div>
 </div>
 </div>
@@ -941,11 +1024,11 @@ clickUrlEsc - ссылка из макроса DFP для отслеживани
 <dd><blockquote class="first">
 <div><dl class="docutils">
 <dt>MenuOptions: {</dt>
-<dd>FontSize: «1.4em»,
-FontFamily: „«Helvetica Neue»,Helvetica,Arial,»Lucida Grande»,sans-serif“,
-BackgroundColor: „rgba(49,55,61,.95)“,
-ForegroundColor: „#fff“,
-MenuHeight: «3.4em»</dd>
+<dd>FontSize: &#8220;1.4em&#8221;,
+FontFamily: &#8216;&#8220;Helvetica Neue&#8221;,Helvetica,Arial,&#8221;Lucida Grande&#8221;,sans-serif&#8217;,
+BackgroundColor: &#8216;rgba(49,55,61,.95)&#8217;,
+ForegroundColor: &#8216;#fff&#8217;,
+MenuHeight: &#8220;3.4em&#8221;</dd>
 </dl>
 </div></blockquote>
 <p class="last">}</p>
@@ -1011,10 +1094,10 @@ ScrollZones: [</p>
 <div><dl class="docutils">
 <dt>{</dt>
 <dd>ZoneHeight: 0.5,
-ButtonImage: «//cdnjs.cloudflare.com/ajax/libs/probtn/1.0.0/images/probtn/gray.png»,
-ButtonDragImage: «»,
-HintText: «»,
-TrackingLink: «»,
+ButtonImage: &#8220;//cdnjs.cloudflare.com/ajax/libs/probtn/1.0.0/images/probtn/gray.png&#8221;,
+ButtonDragImage: &#8220;&#8221;,
+HintText: &#8220;&#8221;,
+TrackingLink: &#8220;&#8221;,
 CustomButtonParams: false,</dd>
 <dt>ButtonSize: { // Размер</dt>
 <dd>W: 64.0,
@@ -1032,10 +1115,10 @@ ButtonDragOpacity: 1.0 // Прозрачность при перемещении
 {</p>
 <blockquote>
 <div>ZoneHeight: 0.5,
-ButtonImage: «//cdnjs.cloudflare.com/ajax/libs/probtn/1.0.0/images/probtn/gray.png»,
-ButtonDragImage: «»,
-HintText: «»,
-TrackingLink: «»,
+ButtonImage: &#8220;//cdnjs.cloudflare.com/ajax/libs/probtn/1.0.0/images/probtn/gray.png&#8221;,
+ButtonDragImage: &#8220;&#8221;,
+HintText: &#8220;&#8221;,
+TrackingLink: &#8220;&#8221;,
 CustomButtonParams: false,</div></blockquote>
 <dl class="docutils">
 <dt>ButtonSize: { // Размер</dt>
@@ -1103,7 +1186,7 @@ where W and H stand for width and height in px respectively</p>
 </div>
 <div class="section" id="id13">
 <h3>ActionURL<a class="headerlink" href="#id13" title="Ссылка на этот заголовок">¶</a></h3>
-<p>Link that opens when the button is «dropped” to the zone. If <code class="docutils literal"><span class="pre">ActionURL==&quot;&quot;</span></code> (left blank), the link indicated in ContentURL opens (displayed by a click on the button)</p>
+<p>Link that opens when the button is &#8220;dropped” to the zone. If <code class="docutils literal"><span class="pre">ActionURL==&quot;&quot;</span></code> (left blank), the link indicated in ContentURL opens (displayed by a click on the button)</p>
 </div>
 <div class="section" id="visibleonlyinteraction">
 <h3>VisibleOnlyInteraction<a class="headerlink" href="#visibleonlyinteraction" title="Ссылка на этот заголовок">¶</a></h3>
@@ -1148,14 +1231,14 @@ ActiveZones: [</p>
 <blockquote>
 <div><dl class="docutils">
 <dt>{</dt>
-<dd><p class="first">Name: «Area1»,
+<dd><p class="first">Name: &#8220;Area1&#8221;,
 Position: {</p>
 <blockquote>
 <div>X: 0.1,
 Y: 0.1</div></blockquote>
 <p>},
-ActiveImage: «//probtnexample1.azurewebsites.net/img/logo.png»,
-InactiveImage: «//admin.probtn.com/eqwid_btn_nonpress.png»,
+ActiveImage: &#8220;//probtnexample1.azurewebsites.net/img/logo.png&#8221;,
+InactiveImage: &#8220;//admin.probtn.com/eqwid_btn_nonpress.png&#8221;,
 ActiveSize: {</p>
 <blockquote>
 <div>W: 64,
@@ -1166,22 +1249,22 @@ InactiveSize: {</p>
 <div>W: 64,
 H: 64</div></blockquote>
 <p class="last">},
-ActionURL: «<a class="reference external" href="http://m0rg0t.ru">http://m0rg0t.ru</a>»,
-ClickCounterLink: «»,
+ActionURL: &#8220;<a class="reference external" href="http://m0rg0t.ru">http://m0rg0t.ru</a>&#8221;,
+ClickCounterLink: &#8220;&#8221;,
 VisibleOnlyInteraction: true,</p>
 </dd>
 </dl>
 <p>},
 {</p>
 <blockquote>
-<div><p>Name: «Area2»,
+<div><p>Name: &#8220;Area2&#8221;,
 Position: {</p>
 <blockquote>
 <div>X: 0.6,
 Y: 0.1</div></blockquote>
 <p>},
-ActiveImage: «//probtnexample1.azurewebsites.net/img/logo.png»,
-InactiveImage: «//admin.probtn.com/eqwid_btn_nonpress.png»,
+ActiveImage: &#8220;//probtnexample1.azurewebsites.net/img/logo.png&#8221;,
+InactiveImage: &#8220;//admin.probtn.com/eqwid_btn_nonpress.png&#8221;,
 ActiveSize: {</p>
 <blockquote>
 <div>W: 64,
@@ -1192,8 +1275,8 @@ InactiveSize: {</p>
 <div>W: 64,
 H: 64</div></blockquote>
 <p>},
-ActionURL: «»,
-ClickCounterLink: «»,
+ActionURL: &#8220;&#8221;,
+ClickCounterLink: &#8220;&#8221;,
 VisibleOnlyInteraction: false,
 InactiveOpacity: 0.8,
 ActiveOpacity: 1</p>
@@ -1333,8 +1416,8 @@ Link to the image in the closing area in active mode</p>
 <h2>HintArrowImageR<a class="headerlink" href="#hintarrowimager" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Not used.</p>
 </div>
-<div class="section" id="id15">
-<h2>Остальные параметры<a class="headerlink" href="#id15" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="other-parameters">
+<h2>Other parameters:<a class="headerlink" href="#other-parameters" title="Ссылка на этот заголовок">¶</a></h2>
 <p>DefaultDuration, DefaultDelay, OpenDuration, OpenDelay, CloseDuration, CloseDelay, ButtonShowDuration, ButtonShowDelay, ButtonHideDuration, ButtonHideDelay, ButtonDragDuration, ButtonDragDelay, ButtonUndragDuration: 0.2, ButtonUndragDelay, ButtonInactiveDuration, ButtonInactiveDelay, ButtonInertiaSpeed, ButtonInertiaSpeedMin, ButtonInertiaSpeedMax, ButtonInertiaFactor, CloseShowDuration, CloseShowDelay, CloseHideDuration, CloseHideDelay, CloseActiveDuration, CloseActiveDelay, CloseUnactiveDuration, CloseUnactiveDelay, HintLaunchDuration, HintLaunchDelay, HintShowDuration, HintShowDelay, HintHideDuration, HintHideDelay, ContentShowDuration, ContentShowDelay, ContentHideDuration, ContentHideDelay</p>
 <p>Not used</p>
 </div>
@@ -1344,9 +1427,6 @@ Link to the image in the closing area in active mode</p>
 </div>
 
 
-           </div>
-           <div class="articleComments">
-            
            </div>
           </div>
           <footer>
@@ -1381,8 +1461,7 @@ Link to the image in the closing area in active mode</p>
             VERSION:'1.4.1335_31102015_dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
+            HAS_SOURCE:  true
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

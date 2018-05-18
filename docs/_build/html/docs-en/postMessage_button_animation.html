@@ -13,8 +13,6 @@
 
   
   
-  
-  
 
   
 
@@ -32,9 +30,6 @@
   
 
   
-        <link rel="index" title="Алфавитный указатель"
-              href="../genindex.html"/>
-        <link rel="search" title="Поиск" href="../search.html"/>
     <link rel="top" title="Документация Profit Button 1.4.1335_31102015_dev" href="../index.html"/> 
 
   
@@ -44,7 +39,6 @@
 
 <body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
 
     
@@ -85,10 +79,7 @@
           
             
             
-              
-            
-            
-              <p class="caption"><span class="caption-text">Содержание</span></p>
+                <p class="caption"><span class="caption-text">Содержание</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../description.html">Интеграция</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../description.html#id2">Общее описание кнопки</a></li>
@@ -114,6 +105,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../reports_description.html">Отчеты admin.probtn.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../passback.html">Использование passback кода</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hints_and_tricks.html">Неочевидные моменты, подсказки и иные дополнительные данные</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics_api.html">Использование API для получения статистики</a></li>
 </ul>
 
             
@@ -126,10 +118,8 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Profit Button</a>
-        
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Profit Button</a>
       </nav>
 
 
@@ -142,36 +132,19 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-      <li>Send message about animation steps</li>
-    
-    
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Send message about animation steps</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/docs-en/postMessage_button_animation.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/docs-en/postMessage_button_animation.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -181,7 +154,7 @@
 <span id="hpmd"></span><h1>Send message about animation steps<a class="headerlink" href="#send-message-about-animation-steps" title="Ссылка на этот заголовок">¶</a></h1>
 <p>Send message using <code class="docutils literal"><span class="pre">postMessage</span></code> in iframe-creative, could be used to react for different animation steps.</p>
 <div class="section" id="object-s-format">
-<h2>Object’s format<a class="headerlink" href="#object-s-format" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Object&#8217;s format<a class="headerlink" href="#object-s-format" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Example:
 <code class="docutils literal"><span class="pre">{message:</span> <span class="pre">&quot;message_value&quot;}</span></code></p>
 </div>
@@ -190,6 +163,17 @@
 <div class="section" id="probtn-page-scroll">
 <h3>probtn_page_scroll<a class="headerlink" href="#probtn-page-scroll" title="Ссылка на этот заголовок">¶</a></h3>
 <p>Message about page was scrolled.</p>
+</div>
+</div>
+<div class="section" id="probtn-move">
+<h2>probtn_move<a class="headerlink" href="#probtn-move" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="probtn-start-move">
+<h3>probtn_start_move<a class="headerlink" href="#probtn-start-move" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Message about button was started move.</p>
+</div>
+<div class="section" id="probtn-end-move">
+<h3>probtn_end_move<a class="headerlink" href="#probtn-end-move" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Message about button was finished move.</p>
 </div>
 </div>
 <div class="section" id="forwardandstopanimation">
@@ -242,9 +226,6 @@
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
           </div>
           <footer>
   
@@ -278,8 +259,7 @@
             VERSION:'1.4.1335_31102015_dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
+            HAS_SOURCE:  true
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

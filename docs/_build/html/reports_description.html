@@ -13,8 +13,6 @@
 
   
   
-  
-  
 
   
 
@@ -32,9 +30,6 @@
   
 
   
-        <link rel="index" title="Алфавитный указатель"
-              href="genindex.html"/>
-        <link rel="search" title="Поиск" href="search.html"/>
     <link rel="top" title="Документация Profit Button 1.4.1335_31102015_dev" href="index.html"/>
         <link rel="next" title="Использование passback кода" href="passback.html"/>
         <link rel="prev" title="Описание параметров запроса к admin.probtn.com от скрипта кнопки" href="get_parameters.html"/> 
@@ -46,7 +41,6 @@
 
 <body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
 
     
@@ -87,10 +81,7 @@
           
             
             
-              
-            
-            
-              <p class="caption"><span class="caption-text">Содержание</span></p>
+                <p class="caption"><span class="caption-text">Содержание</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="description.html">Интеграция</a></li>
 <li class="toctree-l1"><a class="reference internal" href="description.html#id2">Общее описание кнопки</a></li>
@@ -113,13 +104,14 @@
 <li class="toctree-l1"><a class="reference internal" href="postMessage_button_animation.html">Передача сообщений об этапах анимации</a></li>
 <li class="toctree-l1"><a class="reference internal" href="button_additional_animations_param.html">Дополнительные параметры анимации кнопки</a></li>
 <li class="toctree-l1"><a class="reference internal" href="get_parameters.html">Описание параметров запроса к admin.probtn.com от скрипта кнопки</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Отчеты admin.probtn.com</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Отчеты admin.probtn.com</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id1">Старые отчеты, видимые только админам</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id2">Отчеты, доступные всем пользователям</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="passback.html">Использование passback кода</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hints_and_tricks.html">Неочевидные моменты, подсказки и иные дополнительные данные</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistics_api.html">Использование API для получения статистики</a></li>
 </ul>
 
             
@@ -132,10 +124,8 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Profit Button</a>
-        
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Profit Button</a>
       </nav>
 
 
@@ -148,36 +138,19 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>Отчеты admin.probtn.com</li>
-    
-    
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Отчеты admin.probtn.com</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="_sources/reports_description.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/reports_description.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -194,21 +167,24 @@
 </div>
 <div class="section" id="id2">
 <h2>Отчеты, доступные всем пользователям<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
-<ul class="simple">
+<ul>
 <li><dl class="first docutils">
 <dt><strong>C0de calls</strong></dt>
-<dd>Показывает с разбивкой по дням общее кол-во запросов (<cite>getClientSettings</cite>) к серверу с какого-либо аппа</dd>
+<dd><p class="first last">Показывает с разбивкой по дням общее кол-во запросов (<cite>getClientSettings</cite>) к серверу с какого-либо аппа</p>
+</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt><strong>SQL Duration</strong></dt>
-<dd>Отчет о продолжительности просмотра посадки (<cite>ContentShowedDuration</cite>) с разбивкой по интервалам</dd>
+<dd><p class="first last">Отчет о продолжительности просмотра посадки (<cite>ContentShowedDuration</cite>) с разбивкой по интервалам</p>
+</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt><strong>Detailed by App</strong></dt>
-<dd>Один из основных отчетов. Содержит отчеты, выгружаемые по аппу.
-Варианты отображения данных:<ol class="last arabic">
+<dd><p class="first">Один из основных отчетов. Содержит отчеты, выгружаемые по аппу.
+Варианты отображения данных:</p>
+<ol class="last arabic simple">
 <li><em>by Date</em> - сумма по датам</li>
 <li><em>by Date and creative</em> - сумма по датам с разбивкой по креативам</li>
 <li><em>by Zones*</em> - средняя продолжительность и клики с разбивкой каждой зоне (необходимо выбрать креатив)</li>
@@ -226,8 +202,9 @@
 </li>
 <li><dl class="first docutils">
 <dt><strong>Detailed by Campaign</strong></dt>
-<dd>Второй из основных отчетов. Содержит отчеты, выгружаемые по рекламной кампании.
-Варианты отображания данных:<ol class="last arabic">
+<dd><p class="first">Второй из основных отчетов. Содержит отчеты, выгружаемые по рекламной кампании.
+Варианты отображания данных:</p>
+<ol class="last arabic simple">
 <li><em>by Date</em> - сумма по датам</li>
 <li><em>by Apps</em> - с разбивкой по аппам (всем в этой кампании)</li>
 <li><em>by Creative</em> - сумма по креативам</li>
@@ -242,8 +219,9 @@
 </li>
 <li><dl class="first docutils">
 <dt><strong>SQL Pool</strong></dt>
-<dd>Отчет по аппу с <cite>BundleID == «pool»</cite>, который используется (использовался?) в основном Addinapp’ом для запуска идентичных креативов на нескольких площадках
-Отчет показывает сколько показов было на какой площадке (имя площадки необходимо ввести самому в Domain name)</dd>
+<dd><p class="first last">Отчет по аппу с <cite>BundleID == &#8220;pool&#8221;</cite>, который используется (использовался?) в основном Addinapp&#8217;ом для запуска идентичных креативов на нескольких площадках
+Отчет показывает сколько показов было на какой площадке (имя площадки необходимо ввести самому в Domain name)</p>
+</dd>
 </dl>
 </li>
 </ul>
@@ -252,18 +230,15 @@
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="passback.html" class="btn btn-neutral float-right" title="Использование passback кода" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="passback.html" class="btn btn-neutral float-right" title="Использование passback кода" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="get_parameters.html" class="btn btn-neutral" title="Описание параметров запроса к admin.probtn.com от скрипта кнопки" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="get_parameters.html" class="btn btn-neutral" title="Описание параметров запроса к admin.probtn.com от скрипта кнопки" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -297,8 +272,7 @@
             VERSION:'1.4.1335_31102015_dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
+            HAS_SOURCE:  true
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>

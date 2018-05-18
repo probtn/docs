@@ -12,7 +12,35 @@ To use the button in the Google DFP container you need to make this steps:
 
 Create campaign https://admin.probtn.com
 
-Intergation with DFP - async code
+Integration without safeframe
+----------------------------------
+
+Step 0
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Add this code to DFP ad
+
+``<script src="//cdn.probtn.com/showinparent_concat.js"></script>``
+
+and don't select checkbox "Serve into a SafeFrame"
+
+.. image:: images/dfp/safeframe.png
+
+To add aditional params to ad you can add block with button settings (domain and campaign are set for example):
+
+.. code-block:: html
+
+  <div id="probtn_additional_params" style="display: none;">{ "domain": "example.com", "SelectAdSet": "campaign_id"}</div>
+
+Your code will look like:
+
+.. code-block:: html
+
+  <div id="probtn_additional_params" style="display: none;">{ "domain": "example.com", "SelectAdSet": "campaign_id"}</div>
+  <script src="//cdn.probtn.com/showinparent_concat.js"></script>
+
+
+Integration with safeframe
 ----------------------------------
 
 Step 1
@@ -78,13 +106,4 @@ Campaign ID could be found  at url, if you open campaign page at admin.probtn.co
 
 .. image:: images/adriver/adriver2_step3_2.png
 
-Intergation with DFP - sync code
-----------------------------------
-
-Step 0
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Add this code to your advertisement:
-
-``<script src="//cdn.probtn.com/probtn_concat.js"></script>``
 

@@ -2,9 +2,9 @@
    sphinx-quickstart on Mon Nov  2 12:32:08 2015.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
- 
+
 .. _postMessage_button_control:
- 
+
 Control button using ``postMessage`` message from iframe
 ==================================
 
@@ -74,6 +74,12 @@ Example:
 ``window.top.postMessage({ command: 'probtn_performed_action' }, '*');``
 
 ``window.top.postMessage({ command: 'probtn_performed_action', value: 'booked' }, '*');``
+
+probtn_message_to_creative
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Sending message to creative (sending message from modal window to button, as example).
+Field ``object`` sending as message directly to creative ``iframe``.
 
 Example of sending message
 ----------------------------------

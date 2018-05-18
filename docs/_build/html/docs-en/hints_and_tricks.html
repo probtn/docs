@@ -13,8 +13,6 @@
 
   
   
-  
-  
 
   
 
@@ -32,9 +30,6 @@
   
 
   
-        <link rel="index" title="Алфавитный указатель"
-              href="../genindex.html"/>
-        <link rel="search" title="Поиск" href="../search.html"/>
     <link rel="top" title="Документация Profit Button 1.4.1335_31102015_dev" href="../index.html"/> 
 
   
@@ -44,7 +39,6 @@
 
 <body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
 
     
@@ -85,10 +79,7 @@
           
             
             
-              
-            
-            
-              <p class="caption"><span class="caption-text">Содержание</span></p>
+                <p class="caption"><span class="caption-text">Содержание</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../description.html">Интеграция</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../description.html#id2">Общее описание кнопки</a></li>
@@ -114,6 +105,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../reports_description.html">Отчеты admin.probtn.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../passback.html">Использование passback кода</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hints_and_tricks.html">Неочевидные моменты, подсказки и иные дополнительные данные</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics_api.html">Использование API для получения статистики</a></li>
 </ul>
 
             
@@ -126,10 +118,8 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Profit Button</a>
-        
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Profit Button</a>
       </nav>
 
 
@@ -142,36 +132,19 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-      <li>Unobvious moments, tips and other additional data</li>
-    
-    
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Unobvious moments, tips and other additional data</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/docs-en/hints_and_tricks.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/docs-en/hints_and_tricks.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -180,7 +153,7 @@
   <div class="section" id="unobvious-moments-tips-and-other-additional-data">
 <span id="hints-an-tricks"></span><h1>Unobvious moments, tips and other additional data<a class="headerlink" href="#unobvious-moments-tips-and-other-additional-data" title="Ссылка на этот заголовок">¶</a></h1>
 <div class="section" id="description-of-the-button-s-dom-model">
-<h2>Description of the button’s DOM model<a class="headerlink" href="#description-of-the-button-s-dom-model" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Description of the button&#8217;s DOM model<a class="headerlink" href="#description-of-the-button-s-dom-model" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Base scheme of button elements</p>
 <img alt="../_images/probtn_DOM_model.png" src="../_images/probtn_DOM_model.png" />
 <div class="section" id="probtn-wrapper">
@@ -213,10 +186,10 @@
 <div class="section" id="hide-modal-window-close-button">
 <h3>Hide modal window close button<a class="headerlink" href="#hide-modal-window-close-button" title="Ссылка на этот заголовок">¶</a></h3>
 <p>TO hide close button of modal window (for example in case, when page inside iframe realize closing of modal windowbutton using postMessage) you can add at Z Custom CSS (or directly at site) this CSS styles:</p>
-<div class="highlight-css"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">fancybox-close</span> <span class="p">{</span>
-        <span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
-        <span class="k">top</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
-        <span class="k">right</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
+<div class="highlight-css"><div class="highlight"><pre><span class="nc">.fancybox-close</span> <span class="p">{</span>
+        <span class="k">display</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+        <span class="k">top</span><span class="o">:</span> <span class="m">0px</span> <span class="cp">!important</span><span class="p">;</span>
+        <span class="k">right</span><span class="o">:</span> <span class="m">0px</span> <span class="cp">!important</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -225,9 +198,6 @@
 </div>
 
 
-           </div>
-           <div class="articleComments">
-            
            </div>
           </div>
           <footer>
@@ -262,8 +232,7 @@
             VERSION:'1.4.1335_31102015_dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
+            HAS_SOURCE:  true
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
