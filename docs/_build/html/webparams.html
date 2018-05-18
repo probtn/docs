@@ -104,6 +104,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#jsimpressioncode">JsImpressionCode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#videoitemheaderimage">VideoItemHeaderImage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#videopixel">VideoPixel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#brandingimage">BrandingImage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#correctpositionbeforemove">CorrectPositionBeforeMove</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#onnoshowpixel">OnNoShowPixel</a></li>
@@ -426,6 +427,20 @@
 <p>URL изображения, которое будет использоваться для брендинга (лого на видео) для видео контента (<code class="docutils literal"><span class="pre">ButtonContentType:</span> <span class="pre">video</span></code>).
 Если оно пустое, то строка таблицы и img не создаются.</p>
 <p>По умолчанию: &#8220;&#8221;</p>
+</div>
+<div class="section" id="videopixel">
+<h2>VideoPixel<a class="headerlink" href="#videopixel" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Параметр, описывающий вызов той или иной трекинговой ссылки при попадании в разные временные интервалы при проигрывании видео.
+Ссылки могут вызываться многократно при прокрутке видео или перезапуске.
+Задается в виде JSON. Пример использования:
+<code class="docutils literal"><span class="pre">[{&quot;TrackingLink&quot;:</span> <span class="pre">&quot;1&quot;,</span> <span class="pre">&quot;StartPosition&quot;:</span> <span class="pre">0.0,</span> <span class="pre">&quot;EndPosition&quot;:</span> <span class="pre">0.25},</span> <span class="pre">{&quot;TrackingLink&quot;:</span> <span class="pre">&quot;2&quot;,</span> <span class="pre">&quot;StartPosition&quot;:</span> <span class="pre">0.25,</span> <span class="pre">&quot;EndPosition&quot;:</span> <span class="pre">0.5},{&quot;TrackingLink&quot;:</span> <span class="pre">&quot;3&quot;,</span> <span class="pre">&quot;StartPosition&quot;:</span> <span class="pre">0.5,</span> <span class="pre">&quot;EndPosition&quot;:</span> <span class="pre">0.75},{&quot;TrackingLink&quot;:</span> <span class="pre">&quot;4&quot;,</span> <span class="pre">&quot;StartPosition&quot;:</span> <span class="pre">0.75,</span> <span class="pre">&quot;EndPosition&quot;:</span> <span class="pre">1}]</span></code>
+Где соответственно:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">TrackingLink</span></code> - трекинговая ссылка, которая будет вызываться</li>
+<li><code class="docutils literal"><span class="pre">StartPosition</span></code> - начало интервала, в секундах</li>
+<li><code class="docutils literal"><span class="pre">EndPosition</span></code> - окончание интервала, в секундах</li>
+</ul>
+<p>По умолчанию: []</p>
 </div>
 <div class="section" id="brandingimage">
 <h2>BrandingImage<a class="headerlink" href="#brandingimage" title="Ссылка на этот заголовок">¶</a></h2>

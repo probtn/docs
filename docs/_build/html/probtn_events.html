@@ -115,6 +115,10 @@
 <li class="toctree-l3"><a class="reference internal" href="#performedaction">performedAction</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id5">ContentShowedDuration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#videofullduration">VideoFullDuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#videostarted">VideoStarted</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#videopaused">VideoPaused</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#videoseeked">VideoSeeked</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#videoclosed">VideoClosed</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#id6">Примеры</a><ul>
@@ -252,6 +256,22 @@
 <div class="section" id="videofullduration">
 <h3>VideoFullDuration<a class="headerlink" href="#videofullduration" title="Ссылка на этот заголовок">¶</a></h3>
 <p>Параметр содержит полную длительность видео в секундах (передается вместе с ContentShowedDuration).</p>
+</div>
+<div class="section" id="videostarted">
+<h3>VideoStarted<a class="headerlink" href="#videostarted" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Событие о старте проигрывания видео в модальном окне. Вызывается также после паузы. Содержит параметр текущего положения видео в секундах.</p>
+</div>
+<div class="section" id="videopaused">
+<h3>VideoPaused<a class="headerlink" href="#videopaused" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Событие о паузе проигрывания видео в модальном окне. Содержит параметр текущего положения видео в секундах.</p>
+</div>
+<div class="section" id="videoseeked">
+<h3>VideoSeeked<a class="headerlink" href="#videoseeked" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Событие об окончании прокрутки видео в модальном окне. Содержит параметр текущего положения видео в секундах.</p>
+</div>
+<div class="section" id="videoclosed">
+<h3>VideoClosed<a class="headerlink" href="#videoclosed" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Событие о закрытии модального окна с видео. Содержит параметр текущего положения видео в секундах.</p>
 </div>
 </div>
 <div class="section" id="id6">
