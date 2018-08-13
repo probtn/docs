@@ -2,14 +2,14 @@
    sphinx-quickstart on Mon Nov  2 12:32:08 2015.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
- 
+
 .. _hpmd:
- 
+
 Дополнительные параметры анимации кнопки
 ==================================
 
 Посредством дополнительных параметров анимации, указываемых в самом имени анимации посредством ``_`` разделителей возможно указать время отдельных этапов анимаций, ее направления и т.д.
-
+Также дополнительные параметры анимации можно указывать в параметре AnimationData, что равносильно указанию их в имени анимации и является более новым способом установки параметров.
 Список анимаций
 ----------------------------------
 
@@ -31,12 +31,16 @@ opacity
 
 Пример: ``opacity_0.3``
 
+В параметре AnimationData: ``{"finalOpacity":0.5}``
+
 rollout
 ----------------------------------
 
 Формат: ``rollout_<начальное_положение>_<процент_выдвижения_кнопки>``
 
 Пример: ``rollout_left_70``
+
+В поле AnimationData: ``{"side":"left","rollOutPercent":80}``
 
 <начальное_положение>
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -57,6 +61,8 @@ lookout
 Формат: ``lookout_<начальное_положение>_<процент_выдвижения_кнопки>``
 
 Пример: ``lookout_left_70``
+
+В поле AnimationData: ``{"side":"left"}``
 
 <начальное_положение>
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -83,6 +89,8 @@ forwardStopAndAway
 
 Пример: ``forwardStopAndAway_right``
 
+В поле AnimationData: ``{"side":"left"}``
+
 <начальное_положение>
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -97,6 +105,8 @@ forwardAndStop
 Формат: ``forwardAndStop_<начальное_положение>_<длительность_первого_этапа>_<дополнительный_режим>_<ширина_выезда>``
 
 Пример: ``forwardAndStop_right_2000_0.9``
+
+В поле AnimationData: ``{"widthPercent": 0.8, "side":"left","waitDuration":2500}``
 
 <начальное_положение>
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -132,6 +142,8 @@ upToDown
 
 Пример: `` upToDown_up_2000``
 
+В поле AnimationData: ``{"side":"top","waitDuration":2500}``
+
 <сторона_up_или_down>
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -150,6 +162,8 @@ forwardAndBack
 Формат: `` forwardAndBack_<начальное_положение>_<pauseDuration>_<stopDuration>``
 
 Пример: `` forwardAndBack_right_2000``
+
+В поле AnimationData: ``{"side":"left","pauseDuration":0,"stopDuration":0}``
 
 <начальное_положение>
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -179,6 +193,8 @@ lookOutAndOut
 
 Пример формата: `` lookOutAndOut_right_50``
 
+В поле AnimationData: ``{"side":"left", "rollOutPercent":50}``
+
 Пример: http://demo.probtn.com/button_example4/fruto/desktop/
 
 <начальное_положение>
@@ -192,4 +208,3 @@ lookOutAndOut
 <ширина_выглядывания>
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Процент выглядывания кнопки
-
