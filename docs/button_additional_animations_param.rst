@@ -23,6 +23,7 @@
 * ``lootOutAndOut``
 * ``topToBottomAndStop``
 * ``upToDown``
+* ``resizeAnimation``
 
 opacity
 ----------------------------------
@@ -213,3 +214,20 @@ lookOutAndOut
 <ширина_выглядывания>
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Процент выглядывания кнопки
+
+
+resizeAnimation
+----------------------------------
+
+Анимация изменения размера кнопки.
+
+В поле AnimationData: ``[{"autoStart": false, "width": -100, "height": 0.176,
+"waitDuration": 800, "name": "step2",
+"ButtonIframeInitialSize": {"W": "375", "H": "66"} }]}``
+
+autoStart
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Если значение установлено в true - анимации начинают выполняться сразу.
+Если false - после получения события probtn_start_animation.
+
+``window.top.postMessage({ "command": "probtn_start_animation" }, "*");``
