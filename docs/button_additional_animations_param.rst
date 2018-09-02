@@ -231,3 +231,11 @@ autoStart
 Если false - после получения события probtn_start_animation.
 
 ``window.top.postMessage({ "command": "probtn_start_animation" }, "*");``
+
+width
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Новая ширина кнопки
+
+height
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Новая высота кнопки
