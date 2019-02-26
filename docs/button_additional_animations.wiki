@@ -1,0 +1,217 @@
+<div id="hpmd">
+
+Дополнительные параметры анимации кнопки ==================================
+
+
+</div>
+Посредством дополнительных параметров анимации, указываемых в самом имени анимации посредством <code>_</code> разделителей возможно указать время отдельных этапов анимаций, ее направления и т.д. Также дополнительные параметры анимации можно указывать в параметре AnimationData, что равносильно указанию их в имени анимации и является более новым способом установки параметров. Список анимаций ----------------------------------
+
+* <code>opacity</code>
+* <code>rollout</code>
+* <code>lookout</code>
+* <code>forwardAndBack</code>
+* <code>forwardStopAndAway</code>
+* <code>cornerToCorner</code>
+* <code>forwardAndStop</code>
+* <code>lootOutAndOut</code>
+* <code>topToBottomAndStop</code>
+* <code>upToDown</code>
+* <code>resizeAnimation</code>
+
+= opacity =
+
+Формат: <code>opacity_&lt;конечное_значение_прозрачности_кнопки&gt;</code>
+
+Пример: <code>opacity_0.3</code>
+
+В параметре AnimationData: <code>{&quot;finalOpacity&quot;:0.5}</code>
+
+= rollout =
+
+Формат: <code>rollout_&lt;начальное_положение&gt;_&lt;процент_выдвижения_кнопки&gt;</code>
+
+Пример: <code>rollout_left_70</code>
+
+В поле AnimationData: <code>{&quot;side&quot;:&quot;left&quot;,&quot;rollOutPercent&quot;:80}</code>
+
+== &lt;начальное_положение&gt; ==
+
+Варианты:
+
+* <code>left</code>
+* <code>right</code>
+
+== &lt;процент_выдвижения_кнопки&gt; ==
+
+Процент от ширины страницы на которую максимально будет выдвинута кнопка
+
+= lookout =
+
+Формат: <code>lookout_&lt;начальное_положение&gt;_&lt;процент_выдвижения_кнопки&gt;</code>
+
+Пример: <code>lookout_left_70</code>
+
+В поле AnimationData: <code>{&quot;side&quot;:&quot;left&quot;}</code>
+
+== &lt;начальное_положение&gt; ==
+
+Варианты:
+
+* <code>left</code>
+* <code>right</code>
+
+== &lt;процент_выдвижения_кнопки&gt; ==
+
+Процент от ширины кнопки на которую максимально будет &quot;выглядывать&quot; кнопка
+
+= cornerToCorner =
+
+Дополнительные параметры отсутствуют.
+
+= forwardStopAndAway =
+
+Формат: <code>forwardStopAndAway_&lt;начальное_положение&gt;</code>
+
+Пример: <code>forwardStopAndAway_right</code>
+
+В поле AnimationData: <code>{&quot;side&quot;:&quot;left&quot;}</code>
+
+== &lt;начальное_положение&gt; ==
+
+Варианты:
+
+* <code>left</code>
+* <code>right</code>
+
+= forwardAndStop =
+
+Формат: <code>forwardAndStop_&lt;начальное_положение&gt;_&lt;длительность_первого_этапа&gt;_&lt;дополнительный_режим&gt;_&lt;ширина_выезда&gt;_&lt;начальное_положение&gt;</code>
+
+Пример: <code>forwardAndStop_right_2000_0.9</code>
+
+В поле AnimationData: <code>{&quot;widthPercent&quot;: 0.8, &quot;side&quot;:&quot;left&quot;,&quot;waitDuration&quot;:2500, &quot;startWidthPercent&quot;: 0.1}</code>
+
+== &lt;начальное_положение&gt; ==
+
+Варианты:
+
+* <code>left</code>
+* <code>right</code>
+
+== &lt;длительность_первого_этапа&gt; ==
+
+Длительность проезда кнопки от одного края до другого в мс
+
+== &lt;дополнительный_режим&gt; ==
+
+Варианты:
+
+* <code>maximizeButton</code> - увеличение размеров кнопки до размеров экрана по завершению перемещения
+* <code>openModal</code> - открытие модального окна по завершению анимации кнопки
+
+== &lt;ширина_выезда&gt; ==
+
+Задается как число от 0 до 1 - соответсвует пропорциональной ширине (от ширины страницы) для точки завершения выезда кнопки.
+
+К примеру при 1 кнопка проедет всю щирину экрана, при 0.5 - только половину, после чего остановится.
+
+== &lt;начальное_положение&gt; ==
+
+Задается в диапазоне от 0 до 1, соответствует пропорциональной ширине страницы, т.е. 0 - левый край страницы, 1 - правый, 0.5 - половина страницы.
+
+= upToDown =
+
+Формат: <code>upToDown_&lt;сторона_up_или_down&gt;_&lt;длительность_ожидания_перед_запуском_анимации_в_мс&gt;_&lt;длина_перемещения&gt;_&lt;начальное_положение&gt;</code>
+
+Пример: <code>upToDown_up_2000_1_0</code>
+
+Данная анимация также может именоваться <code>TopToBottom</code>.
+
+В поле AnimationData: <code>{&quot;side&quot;:&quot;top&quot;,&quot;waitDuration&quot;:2500, &quot;heightPercent&quot;: 1, &quot;startHeightPercent&quot;:0}</code>
+
+== &lt;сторона_up_или_down&gt; ==
+
+Варианты:
+
+* <code>up</code>
+* <code>down</code>
+
+&lt;длительность_ожидания_перед_запуском_анимации_в_мс&gt; ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Длительность паузы (в мс) после первого проезда кнопки в противоположной части экрана
+
+== &lt;длина_перемещения&gt; ==
+
+Длина от высоты страницы на которую будет перемещена кнопка. Задается в диапазоне от 0 до 1 (по - умолчанию: 1).
+
+== &lt;начальное_положение &gt; ==
+
+Стартовая позиция кнопки в процентах от высоты экрана. Задается в диапазоне от 0 до 1 (по - умолчанию: 0).
+
+= forwardAndBack =
+
+Формат: <code>forwardAndBack_&lt;начальное_положение&gt;_&lt;pauseDuration&gt;_&lt;stopDuration&gt;</code>
+
+Пример: <code>forwardAndBack_right_2000</code>
+
+В поле AnimationData: <code>{&quot;side&quot;:&quot;left&quot;,&quot;pauseDuration&quot;:0,&quot;stopDuration&quot;:0}</code>
+
+== &lt;начальное_положение&gt; ==
+
+Варианты:
+
+* <code>left</code>
+* <code>right</code>
+
+== &lt;pauseDuration&gt; ==
+
+Длительность паузы (в мс) после первого проезда кнопки в противоположной части экрана
+
+== &lt;stopDuration&gt; ==
+
+Длительность задержки до уменьшения probtn_wrapper
+
+= lookOutAndOut =
+
+Анимация с выглядыванием кнопки (два раза), затем показом модального окна и выездом кнопки к боку модального окна.
+
+Формат: <code>lookOutAndOut_&lt;начальное_положение&gt;_&lt;ширина_выглядывания&gt;</code>
+
+Пример формата: <code>lookOutAndOut_right_50</code>
+
+В поле AnimationData: <code>{&quot;side&quot;:&quot;left&quot;, &quot;rollOutPercent&quot;:50}</code>
+
+Пример: http://demo.probtn.com/button_example4/fruto/desktop/
+
+== &lt;начальное_положение&gt; ==
+
+Варианты:
+
+* <code>left</code>
+* <code>right</code>
+
+== &lt;ширина_выглядывания&gt; ==
+
+Процент выглядывания кнопки
+
+= resizeAnimation =
+
+Анимация изменения размера кнопки.
+
+В поле AnimationData: <code>[{&quot;autoStart&quot;: false, &quot;width&quot;: -100, &quot;height&quot;: 0.176, &quot;waitDuration&quot;: 800, &quot;name&quot;: &quot;step2&quot;, &quot;ButtonIframeInitialSize&quot;: {&quot;W&quot;: &quot;375&quot;, &quot;H&quot;: &quot;66&quot;} }]}</code>
+
+== autoStart ==
+
+Если значение установлено в true - анимации начинают выполняться сразу. Если false - после получения события probtn_start_animation.
+
+<code>window.top.postMessage({ &quot;command&quot;: &quot;probtn_start_animation&quot; }, &quot;*&quot;);</code>
+
+== width ==
+
+Новая ширина кнопки
+
+== height ==
+
+Новая высота кнопки
+
+== name ==
+
+Идентификатор шага анимации
