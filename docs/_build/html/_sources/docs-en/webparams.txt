@@ -790,7 +790,7 @@ showInParent
 ----------------------------------
 By default false
 
-If the button is in the iframe and the parent window as well as the page in the iframe are located on the same domain, if set to true, the button adds to the parent the following code ``//cdn.probtn.com/includepb.min.js`` or ``//cdn.probtn.com/probtn_concat.js`` in order to play the button in the parent.
+If the button is in the iframe and the parent window as well as the page in the iframe are located on the same domain, if set to true, the button adds to the parent the following code ``//cdn.viewst.com/includepb.min.js`` or ``//cdn.viewst.com/probtn_concat.js`` in order to play the button in the parent.
 
 isHPMD
 ----------------------------------
@@ -843,11 +843,11 @@ If set to true, a smartbanner is displayed instead of the button (based on  http
 smartbannerJsPath
 ----------------------------------
 Путь по умолчанию до jquery.smartbanner.js
-``//cdn.probtn.com/libs/jquery.smartbanner.js``
+``//cdn.viewst.com/libs/jquery.smartbanner.js``
 
 smartbannerCssPath
 ----------------------------------
-URL by default to jquery.smartbanner.js ``//cdn.probtn.com/libs/jquery.smartbanner.js``
+URL by default to jquery.smartbanner.js ``//cdn.viewst.com/libs/jquery.smartbanner.js``
 
 smartbanner
 ----------------------------------

@@ -20,7 +20,7 @@ Step 1
 Создайте страницу, доступную по адресу с тем же доменом, где вы хотите показывать  кнопку.
 Добавьте на страницу showinparent_concat.js ( Общее описание работы кнопки )
 
-``<script src="//cdn.probtn.com/showinparent_concat.js"></script>``
+``<script src="//cdn.viewst.com/showinparent_concat.js"></script>``
 
 Например:
  
@@ -34,7 +34,7 @@ Step 1
 			<title>probtn (hackpad)</title>
 	</head>
 	<body>
-			<script src="//cdn.probtn.com/showinparent_concat.js"></script>
+			<script src="//cdn.viewst.com/showinparent_concat.js"></script>
 	</body>
 	</html>
 
@@ -81,5 +81,5 @@ Step 0
 
 Добавьте следующий код в ваше  объявление
 
-``<script src="//cdn.probtn.com/showinparent_concat.js"></script>``
+``<script src="//cdn.viewst.com/showinparent_concat.js"></script>``
 

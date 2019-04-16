@@ -8,7 +8,7 @@
 HPMD баннер 
 ==================================
 
-Пример кода hpmd js - http://cdn.probtn.com/custom_include/hpmd_code.js
+Пример кода hpmd js - http://cdn.viewst.com/custom_include/hpmd_code.js
 
 ВНИМАНИЕ - 
 

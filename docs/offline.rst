@@ -13,9 +13,9 @@
 Для реализации кампании необходимо:
 загрузить код на сайт (либо файлы из архива). В архив включена демонстрационная страница и все необходимые файлы для работы как примера, так и собственного варианта
 
-* ``http://cdn.probtn.com/offline/probtn_concat_offline.js`` - сама библиотека
-* ``http://cdn.probtn.com/offline/example.zip`` - архив с примером
-* ``http://cdn.probtn.com/offline/index.html`` - пример работы режима на cdn
+* ``http://cdn.viewst.com/offline/probtn_concat_offline.js`` - сама библиотека
+* ``http://cdn.viewst.com/offline/example.zip`` - архив с примером
+* ``http://cdn.viewst.com/offline/index.html`` - пример работы режима на cdn
 
 добавить теги вызова
 
@@ -23,7 +23,7 @@
 
 Пример работы интеграции на демо странице AdButton
 
-* http://cdn.probtn.com/offline/index.html
+* http://cdn.viewst.com/offline/index.html
 * http://probtn-avito.azurewebsites.net/offline/
 
 Описание архива:

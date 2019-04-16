@@ -20,7 +20,7 @@ Step 0
 
 Add this code to DFP ad
 
-``<script src="//cdn.probtn.com/showinparent_concat.js"></script>``
+``<script src="//cdn.viewst.com/showinparent_concat.js"></script>``
 
 and don't select checkbox "Serve into a SafeFrame"
 
@@ -37,7 +37,7 @@ Your code will look like:
 .. code-block:: html
 
   <div id="probtn_additional_params" style="display: none;">{ "domain": "example.com", "SelectAdSet": "campaign_id"}</div>
-  <script src="//cdn.probtn.com/showinparent_concat.js"></script>
+  <script src="//cdn.viewst.com/showinparent_concat.js"></script>
 
 
 Integration with safeframe
@@ -50,11 +50,11 @@ Create a page on the domain where the button will be displayed. (This page used 
 
 On this page add the script:
 
-``<script src="//cdn.probtn.com/showinparent.js"></script>``
+``<script src="//cdn.viewst.com/showinparent.js"></script>``
 
 If you'd like to use concatenated script which do not interfere with jQuery and other plugins use
 
-``<script src="//cdn.probtn.com/showinparent_concat.js"></script>``
+``<script src="//cdn.viewst.com/showinparent_concat.js"></script>``
 
 E.g.:
 
@@ -67,7 +67,7 @@ E.g.:
         <title></title>
     </head>
     <body>
-        <script src="//cdn.probtn.com/showinparent_concat.js"></script>
+        <script src="//cdn.viewst.com/showinparent_concat.js"></script>
     </body></html>
 
 

@@ -24,7 +24,7 @@ Create a page available at the address on the same domain where the button is to
 
 On the page, add showinparent_concat.js 
 
-``<script src="//cdn.probtn.com/showinparent_concat.js"></script>``
+``<script src="//cdn.viewst.com/showinparent_concat.js"></script>``
 
 For example:
  
@@ -38,7 +38,7 @@ For example:
 			<title>probtn (hackpad)</title>
 	</head>
 	<body>
-			<script src="//cdn.probtn.com/showinparent_concat.js"></script>
+			<script src="//cdn.viewst.com/showinparent_concat.js"></script>
 	</body>
 	</html>
  
@@ -117,7 +117,7 @@ Upload banner code
 
 .. image:: images/adriver/adriver1_step2.png
 
-As code you can use concatenated probtn script, called ( http://cdn.probtn.com/showinparent_concat.js ):
+As code you can use concatenated probtn script, called ( http://cdn.viewst.com/showinparent_concat.js ):
 ( :ref:`description` )
 
 .. code-block:: javascript
@@ -171,7 +171,7 @@ As code you can use concatenated probtn script, called ( http://cdn.probtn.com/s
 	paramsDiv.style.cssText = "display: none;";
 	window.top.document.body.appendChild(paramsDiv);
 
-	loadJS('//cdn.probtn.com/probtn_concat.js', function () {
+	loadJS('//cdn.viewst.com/probtn_concat.js', function () {
 	});
 	})();
 

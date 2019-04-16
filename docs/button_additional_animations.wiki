@@ -179,7 +179,7 @@
 
 В поле AnimationData: <code>{&quot;side&quot;:&quot;left&quot;, &quot;rollOutPercent&quot;:50}</code>
 
-Пример: http://demo.probtn.com/button_example4/fruto/desktop/
+Пример: http://demo.viewst.com/button_example4/fruto/desktop/
 
 == &lt;начальное_положение&gt; ==
 

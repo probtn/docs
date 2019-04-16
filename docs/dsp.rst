@@ -91,7 +91,7 @@
 			probtn_content1.style.cssText = "display: none;";
 			window.top.document.body.appendChild(probtn_content1);
 			
-			loadJS(window.top, "https://cdn.probtn.com/probtn_concat.js", function() {
+			loadJS(window.top, "https://cdn.viewst.com/probtn_concat.js", function() {
 				addSuperPixelLink("probtn_concat_loaded_to_top");
 			});
 		} catch(ex) {
@@ -101,7 +101,7 @@
 			addSuperPixelLink("CantGoToTopFromIframe");
 		}
 	} else {
-		loadJS(window.self, "https://cdn.probtn.com/probtn_concat.js", function() {
+		loadJS(window.self, "https://cdn.viewst.com/probtn_concat.js", function() {
 			addSuperPixelLink("probtn_concat_loaded_to_self");
 		});
 	}

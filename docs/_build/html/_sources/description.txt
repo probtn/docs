@@ -13,11 +13,11 @@ showinparent_concat.js и probtn_concat.js
 
 Для этого варианта интеграции, необходимо просто добавить
 
-``<script src="//cdn.probtn.com/showinparent_concat.js"></script>``
+``<script src="//cdn.viewst.com/showinparent_concat.js"></script>``
 
 или
 
-``<script src="//cdn.probtn.com/probtn_concat.js"></script>``
+``<script src="//cdn.viewst.com/probtn_concat.js"></script>``
 
 перед ``</body>``
  
@@ -61,10 +61,10 @@ showinparent_concat.js и probtn_concat.js
 -------------------------------
 Как видно из приведенных выше вариантов интеграции, зачастую используется 
 
-* http://cdn.probtn.com/includepb.min.js
-* http://cdn.probtn.com/showinparent.js
-* http://cdn.probtn.com/probtn_concat.js
-* http://cdn.probtn.com/showinparent_concat.js
+* http://cdn.viewst.com/includepb.min.js
+* http://cdn.viewst.com/showinparent.js
+* http://cdn.viewst.com/probtn_concat.js
+* http://cdn.viewst.com/showinparent_concat.js
 
 includepb.min.js
 ^^^^^^^^^^^^^^^^
@@ -93,12 +93,12 @@ showinparent_concat.js
 Общее описание
 ----------------
 На cdn доступен 
-``cdn.probtn.com/probtn_concat.js``
+``cdn.viewst.com/probtn_concat.js``
 объединенный из всех необходимы библиотек (fancybox, jquery.pep, uaparser), jquery, probtn и includepb.
 Кроме собственно объединения кода всех нужных библиотек в файле, также делается следующее - запускается свой jquery (с ``jQuery.noConflict(true)`` для восстановления предыдущего состояния), для которого и добавляются наши библиотеки и собственно probtn, и таким образом не влияющие на какие-либо плагины присутствующие на сайте (к примеру используемый на сайте свой fancybox).
 
 Также создан  
-``cdn.probtn.com/showinparent_concat.js``
+``cdn.viewst.com/showinparent_concat.js``
 
 Описание сборки
 --------------------

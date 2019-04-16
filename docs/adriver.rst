@@ -27,7 +27,7 @@ Step1
 
 Step2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Сохранить код баннера ``https://cdn.probtn.com/custom_include/script.js``, затем загрузить его (нажав на ссылку "Загрузить баннер")
+Сохранить код баннера ``https://cdn.viewst.com/custom_include/script.js``, затем загрузить его (нажав на ссылку "Загрузить баннер")
 
 .. image:: images/adriver/adriver1_step2.png
 
@@ -46,7 +46,7 @@ Step1
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Создайте  страницу, доступную по адресу с тем же доменом, где вы хотите показывать  кнопку.
 Добавьте  на страницу showinparent_concat.js ( Общее описание работы кнопки )
-``<script src="//cdn.probtn.com/showinparent_concat.js"></script>``
+``<script src="//cdn.viewst.com/showinparent_concat.js"></script>``
 Например:
 
 .. code-block:: html
@@ -59,7 +59,7 @@ Step1
 			<title>probtn (hackpad)</title>
 	</head>
 	<body>
-			<script src="//cdn.probtn.com/showinparent_concat.js"></script>
+			<script src="//cdn.viewst.com/showinparent_concat.js"></script>
 	</body>
 	</html>
 

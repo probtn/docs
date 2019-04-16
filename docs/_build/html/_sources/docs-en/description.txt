@@ -48,10 +48,10 @@ Description of the used options
 -------------------------------
 The above cited integration types show that these combinations are often used
 
-* http://cdn.probtn.com/includepb.min.js
-* http://cdn.probtn.com/showinparent.js
-* http://cdn.probtn.com/probtn_concat.js
-* http://cdn.probtn.com/showinparent_concat.js
+* http://cdn.viewst.com/includepb.min.js
+* http://cdn.viewst.com/showinparent.js
+* http://cdn.viewst.com/probtn_concat.js
+* http://cdn.viewst.com/showinparent_concat.js
 
 includepb.min.js
 ^^^^^^^^^^^^^^^^

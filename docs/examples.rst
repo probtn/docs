@@ -53,12 +53,12 @@
 	<div class="videoExample">
 		<img id="mainImage1" src="http://probtn.blob.core.windows.net/video/i6-stand.png" srcset="http://probtn.blob.core.windows.net/video/i6-stand@2x.png 2x" style="width: 411px; height:840px;" alt=""/>
 		<video onclick="playVideo(this);" controls="controls" preload="metadata" class="videoItem">
-			<source src="https://demo.probtn.com/video/1-simple_x264_001.mp4" type="video/mp4" />
+			<source src="https://demo.viewst.com/video/1-simple_x264_001.mp4" type="video/mp4" />
 		</video>
 	</div>
 	
 	<div id="probtn_additional_params" style="display: none;">{"domain":"probtn.com"}</div>
-	<script src="//cdn.probtn.com/probtn_concat.js"></script>
+	<script src="//cdn.viewst.com/probtn_concat.js"></script>
 
 Кнопка с видео
 ----------------------------------
@@ -73,7 +73,7 @@
 	<div class="videoExample">
 		<img id="mainImage1" src="http://probtn.blob.core.windows.net/video/i6-stand.png" srcset="http://probtn.blob.core.windows.net/video/i6-stand@2x.png 2x" style="width: 411px; height:840px;" alt=""/>
 		<video onclick="playVideo(this);" controls="controls" preload="metadata" class="videoItem">
-			<source src="https://demo.probtn.com/video/2-video_x264_001.mp4" type="video/mp4" />
+			<source src="https://demo.viewst.com/video/2-video_x264_001.mp4" type="video/mp4" />
 		</video>
 	</div>
 
@@ -91,7 +91,7 @@
 	<div class="videoExample">
 		<img id="mainImage1" src="http://probtn.blob.core.windows.net/video/i6-stand.png" srcset="http://probtn.blob.core.windows.net/video/i6-stand@2x.png 2x" style="width: 411px; height:840px;" alt=""/>
 		<video onclick="playVideo(this);" controls="controls" preload="metadata" class="videoItem">
-			<source src="https://demo.probtn.com/video/3-scroll_x264_001.mp4" type="video/mp4" />
+			<source src="https://demo.viewst.com/video/3-scroll_x264_001.mp4" type="video/mp4" />
 		</video>
 	</div>
 
@@ -109,7 +109,7 @@
 	<div class="videoExample">
 		<img id="mainImage1" src="http://probtn.blob.core.windows.net/video/i6-stand.png" srcset="http://probtn.blob.core.windows.net/video/i6-stand@2x.png 2x" style="width: 411px; height:840px;" alt=""/>
 		<video onclick="playVideo(this);" controls="controls" preload="metadata" class="videoItem">
-			<source src="https://demo.probtn.com/video/4-activezones_x264_001.mp4" type="video/mp4" />
+			<source src="https://demo.viewst.com/video/4-activezones_x264_001.mp4" type="video/mp4" />
 		</video>
 	</div>
 
@@ -127,11 +127,11 @@
 	<div class="videoExample">
 		<img id="mainImage1" src="http://probtn.blob.core.windows.net/video/i6-stand.png" srcset="http://probtn.blob.core.windows.net/video/i6-stand@2x.png 2x" style="width: 411px; height:840px;" alt=""/>
 		<video onclick="playVideo(this);" controls="controls" preload="metadata" class="videoItem">
-			<source src="https://demo.probtn.com/video/5-1-menu_x264.mp4" type="video/mp4" />
+			<source src="https://demo.viewst.com/video/5-1-menu_x264.mp4" type="video/mp4" />
 		</video>
 	</div>
 	<!--<div style="margin-top:10px;">
-      <iframe width="100%" height="400" src="http://demo.probtn.com/button_example2/menu/" frameborder="0" allowfullscreen></iframe>
+      <iframe width="100%" height="400" src="http://demo.viewst.com/button_example2/menu/" frameborder="0" allowfullscreen></iframe>
     </div>-->
 	
 Также для меню возможно включить режим радиального меню используя параметр ``"MenuTemplateVariant":"radialcorner"``
@@ -141,11 +141,11 @@
 	<div class="videoExample">
 		<img id="mainImage1" src="http://probtn.blob.core.windows.net/video/i6-stand.png" srcset="http://probtn.blob.core.windows.net/video/i6-stand@2x.png 2x" style="width: 411px; height:840px;" alt=""/>
 		<video onclick="playVideo(this);" controls="controls" preload="metadata" class="videoItem">
-			<source src="https://demo.probtn.com/video/5-2-radmenu_x264.mp4" type="video/mp4" />
+			<source src="https://demo.viewst.com/video/5-2-radmenu_x264.mp4" type="video/mp4" />
 		</video>
 	</div>
     <!--<div style="margin-top:10px;">
-      <iframe width="100%" height="400" src="http://demo.probtn.com/button_example2/radmenu_param/" frameborder="0" allowfullscreen></iframe>
+      <iframe width="100%" height="400" src="http://demo.viewst.com/button_example2/radmenu_param/" frameborder="0" allowfullscreen></iframe>
     </div>-->
 
 Фуллскрин
@@ -158,11 +158,11 @@
 	<div class="videoExample">
 		<img id="mainImage1" src="http://probtn.blob.core.windows.net/video/i6-stand.png" srcset="http://probtn.blob.core.windows.net/video/i6-stand@2x.png 2x" style="width: 411px; height:840px;" alt=""/>
 		<video onclick="playVideo(this);" controls="controls" preload="metadata" class="videoItem">
-			<source src="https://demo.probtn.com/video/6-fullscreen_x264_001.mp4" type="video/mp4" />
+			<source src="https://demo.viewst.com/video/6-fullscreen_x264_001.mp4" type="video/mp4" />
 		</video>
 	</div>
     <!--<div style="margin-top:10px;">
-      <iframe width="100%" height="400" src="http://demo.probtn.com/button_example/fullscreen_test/" frameborder="0" allowfullscreen></iframe>
+      <iframe width="100%" height="400" src="http://demo.viewst.com/button_example/fullscreen_test/" frameborder="0" allowfullscreen></iframe>
     </div>-->
 	
 Smartbanner
@@ -175,11 +175,11 @@ Smartbanner
 	<div class="videoExample">
 		<img id="mainImage1" src="http://probtn.blob.core.windows.net/video/i6-stand.png" srcset="http://probtn.blob.core.windows.net/video/i6-stand@2x.png 2x" style="width: 411px; height:840px;" alt=""/>
 		<video onclick="playVideo(this);" controls="controls" preload="metadata" class="videoItem">
-			<source src="https://demo.probtn.com/video/7-smartbanner_x264_001.mp4" type="video/mp4" />
+			<source src="https://demo.viewst.com/video/7-smartbanner_x264_001.mp4" type="video/mp4" />
 		</video>
 	</div>
 	<!--<div style="margin-top:10px;">
-      <iframe width="100%" height="400" src="http://demo.probtn.com/smartbanner/android" frameborder="0" allowfullscreen></iframe>
+      <iframe width="100%" height="400" src="http://demo.viewst.com/smartbanner/android" frameborder="0" allowfullscreen></iframe>
     </div>-->
 
 Анимации кнопки
@@ -199,14 +199,14 @@ Opacity
 
 Начальное значение прозрачности соответственно устанавливается через ``ButtonOpacity`` параметр
 
-Демо страница - http://demo.probtn.com/button_example/opacity_animation
+Демо страница - http://demo.viewst.com/button_example/opacity_animation
 
 .. raw:: html
 
 	<div class="videoExample">
 		<img id="mainImage1" src="http://probtn.blob.core.windows.net/video/i6-stand.png" srcset="http://probtn.blob.core.windows.net/video/i6-stand@2x.png 2x" style="width: 411px; height:840px;" alt=""/>
 		<video onclick="playVideo(this);" controls="controls" preload="metadata" class="videoItem">
-			<source src="https://demo.probtn.com/video/8-1-opacity_x264.mp4" type="video/mp4" />
+			<source src="https://demo.viewst.com/video/8-1-opacity_x264.mp4" type="video/mp4" />
 		</video>
 	</div>
 	
@@ -226,15 +226,15 @@ rollout
 
 Демо страницы:
 
-- http://demo.probtn.com/button_example2/rollout
-- http://demo.probtn.com/button_example2/rollout/right/
+- http://demo.viewst.com/button_example2/rollout
+- http://demo.viewst.com/button_example2/rollout/right/
 
 .. raw:: html
 
 	<div class="videoExample">
 		<img id="mainImage1" src="http://probtn.blob.core.windows.net/video/i6-stand.png" srcset="http://probtn.blob.core.windows.net/video/i6-stand@2x.png 2x" style="width: 411px; height:840px;" alt=""/>
 		<video onclick="playVideo(this);" controls="controls" preload="metadata" class="videoItem">
-			<source src="https://demo.probtn.com/video/8-2-rollout_x264.mp4" type="video/mp4" />
+			<source src="https://demo.viewst.com/video/8-2-rollout_x264.mp4" type="video/mp4" />
 		</video>
 	</div>
 	
@@ -243,7 +243,7 @@ rollout
 	<div class="videoExample">
 		<img id="mainImage1" src="http://probtn.blob.core.windows.net/video/i6-stand.png" srcset="http://probtn.blob.core.windows.net/video/i6-stand@2x.png 2x" style="width: 411px; height:840px;" alt=""/>
 		<video onclick="playVideo(this);" controls="controls" preload="metadata" class="videoItem">
-			<source src="https://demo.probtn.com/video/8-3-rollout-right_x264.mp4" type="video/mp4" />
+			<source src="https://demo.viewst.com/video/8-3-rollout-right_x264.mp4" type="video/mp4" />
 		</video>
 	</div>
 
@@ -263,7 +263,7 @@ lookout
 	<div class="videoExample">
 		<img id="mainImage1" src="http://probtn.blob.core.windows.net/video/i6-stand.png" srcset="http://probtn.blob.core.windows.net/video/i6-stand@2x.png 2x" style="width: 411px; height:840px;" alt=""/>
 		<video onclick="playVideo(this);" controls="controls" preload="metadata" class="videoItem">
-			<source src="https://demo.probtn.com/video/8-4-lookout_x264.mp4" type="video/mp4" />
+			<source src="https://demo.viewst.com/video/8-4-lookout_x264.mp4" type="video/mp4" />
 		</video>
 	</div>
 
@@ -278,14 +278,14 @@ forwardAndBack
 
 Пример:
 
-- http://demo.probtn.com/button_example2/forwardAndBack/
+- http://demo.viewst.com/button_example2/forwardAndBack/
 
 .. raw:: html
 
 	<div class="videoExample">
 		<img id="mainImage1" src="http://probtn.blob.core.windows.net/video/i6-stand.png" srcset="http://probtn.blob.core.windows.net/video/i6-stand@2x.png 2x" style="width: 411px; height:840px;" alt=""/>
 		<video onclick="playVideo(this);" controls="controls" preload="metadata" class="videoItem">
-			<source src="https://demo.probtn.com/video/8-5-forwardAndBack_x264.mp4" type="video/mp4" />
+			<source src="https://demo.viewst.com/video/8-5-forwardAndBack_x264.mp4" type="video/mp4" />
 		</video>
 	</div>
 
@@ -301,13 +301,13 @@ forwardStopAndAway
 
 Пример:
 
-- http://demo.probtn.com/button_example2/forwardStopAndAway
+- http://demo.viewst.com/button_example2/forwardStopAndAway
 
 .. raw:: html
 
 	<div class="videoExample">
 		<img id="mainImage1" src="http://probtn.blob.core.windows.net/video/i6-stand.png" srcset="http://probtn.blob.core.windows.net/video/i6-stand@2x.png 2x" style="width: 411px; height:840px;" alt=""/>
 		<video onclick="playVideo(this);" controls="controls" preload="metadata" class="videoItem">
-			<source src="https://demo.probtn.com/video/8-6-forwardStopAndAway_x264.mp4" type="video/mp4" />
+			<source src="https://demo.viewst.com/video/8-6-forwardStopAndAway_x264.mp4" type="video/mp4" />
 		</video>
 	</div>

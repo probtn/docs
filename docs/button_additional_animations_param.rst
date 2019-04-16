@@ -214,7 +214,7 @@ lookOutAndOut
 
 В поле AnimationData: ``{"side":"left", "rollOutPercent":50}``
 
-Пример: http://demo.probtn.com/button_example4/fruto/desktop/
+Пример: http://demo.viewst.com/button_example4/fruto/desktop/
 
 <начальное_положение>
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

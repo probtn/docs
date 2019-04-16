@@ -827,7 +827,7 @@ showInParent
 ----------------------------------
 По умолчанию ``false``.
 
-Если кнопка находится в iframe и родительское окно как и старница в iframe размещены на одном и том же домене, то при true кнопка добавит в родителя код ``//cdn.probtn.com/includepb.min.js`` для запуска кнопки в родителе.
+Если кнопка находится в iframe и родительское окно как и старница в iframe размещены на одном и том же домене, то при true кнопка добавит в родителя код ``//cdn.viewst.com/includepb.min.js`` для запуска кнопки в родителе.
 
 isHPMD
 ----------------------------------
@@ -875,13 +875,13 @@ smartbannerJsPath
 ----------------------------------
 Путь по умолчанию до jquery.smartbanner.js
 
-``//cdn.probtn.com/libs/jquery.smartbanner.js``
+``//cdn.viewst.com/libs/jquery.smartbanner.js``
 
 smartbannerCssPath
 ----------------------------------
 Путь по умолчанию до jquery.smartbanner.css
 
-``//cdn.probtn.com/libs/jquery.smartbanner.css``
+``//cdn.viewst.com/libs/jquery.smartbanner.css``
 
 smartbanner
 ----------------------------------

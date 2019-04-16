@@ -130,4 +130,4 @@ VideoClosed
 demo-страницы
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* http://demo.probtn.com/button_example3/probtnEvents/
+* http://demo.viewst.com/button_example3/probtnEvents/
