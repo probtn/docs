@@ -89,7 +89,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#id2">Общее описание кнопки</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id3">Получение настроек кнопки</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#admin-probtn-com">Краткое описание взаимодействия с сервером настроек (<code class="docutils literal"><span class="pre">admin.probtn.com</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#admin-probtn-com">Краткое описание взаимодействия с сервером настроек (<code class="docutils literal"><span class="pre">admin.viewst.com</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id4">Интеграция со сторонними сервисами</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id5">Описание используемых вариантов</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#includepb-min-js">includepb.min.js</a></li>
@@ -107,7 +107,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="createbutton.html">Создание кампании и креатива</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Примеры режимов работы кнопки</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hierarchy.html">Иерархия сущностей admin.probtn.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hierarchy.html">Иерархия сущностей admin.viewst.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adriver.html">Интеграция с AdRiver</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adfox.html">Интеграция с AdFox</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dfp.html">Интеграция с DFP</a></li>
@@ -122,8 +122,8 @@
 <li class="toctree-l1"><a class="reference internal" href="postMessage_button_control.html">Управление кнопкой посредстовм postMessage сообщений из iframe</a></li>
 <li class="toctree-l1"><a class="reference internal" href="postMessage_button_animation.html">Передача сообщений об этапах анимации</a></li>
 <li class="toctree-l1"><a class="reference internal" href="button_additional_animations_param.html">Дополнительные параметры анимации кнопки</a></li>
-<li class="toctree-l1"><a class="reference internal" href="get_parameters.html">Описание параметров запроса к admin.probtn.com от скрипта кнопки</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reports_description.html">Отчеты admin.probtn.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_parameters.html">Описание параметров запроса к admin.viewst.com от скрипта кнопки</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports_description.html">Отчеты admin.viewst.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="passback.html">Использование passback кода</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hints_and_tricks.html">Неочевидные моменты, подсказки и иные дополнительные данные</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statistics_api.html">Использование API для получения статистики</a></li>
@@ -190,14 +190,14 @@
 Настройки указанные локально при запуске кнопки
 Получение настроек (конвертация текста из блока в json) из div c <code class="docutils literal"><span class="pre">id=&quot;probtn_additional_params&quot;</span></code>
 Получение настроек из json-файла с настройками кнопки (в этом случае обращение к серверу за настройками не происходит)
-Получение настроек от сервера (<code class="docutils literal"><span class="pre">admin.probtn.com</span></code>) - основной и наиболее широко используемый и удобный способ</p>
+Получение настроек от сервера (<code class="docutils literal"><span class="pre">admin.viewst.com</span></code>) - основной и наиболее широко используемый и удобный способ</p>
 <p>Список используемых параметров и их описаний доступен в документе Probtn web params</p>
 </div>
 <div class="section" id="admin-probtn-com">
-<h2>Краткое описание взаимодействия с сервером настроек (<code class="docutils literal"><span class="pre">admin.probtn.com</span></code>)<a class="headerlink" href="#admin-probtn-com" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Краткое описание взаимодействия с сервером настроек (<code class="docutils literal"><span class="pre">admin.viewst.com</span></code>)<a class="headerlink" href="#admin-probtn-com" title="Ссылка на этот заголовок">¶</a></h2>
 <p>При запуске скрипта кнопки, происходит следующее:</p>
-<p>Производится начальная инициализация, во время которой кнопка делает запрос настроек к admin.probtn.com. Настройки идентифицируются исходя из домена сайта (в частности при запросе в числе прочих передается параметр BundleID с доменом сайта, который автоматически берется из document.domain)</p>
-<p>В случае, если указаны настройки способами 1 и 2, и одним из параметров указан параметр domain c идентификатором&#8221;доменом&#8221;, соответствующим одному из &#8220;аппов&#8221; в <code class="docutils literal"><span class="pre">admin.probtn.com</span></code>, то скрипт кнопки при обращении к серверу в <code class="docutils literal"><span class="pre">BundleID</span></code> передаст указанный параметр и получит для него настройки. Это бывает полезно в различных случаях, к примеру когда кнопка с искомыми настройками должна показываться на нескольких сайтах, или же наоборот, когда на одном сайте нужно показать различные рекламные кампании (данный вариант возможен и с использованием campaign в &#8220;аппе&#8221;, но не всегда подходит).</p>
+<p>Производится начальная инициализация, во время которой кнопка делает запрос настроек к admin.viewst.com. Настройки идентифицируются исходя из домена сайта (в частности при запросе в числе прочих передается параметр BundleID с доменом сайта, который автоматически берется из document.domain)</p>
+<p>В случае, если указаны настройки способами 1 и 2, и одним из параметров указан параметр domain c идентификатором&#8221;доменом&#8221;, соответствующим одному из &#8220;аппов&#8221; в <code class="docutils literal"><span class="pre">admin.viewst.com</span></code>, то скрипт кнопки при обращении к серверу в <code class="docutils literal"><span class="pre">BundleID</span></code> передаст указанный параметр и получит для него настройки. Это бывает полезно в различных случаях, к примеру когда кнопка с искомыми настройками должна показываться на нескольких сайтах, или же наоборот, когда на одном сайте нужно показать различные рекламные кампании (данный вариант возможен и с использованием campaign в &#8220;аппе&#8221;, но не всегда подходит).</p>
 <p>В случае, если апп (и его кампании) выключены, от сервера придет ответ о том, что кнопка выключена, и соответственно кнопка показана не будет, и не будет производить дальнейшую инициализацию.</p>
 <p>В случае, если аппа с указанным bundleId&#8221;доменом&#8221; не существует, будет возвращена ошибка, и кнопка опять таки не будет производить дальнейшую инициализацию.</p>
 </div>

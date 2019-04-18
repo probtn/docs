@@ -202,7 +202,7 @@ URL до звукового файла, который будет воспрои
 
 == PassbackCustomCode ==
 
-В данном параметре возможно указать код, который будет вызываться в случае, если кнопка будет выключена (когда от admin.probtn.com придет <code>{&quot;ButtonVisible&quot;:false,&quot;ButtonEnabled&quot;:false}</code>)
+В данном параметре возможно указать код, который будет вызываться в случае, если кнопка будет выключена (когда от admin.viewst.com придет <code>{&quot;ButtonVisible&quot;:false,&quot;ButtonEnabled&quot;:false}</code>)
 
 Внимание - желательно предварительно тестировать желаемый код до использования.
 
@@ -235,7 +235,7 @@ URL до звукового файла, который будет воспрои
 
 == AdditionalTargetingParam ==
 
-Дополнительный кастомный параметр для таргетинга, позволяющий гибко настроит таргетинг admin.probtn.com в зависимости от задач.
+Дополнительный кастомный параметр для таргетинга, позволяющий гибко настроит таргетинг admin.viewst.com в зависимости от задач.
 
 По умоланию &quot;&quot;.
 
@@ -1069,7 +1069,7 @@ true/false По умолчанию true * В случае true активная 
                             Y: 0.1
                         },
                         ActiveImage: &quot;//probtnexample1.azurewebsites.net/img/logo.png&quot;,
-                        InactiveImage: &quot;//admin.probtn.com/eqwid_btn_nonpress.png&quot;,
+                        InactiveImage: &quot;//admin.viewst.com/eqwid_btn_nonpress.png&quot;,
                         ActiveSize: {
                             W: 64,
                             H: 64
@@ -1089,7 +1089,7 @@ true/false По умолчанию true * В случае true активная 
                             Y: 0.1
                         },
                         ActiveImage: &quot;//probtnexample1.azurewebsites.net/img/logo.png&quot;,
-                        InactiveImage: &quot;//admin.probtn.com/eqwid_btn_nonpress.png&quot;,
+                        InactiveImage: &quot;//admin.viewst.com/eqwid_btn_nonpress.png&quot;,
                         ActiveSize: {
                             W: 64,
                             H: 64

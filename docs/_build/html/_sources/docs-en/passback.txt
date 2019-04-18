@@ -4,7 +4,7 @@
 Using passback code
 ===========
 
-There is opportunity in button to use passback code, which would be added at page in case button disabled (when  admin.probtn.com settings request return then button state is off).
+There is opportunity in button to use passback code, which would be added at page in case button disabled (when  admin.viewst.com settings request return then button state is off).
 
 In particular at editing app we can add at field ``Passback Code`` HTML code, which would be added at page (if passback code is pure JS code, when e need to put it inside ``<script></script>``).
 

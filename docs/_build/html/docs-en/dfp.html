@@ -86,7 +86,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../description.html#probtn">Объединенный probtn</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../createbutton.html">Создание кампании и креатива</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples.html">Примеры режимов работы кнопки</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../hierarchy.html">Иерархия сущностей admin.probtn.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hierarchy.html">Иерархия сущностей admin.viewst.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../adriver.html">Интеграция с AdRiver</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../adfox.html">Интеграция с AdFox</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dfp.html">Интеграция с DFP</a></li>
@@ -101,8 +101,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../postMessage_button_control.html">Управление кнопкой посредстовм postMessage сообщений из iframe</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../postMessage_button_animation.html">Передача сообщений об этапах анимации</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../button_additional_animations_param.html">Дополнительные параметры анимации кнопки</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../get_parameters.html">Описание параметров запроса к admin.probtn.com от скрипта кнопки</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reports_description.html">Отчеты admin.probtn.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../get_parameters.html">Описание параметров запроса к admin.viewst.com от скрипта кнопки</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports_description.html">Отчеты admin.viewst.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../passback.html">Использование passback кода</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hints_and_tricks.html">Неочевидные моменты, подсказки и иные дополнительные данные</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../statistics_api.html">Использование API для получения статистики</a></li>
@@ -153,7 +153,7 @@
   <div class="section" id="probtn-working-with-dfp-google-ads">
 <span id="dfp"></span><h1>Probtn - working with DFP Google ads<a class="headerlink" href="#probtn-working-with-dfp-google-ads" title="Ссылка на этот заголовок">¶</a></h1>
 <p>To use the button in the Google DFP container you need to make this steps:</p>
-<p>Create campaign <a class="reference external" href="https://admin.probtn.com">https://admin.probtn.com</a></p>
+<p>Create campaign <a class="reference external" href="https://admin.viewst.com">https://admin.viewst.com</a></p>
 <div class="section" id="integration-without-safeframe">
 <h2>Integration without safeframe<a class="headerlink" href="#integration-without-safeframe" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="section" id="step-0">
@@ -202,7 +202,7 @@
 <p>Url <code class="docutils literal"><span class="pre">//example.com/example_iframe_page.html</span></code> is added by example, you should use your own path</p>
 <p>Also you can set domain:</p>
 <p><code class="docutils literal"><span class="pre">&lt;iframe</span> <span class="pre">src=&quot;//example.com/example_iframe_page.html?domain=nessasary_example_app_domain.test&amp;click_url_esc=%%CLICK_URL_ESC%%&amp;cacheBuster=%%CACHEBUSTER%%&quot;</span> <span class="pre">style=&quot;border:</span> <span class="pre">0px;</span> <span class="pre">width:</span> <span class="pre">0px;</span> <span class="pre">height:</span> <span class="pre">0px;</span> <span class="pre">display:</span> <span class="pre">none;&quot;&gt;&lt;/iframe&gt;</span></code></p>
-<p>Where GET param <code class="docutils literal"><span class="pre">domain</span></code> (for example) <code class="docutils literal"><span class="pre">nessasary_example_app_domain.test</span></code> should be replaced to nessesary domain, used in app in admin.probtn.com</p>
+<p>Where GET param <code class="docutils literal"><span class="pre">domain</span></code> (for example) <code class="docutils literal"><span class="pre">nessasary_example_app_domain.test</span></code> should be replaced to nessesary domain, used in app in admin.viewst.com</p>
 </div>
 <div class="section" id="set-campaign-optional">
 <h3>Set campaign (optional)<a class="headerlink" href="#set-campaign-optional" title="Ссылка на этот заголовок">¶</a></h3>
@@ -211,9 +211,9 @@ To do so, you should:</p>
 <p>Create ad with code</p>
 <p><code class="docutils literal"><span class="pre">&lt;iframe</span> <span class="pre">style=&quot;border:</span> <span class="pre">0px;</span> <span class="pre">width:</span> <span class="pre">0px;</span> <span class="pre">height:</span> <span class="pre">0px;</span> <span class="pre">display:</span> <span class="pre">none;&quot;</span>&nbsp; <span class="pre">src=&quot;//example.com/example_iframe_page.html?domain=nessasary_example_app_domain.test&amp;SelectAdSet=565e021f99c27511100000d0&quot;&gt;&lt;/iframe&gt;</span></code></p>
 <p>Url //example.com/example_iframe_page.html добавлен для примера, is an example, use your own path (to the page created on step 1)</p>
-<p>Also value of GET param domain (for example) <code class="docutils literal"><span class="pre">nessasary_example_app_domain.test</span></code> should be replaced on nessesary (id), used in nessesary app in admin.probtn.com</p>
+<p>Also value of GET param domain (for example) <code class="docutils literal"><span class="pre">nessasary_example_app_domain.test</span></code> should be replaced on nessesary (id), used in nessesary app in admin.viewst.com</p>
 <p>Value of GET param SelectAdSet (for example) <code class="docutils literal"><span class="pre">565e021f99c27511100000d0</span></code> should be replaced on nessesary campaign id (don&#8217;t use placement or creative id).</p>
-<p>Campaign ID could be found  at url, if you open campaign page at admin.probtn.com.</p>
+<p>Campaign ID could be found  at url, if you open campaign page at admin.viewst.com.</p>
 <img alt="../_images/adriver2_step3_21.png" src="../_images/adriver2_step3_21.png" />
 </div>
 </div>

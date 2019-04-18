@@ -5,7 +5,7 @@
  
 .. _reports_description:
 
-Reports at admin.probtn.com
+Reports at admin.viewst.com
 ===========
 
 Old reports, visible only for admins

@@ -15,18 +15,18 @@ There are a few ways the button script gets the settings (in the settings priori
 * Settings are specified locally when the button is launched
 * Settings are obtained (text conversion from a string in json) from div where ``id="probtn_additional_params"``
 * Settings are obtained from the json file containing button settings (no settings request is sent to the server)
-* Settings are obtained from the server (``admin.probtn.com``), the most popular and easy way
+* Settings are obtained from the server (``admin.viewst.com``), the most popular and easy way
 
 
 The list of used parameters and their description is available in the document Probtn web params
 
-•	Brief description of communication with the settings server (``admin.probtn.com``)
+•	Brief description of communication with the settings server (``admin.viewst.com``)
 --------------------------------------------------------------------------
 When the button script is launched, the following events take place:
 
-Zero initialization is activated when the button sends a settings request to admin.probtn.com. The settings are identified based on the site domain (in particular, among others the request transfers the parameter BundleID which contains the site domain automatically extracted from the ``document.domain``).
+Zero initialization is activated when the button sends a settings request to admin.viewst.com. The settings are identified based on the site domain (in particular, among others the request transfers the parameter BundleID which contains the site domain automatically extracted from the ``document.domain``).
 
-If settings are specified using methods 1 and 2 and the domain parameter with the domain identifier corresponding to an app from admin.probtn.com is set among others, the button script when requesting the server, transfers the indicated parameter and obtains its setings. This could be helpful when one button with the required settings is to be displayed on a numbrer of sites, or, on the contrary, when a number of adds is to be displayed on one site (here you can use a campaign in an app but it doesn't always work).
+If settings are specified using methods 1 and 2 and the domain parameter with the domain identifier corresponding to an app from admin.viewst.com is set among others, the button script when requesting the server, transfers the indicated parameter and obtains its setings. This could be helpful when one button with the required settings is to be displayed on a numbrer of sites, or, on the contrary, when a number of adds is to be displayed on one site (here you can use a campaign in an app but it doesn't always work).
 
 If an app (and its campaigns) are off, the server responds that the button is disabled and, consequently, it is not displayed and no further initialization is launched.
 

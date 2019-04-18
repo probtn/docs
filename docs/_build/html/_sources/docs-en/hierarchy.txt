@@ -5,7 +5,7 @@
  
 .. _hierarchy:
  
-The hierarchy of entities of admin.probtn.com
+The hierarchy of entities of admin.viewst.com
 ==================================
 
 Hierarchy

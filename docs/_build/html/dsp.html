@@ -88,7 +88,7 @@
 <li class="toctree-l1"><a class="reference internal" href="description.html#probtn">Объединенный probtn</a></li>
 <li class="toctree-l1"><a class="reference internal" href="createbutton.html">Создание кампании и креатива</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Примеры режимов работы кнопки</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hierarchy.html">Иерархия сущностей admin.probtn.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hierarchy.html">Иерархия сущностей admin.viewst.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adriver.html">Интеграция с AdRiver</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adfox.html">Интеграция с AdFox</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dfp.html">Интеграция с DFP</a></li>
@@ -113,8 +113,8 @@
 <li class="toctree-l1"><a class="reference internal" href="postMessage_button_control.html">Управление кнопкой посредстовм postMessage сообщений из iframe</a></li>
 <li class="toctree-l1"><a class="reference internal" href="postMessage_button_animation.html">Передача сообщений об этапах анимации</a></li>
 <li class="toctree-l1"><a class="reference internal" href="button_additional_animations_param.html">Дополнительные параметры анимации кнопки</a></li>
-<li class="toctree-l1"><a class="reference internal" href="get_parameters.html">Описание параметров запроса к admin.probtn.com от скрипта кнопки</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reports_description.html">Отчеты admin.probtn.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_parameters.html">Описание параметров запроса к admin.viewst.com от скрипта кнопки</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports_description.html">Отчеты admin.viewst.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="passback.html">Использование passback кода</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hints_and_tricks.html">Неочевидные моменты, подсказки и иные дополнительные данные</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statistics_api.html">Использование API для получения статистики</a></li>
@@ -172,8 +172,8 @@
 </div>
 <div class="section" id="id2">
 <h2>Пример кода для объявления в DSP<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Для реального запуска необходимо заменить в блоке <code class="docutils literal"><span class="pre">#probtn_additional_params</span></code> параметр <code class="docutils literal"><span class="pre">domain</span></code> с <code class="docutils literal"><span class="pre">getintent_dsp</span></code> на реальный идентификатор аппа из admin.probtn.com</p>
-<p>Также заменить в <code class="docutils literal"><span class="pre">addLink(&quot;https://pixel.probtn.com/1/from-ref?pbdebug=getintent&amp;DeviceUID=&amp;localDomain=&quot;+document.domain.replace(&quot;www.&quot;,</span> <span class="pre">&quot;&quot;)+&quot;&amp;daction=&quot;</span> <span class="pre">+</span> <span class="pre">param</span> <span class="pre">+</span> <span class="pre">suf);</span></code> <code class="docutils literal"><span class="pre">pbdebug</span></code> параметр с <code class="docutils literal"><span class="pre">getintent</span></code> на реальный идентификатор аппа из admin.probtn.com</p>
+<p>Для реального запуска необходимо заменить в блоке <code class="docutils literal"><span class="pre">#probtn_additional_params</span></code> параметр <code class="docutils literal"><span class="pre">domain</span></code> с <code class="docutils literal"><span class="pre">getintent_dsp</span></code> на реальный идентификатор аппа из admin.viewst.com</p>
+<p>Также заменить в <code class="docutils literal"><span class="pre">addLink(&quot;https://pixel.viewst.com/1/from-ref?pbdebug=getintent&amp;DeviceUID=&amp;localDomain=&quot;+document.domain.replace(&quot;www.&quot;,</span> <span class="pre">&quot;&quot;)+&quot;&amp;daction=&quot;</span> <span class="pre">+</span> <span class="pre">param</span> <span class="pre">+</span> <span class="pre">suf);</span></code> <code class="docutils literal"><span class="pre">pbdebug</span></code> параметр с <code class="docutils literal"><span class="pre">getintent</span></code> на реальный идентификатор аппа из admin.viewst.com</p>
 <p>Или возможно воспользоваться сервисом для генерации кодов интеграции для автоматического создания кода с заданными параметрами (ссылка будет добавлена позднее после релиза сервиса).</p>
 <div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;probtn_content1&quot;</span><span class="nt">&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;probtn_additional_params&quot;</span> <span class="na">style=</span><span class="s">&quot;display: none;&quot;</span><span class="nt">&gt;</span>{ &quot;domain&quot;: &quot;getintent_dsp&quot;, &quot;HideInFrame&quot;: false, &quot;useGuidIframe&quot;: false}<span class="nt">&lt;/div&gt;</span>
@@ -191,7 +191,7 @@
 <span class="kd">var</span> <span class="nx">addSuperPixelLink</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">param</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">param</span><span class="p">);</span>
         <span class="kd">var</span> <span class="nx">suf</span> <span class="o">=</span> <span class="s2">&quot;_ECLICK&quot;</span><span class="p">;</span>
-        <span class="nx">addLink</span><span class="p">(</span><span class="s2">&quot;https://pixel.probtn.com/1/from-ref?pbdebug=getintent&amp;DeviceUID=&amp;localDomain=&quot;</span><span class="o">+</span><span class="nb">document</span><span class="p">.</span><span class="nx">domain</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s2">&quot;www.&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;&amp;daction=&quot;</span> <span class="o">+</span> <span class="nx">param</span> <span class="o">+</span> <span class="nx">suf</span><span class="p">);</span>
+        <span class="nx">addLink</span><span class="p">(</span><span class="s2">&quot;https://pixel.viewst.com/1/from-ref?pbdebug=getintent&amp;DeviceUID=&amp;localDomain=&quot;</span><span class="o">+</span><span class="nb">document</span><span class="p">.</span><span class="nx">domain</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s2">&quot;www.&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;&amp;daction=&quot;</span> <span class="o">+</span> <span class="nx">param</span> <span class="o">+</span> <span class="nx">suf</span><span class="p">);</span>
         <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
 <span class="p">}</span>
 

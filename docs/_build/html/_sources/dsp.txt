@@ -20,9 +20,9 @@
 Пример кода для объявления в DSP
 ----------------------------------
 
-Для реального запуска необходимо заменить в блоке ``#probtn_additional_params`` параметр ``domain`` с ``getintent_dsp`` на реальный идентификатор аппа из admin.probtn.com 
+Для реального запуска необходимо заменить в блоке ``#probtn_additional_params`` параметр ``domain`` с ``getintent_dsp`` на реальный идентификатор аппа из admin.viewst.com 
 
-Также заменить в ``addLink("https://pixel.probtn.com/1/from-ref?pbdebug=getintent&DeviceUID=&localDomain="+document.domain.replace("www.", "")+"&daction=" + param + suf);`` ``pbdebug`` параметр с ``getintent`` на реальный идентификатор аппа из admin.probtn.com 
+Также заменить в ``addLink("https://pixel.viewst.com/1/from-ref?pbdebug=getintent&DeviceUID=&localDomain="+document.domain.replace("www.", "")+"&daction=" + param + suf);`` ``pbdebug`` параметр с ``getintent`` на реальный идентификатор аппа из admin.viewst.com 
 
 Или возможно воспользоваться сервисом для генерации кодов интеграции для автоматического создания кода с заданными параметрами (ссылка будет добавлена позднее после релиза сервиса).
 
@@ -44,7 +44,7 @@
 	var addSuperPixelLink = function(param) {
 		console.log(param);
 		var suf = "_ECLICK";
-		addLink("https://pixel.probtn.com/1/from-ref?pbdebug=getintent&DeviceUID=&localDomain="+document.domain.replace("www.", "")+"&daction=" + param + suf);
+		addLink("https://pixel.viewst.com/1/from-ref?pbdebug=getintent&DeviceUID=&localDomain="+document.domain.replace("www.", "")+"&daction=" + param + suf);
 		return true;
 	}
 

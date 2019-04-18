@@ -30,11 +30,11 @@ Send message to start timer of how long user watch content.
 
 probtn_stop_content_showed_timer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Send message to stop timer of how long user watch content and sending stats abut it to admin.probtn.com
+Send message to stop timer of how long user watch content and sending stats abut it to admin.viewst.com
 
 probtn_close
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Close probtn (including modal window, close area, active zones, etc.) end sending stats to admin.probtn.com
+Close probtn (including modal window, close area, active zones, etc.) end sending stats to admin.viewst.com
 
 probtn_hide
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

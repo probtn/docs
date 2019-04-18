@@ -11,7 +11,7 @@
 Шаг 1 - создание кампании
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-На странице https://admin.probtn.com/adsets посредством кнопки New Campaign переходим к созданию новой кампании
+На странице https://admin.viewst.com/adsets посредством кнопки New Campaign переходим к созданию новой кампании
 
 .. image:: images/creating/1.png
 

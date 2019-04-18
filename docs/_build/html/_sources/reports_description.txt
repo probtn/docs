@@ -5,7 +5,7 @@
  
 .. _reports_description:
 
-Отчеты admin.probtn.com
+Отчеты admin.viewst.com
 ===========
 
 Старые отчеты, видимые только админам

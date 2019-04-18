@@ -32,7 +32,7 @@
   
     <link rel="top" title="Документация Profit Button 1.4.1335_31102015_dev" href="index.html"/>
         <link rel="next" title="Интеграция с AdFox" href="adfox.html"/>
-        <link rel="prev" title="Иерархия сущностей admin.probtn.com" href="hierarchy.html"/> 
+        <link rel="prev" title="Иерархия сущностей admin.viewst.com" href="hierarchy.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -88,7 +88,7 @@
 <li class="toctree-l1"><a class="reference internal" href="description.html#probtn">Объединенный probtn</a></li>
 <li class="toctree-l1"><a class="reference internal" href="createbutton.html">Создание кампании и креатива</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Примеры режимов работы кнопки</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hierarchy.html">Иерархия сущностей admin.probtn.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hierarchy.html">Иерархия сущностей admin.viewst.com</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Интеграция с AdRiver</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#adriver-javascript-javascript">Интеграция с AdRiver (баннер javascript/JavaScript)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#step0">Step0</a></li>
@@ -120,8 +120,8 @@
 <li class="toctree-l1"><a class="reference internal" href="postMessage_button_control.html">Управление кнопкой посредстовм postMessage сообщений из iframe</a></li>
 <li class="toctree-l1"><a class="reference internal" href="postMessage_button_animation.html">Передача сообщений об этапах анимации</a></li>
 <li class="toctree-l1"><a class="reference internal" href="button_additional_animations_param.html">Дополнительные параметры анимации кнопки</a></li>
-<li class="toctree-l1"><a class="reference internal" href="get_parameters.html">Описание параметров запроса к admin.probtn.com от скрипта кнопки</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reports_description.html">Отчеты admin.probtn.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_parameters.html">Описание параметров запроса к admin.viewst.com от скрипта кнопки</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports_description.html">Отчеты admin.viewst.com</a></li>
 <li class="toctree-l1"><a class="reference internal" href="passback.html">Использование passback кода</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hints_and_tricks.html">Неочевидные моменты, подсказки и иные дополнительные данные</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statistics_api.html">Использование API для получения статистики</a></li>
@@ -237,9 +237,9 @@
 <p>или</p>
 <p><code class="docutils literal"><span class="pre">&lt;iframe</span> <span class="pre">style=&quot;border:</span> <span class="pre">0px;</span> <span class="pre">width:</span> <span class="pre">0px;</span> <span class="pre">height:</span> <span class="pre">0px;</span> <span class="pre">display:</span> <span class="pre">none;&quot;</span> <span class="pre">src=&quot;http://example.com/showinparent.html?domain=nessasary_example_app_domain.test&quot;&gt;&lt;/iframe&gt;</span></code></p>
 <p>Url <code class="docutils literal"><span class="pre">//example.com/showinparent.html?domain=nessasary_example_app_domain.test</span></code> добавлен для примера, необходимо использовать свой путь (до страницы созданной на шаге 1)</p>
-<p>GET параметр domain опционален, и необходим в случае, если нужно жестко задать домен, для которого будут браться настройки из admin.probtn.com</p>
+<p>GET параметр domain опционален, и необходим в случае, если нужно жестко задать домен, для которого будут браться настройки из admin.viewst.com</p>
 <blockquote>
-<div>Также значение GET параметра domain (для примера указано) <code class="docutils literal"><span class="pre">nessasary_example_app_domain.test</span></code> нужно заменить на необходимый домен (идентификатор), используемый в нужном аппе в admin.probtn.com</div></blockquote>
+<div>Также значение GET параметра domain (для примера указано) <code class="docutils literal"><span class="pre">nessasary_example_app_domain.test</span></code> нужно заменить на необходимый домен (идентификатор), используемый в нужном аппе в admin.viewst.com</div></blockquote>
 </div>
 <div class="section" id="id6">
 <h3>Указание кампании (опционально)<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h3>
@@ -247,7 +247,7 @@
 <p>Для этого необходимо создать объявление с кодом</p>
 <p><code class="docutils literal"><span class="pre">&lt;iframe</span> <span class="pre">style=&quot;border:</span> <span class="pre">0px;</span> <span class="pre">width:</span> <span class="pre">0px;</span> <span class="pre">height:</span> <span class="pre">0px;</span> <span class="pre">display:</span> <span class="pre">none;&quot;</span>&nbsp; <span class="pre">src=&quot;//example.com/example_iframe_page.html?domain=nessasary_example_app_domain.test&amp;SelectAdSet=565e021f99c27511100000d0&quot;&gt;&lt;/iframe&gt;</span></code></p>
 <p>Url //example.com/example_iframe_page.html добавлен для примера, необходимо использовать свой путь (до страницы созданной на шаге 1)
-Значение GET параметра domain (для примера указано) nessasary_example_app_domain.test нужно заменить на необходимый домен (идентификатор), используемый в нужном аппе в admin.probtn.com</p>
+Значение GET параметра domain (для примера указано) nessasary_example_app_domain.test нужно заменить на необходимый домен (идентификатор), используемый в нужном аппе в admin.viewst.com</p>
 <p>Значение GET параметра SelectAdSet (для примера указано) <code class="docutils literal"><span class="pre">565e021f99c27511100000d0</span></code> нужно заменить на идентификатор кампании (не нужно указывать идентификатор placement или creative)
 Сам идентификатор можно найти в адресной строке, открыв страницу кампании.</p>
 <img alt="_images/adriver2_step3_2.png" src="_images/adriver2_step3_2.png" />
@@ -265,7 +265,7 @@
         <a href="adfox.html" class="btn btn-neutral float-right" title="Интеграция с AdFox" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="hierarchy.html" class="btn btn-neutral" title="Иерархия сущностей admin.probtn.com" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="hierarchy.html" class="btn btn-neutral" title="Иерархия сущностей admin.viewst.com" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

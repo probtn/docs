@@ -198,7 +198,7 @@ By default: ""
 
 PassbackCustomCode
 ----------------------------------
-In this param possible to add code, which would be called in case, if button disabled (when settings request from admin.probtn.com return ``{"ButtonVisible":false,"ButtonEnabled":false}``)
+In this param possible to add code, which would be called in case, if button disabled (when settings request from admin.viewst.com return ``{"ButtonVisible":false,"ButtonEnabled":false}``)
 
 ATTENTION - better to test your code before using in production.
 
@@ -231,7 +231,7 @@ By default "".
 
 AdditionalTargetingParam
 ----------------------------------
-Additional custom parameter for targeting, which allows to make targeting at admin.probtn.com depending from custom tasks (for example targeting by different categories at site, etc).
+Additional custom parameter for targeting, which allows to make targeting at admin.viewst.com depending from custom tasks (for example targeting by different categories at site, etc).
 
 By default "".
 
@@ -1168,7 +1168,7 @@ Example
                                 Y: 0.1
                             },
                             ActiveImage: "//probtnexample1.azurewebsites.net/img/logo.png",
-                            InactiveImage: "//admin.probtn.com/eqwid_btn_nonpress.png",
+                            InactiveImage: "//admin.viewst.com/eqwid_btn_nonpress.png",
                             ActiveSize: {
                                 W: 64,
                                 H: 64
@@ -1188,7 +1188,7 @@ Example
                                 Y: 0.1
                             },
                             ActiveImage: "//probtnexample1.azurewebsites.net/img/logo.png",
-                            InactiveImage: "//admin.probtn.com/eqwid_btn_nonpress.png",
+                            InactiveImage: "//admin.viewst.com/eqwid_btn_nonpress.png",
                             ActiveSize: {
                                 W: 64,
                                 H: 64

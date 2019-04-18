@@ -57,7 +57,7 @@
 		</video>
 	</div>
 	
-	<div id="probtn_additional_params" style="display: none;">{"domain":"probtn.com"}</div>
+	<div id="probtn_additional_params" style="display: none;">{"domain":"viewst.com"}</div>
 	<script src="//cdn.viewst.com/probtn_concat.js"></script>
 
 Кнопка с видео

@@ -4,7 +4,7 @@
 Using API to get statistics data
 ===========
 
-Statistics API could give you opportunity to integrate you system with admin.probtn.com 
+Statistics API could give you opportunity to integrate you system with admin.viewst.com 
 
 GET-параметры запроса
 ----------------------------------
@@ -13,7 +13,7 @@ Params:
 
   * AuthKey - authorize key, give access to campaigns. This param is required.
   * AppName - apps names list for additional filtering.
-  * AdSet - list of campaigns IDs, possible to find in admin.probtn.com. 
+  * AdSet - list of campaigns IDs, possible to find in admin.viewst.com. 
   * DateStart - date in format YYYY-MM-DD
   * DateEnd - date in format YYYY-MM-DD
 
@@ -37,5 +37,5 @@ Description:
 Request example
 ----------------------------------
 
-http://stats.probtn.com/api_reports?AuthKey=<SOME_KEY>&AppName=jgjh.ghjg&AdSet=76786786876
+http://stats.viewst.com/api_reports?AuthKey=<SOME_KEY>&AppName=jgjh.ghjg&AdSet=76786786876
 

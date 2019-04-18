@@ -5,7 +5,7 @@
  
 .. _admin_targetings:
  
-Description of targeting variants at admin.probtn.com
+Description of targeting variants at admin.viewst.com
 ==================================
 
 Base description

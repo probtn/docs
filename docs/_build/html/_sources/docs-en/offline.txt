@@ -8,7 +8,7 @@
 Offline mode
 ==================================
 
-Instruction describe using external format of floating button AdButton without requests from code to external server (for example for AdButton admin panel - ``admin.probtn.com``)
+Instruction describe using external format of floating button AdButton without requests from code to external server (for example for AdButton admin panel - ``admin.viewst.com``)
 
 This variant is used then you'd like to lower risks of adding code from remote server at site. So for this variant button code and nessesary settings uploaded localy.
 
@@ -25,7 +25,7 @@ http://probtn-avito.azurewebsites.net/offline/
 
 Archive description:
 
-* ``settings.txt`` - button settings, exported from admin.probtn.com for campaign (or created manualy)
+* ``settings.txt`` - button settings, exported from admin.viewst.com for campaign (or created manualy)
 * ``style.css`` - styles
 * ``probtn_concat.js`` - button code, concatenated with all nessesary libs
 * ``libs/`` - additional files (images, styles)

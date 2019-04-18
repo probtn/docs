@@ -245,7 +245,7 @@ CreativeId
 
 PassbackCustomCode
 ----------------------------------
-В данном параметре возможно указать код, который будет вызываться в случае, если кнопка будет выключена (когда от admin.probtn.com придет ``{"ButtonVisible":false,"ButtonEnabled":false}``)
+В данном параметре возможно указать код, который будет вызываться в случае, если кнопка будет выключена (когда от admin.viewst.com придет ``{"ButtonVisible":false,"ButtonEnabled":false}``)
 
 Внимание - желательно предварительно тестировать желаемый код до использования.
 
@@ -278,7 +278,7 @@ ExtrusionMode
 
 AdditionalTargetingParam
 ----------------------------------
-Дополнительный кастомный параметр для таргетинга, позволяющий гибко настроит таргетинг admin.probtn.com в зависимости от задач.
+Дополнительный кастомный параметр для таргетинга, позволяющий гибко настроит таргетинг admin.viewst.com в зависимости от задач.
 
 По умоланию "".
 
@@ -1219,7 +1219,7 @@ ActiveOpacity
                                 Y: 0.1
                             },
                             ActiveImage: "//probtnexample1.azurewebsites.net/img/logo.png",
-                            InactiveImage: "//admin.probtn.com/eqwid_btn_nonpress.png",
+                            InactiveImage: "//admin.viewst.com/eqwid_btn_nonpress.png",
                             ActiveSize: {
                                 W: 64,
                                 H: 64
@@ -1239,7 +1239,7 @@ ActiveOpacity
                                 Y: 0.1
                             },
                             ActiveImage: "//probtnexample1.azurewebsites.net/img/logo.png",
-                            InactiveImage: "//admin.probtn.com/eqwid_btn_nonpress.png",
+                            InactiveImage: "//admin.viewst.com/eqwid_btn_nonpress.png",
                             ActiveSize: {
                                 W: 64,
                                 H: 64

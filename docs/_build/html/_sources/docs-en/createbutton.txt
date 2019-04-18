@@ -11,7 +11,7 @@ Campaign and creative creating
 Step 1 - create campaign
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-At page https://admin.probtn.com/adsets using ``New Campaign`` button we start creating a new campaign
+At page https://admin.viewst.com/adsets using ``New Campaign`` button we start creating a new campaign
 
 .. image:: images/creating/1.png
 
